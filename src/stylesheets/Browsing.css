@@ -3,50 +3,8 @@
   display: flex;
 }
 
-.side-panel {
-  width: 250px;
-  padding: 20px;
-  background-color: #f0f0f0;
-  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
-  height:  calc(100vh - 110px);;
-  transition: width 0.3s ease; /* Add a smooth transition effect */
-}
 
 .main-content {
   flex: 1;
   padding: 20px;
-}
-
-.toggle-button {
-  top: 10px;
-  left: 10px;
-  background-color: #3498db;
-  color: #fff;
-  padding: 8px;
-  border: none;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  cursor: pointer;
-  outline: none;
-  height: 100px;
-}
-
-.toggle-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* Adjust when side panel is open */
-.with-side-panel .main-content {
-  
-}
-
-/* Adjust when side panel is closed */
-.without-side-panel .side-panel {
-  width: 0;
-  padding-left: 0;
-  padding-right: 0;
 }

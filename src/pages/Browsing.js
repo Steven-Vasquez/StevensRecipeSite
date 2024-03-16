@@ -1,6 +1,8 @@
 // Browsing.js
 import React, { useState } from "react";
 import "../stylesheets/Browsing.css";
+import "../stylesheets/SidePanel.css";
+import SidePanel from "../components/SidePanel";
 
 const Browsing = () => {
   const [isSidePanelOpen, setIsSidePanelOpen] = useState(true);
@@ -10,19 +12,11 @@ const Browsing = () => {
   };
 
   return (
-    <div className={`page-container ${isSidePanelOpen ? "with-side-panel" : "without-side-panel"}`}>
+    <div className="page-container">
       {/* Side Panel for Filters */}
-      <div className="side-panel">
-        <h2>Filters</h2>
-        {/* Add filter options here */}
-      </div>
-
+      <SidePanel onFilterChange={() => {}} />
       {/* Toggle Button */}
-      <div className="toggle-container">
-        <button className={`toggle-button `} onClick={toggleSidePanel}>
-          {isSidePanelOpen ? ">" : "<"}
-        </button>
-      </div>
+      
 
       {/* Main Content (Recipe List) */}
       <div className="main-content">

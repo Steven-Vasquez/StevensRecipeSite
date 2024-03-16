@@ -1,0 +1,81 @@
+.side-panel {
+  width: 250px;
+  padding-right: 5px;
+  background-color: #f0f0f0;
+ 
+  overflow-y: auto;
+  height:  calc(100vh - 70px);;
+  transition: width 0.3s ease; /* Add a smooth transition effect */
+}
+
+.toggle-button {
+  top: 10px;
+  left: 10px;
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  height: 100px;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjust when side panel is closed */
+.without-side-panel {
+  width: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.filter-category {
+  margin-bottom: 10px;
+}
+
+.filter-header {
+  cursor: pointer;
+  background-color: #efe4e4;
+  padding: 10px;
+  position: relative;
+}
+
+.filter-header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #333;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.filter-header.collapsed::after {
+  transform: translateY(-50%) rotate(-90deg); /* Rotate the arrow when collapsed */
+}
+
+
+.filter-content {
+  display: none;
+  padding: 10px;
+}
+
+.filter-content label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.side-panel-container {
+  display: flex;
+}
