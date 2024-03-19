@@ -42,8 +42,20 @@
 .filter-header {
   cursor: pointer;
   background-color: #efe4e4;
-  padding: 10px;
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-icon {
+  width: 50px;
+  margin: 5px;
+  padding-right: 5px;
+}
+
+.filter-header-text {
+  font-size: 24px;
+  white-space: nowrap;
 }
 
 .filter-header::after {

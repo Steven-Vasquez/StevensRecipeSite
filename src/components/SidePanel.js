@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../stylesheets/SidePanel.css";
+
+import FilterCategory from "./FilterCategory";
 
 const SidePanel = ({ onFilterChange }) => {
     const [filters, setFilters] = useState({
@@ -7,7 +9,7 @@ const SidePanel = ({ onFilterChange }) => {
         cookTime: [],
         servings: [],
         allergies: [],
-        dietTypes: [],
+        dietType: [],
         nicheEquipment: []
     });
 
@@ -18,33 +20,15 @@ const SidePanel = ({ onFilterChange }) => {
     };
 
 
-
-    const handleFilterChange = (category, value) => {
-        // Update the filters state
-        setFilters(prevFilters => ({
-            ...prevFilters,
-            [category]: [...prevFilters[category], value]
-        }));
-    };
-
-    function toggleFilterCategory(event) {
-        var header = event.currentTarget;
-        var content = header.nextElementSibling;
-        if (content) {
-            if (content.style.display === "block") {
-                content.style.display = "none";
-                header.classList.add("collapsed"); // Add the collapsed class
-            } else {
-                content.style.display = "block";
-                header.classList.remove("collapsed"); // Remove the collapsed class
-            }
-        }
-    }
-
     const handleCheckboxChange = (event, category) => {
+        console.log("Filter being changed:" + category + " " + event.target.value)
         const { checked, value } = event.target;
         if (checked) {
-            handleFilterChange(category, value);
+            // Update the filters state
+            setFilters(prevFilters => ({
+                ...prevFilters,
+                [category]: [...(prevFilters[category] || []), value] // Ensure prevFilters[category] is an array
+            }));
         } else {
             // Remove the unchecked value from the filters state
             setFilters(prevFilters => ({
@@ -54,98 +38,72 @@ const SidePanel = ({ onFilterChange }) => {
         }
     };
 
-    // Pass the filters data to the parent component
-    onFilterChange(filters);
+
+    useEffect(() => {
+        // Pass the filters data to the parent component after state update
+        onFilterChange(filters);
+    }, [filters, onFilterChange]);
 
     return (
         <div className="side-panel-container">
-
-
             <div className={`side-panel ${isSidePanelOpen ? "with-side-panel" : "without-side-panel"}`}>
                 <h2>Filters</h2>
 
-                <div className="filter-category">
-                    <div className="filter-header" onClick={toggleFilterCategory}>Dish Type</div>
-                    <div className="filter-content">
-                        <label>
-                            <input
-                                type="checkbox"
-                                value="Breakfast"
-                                onChange={(event) => handleCheckboxChange(event, "dishType")}
-                            />
-                            Breakfast
-                        </label>
+                {/* Dish Type Filter */}
+                <FilterCategory
+                    category="dishType"
+                    categoryLabel="Dish Type"
+                    icon="/images/filter_icons/dish_type.png"
+                    options={[
+                        "Breakfast", "Lunch Entree", "Dinner Entree",
+                        "Snack", "Side Dish", "Party Snack", "Dessert", "Veggies"
+                    ]}
+                    onCheckboxChange={handleCheckboxChange}
+                />
 
-                        <label>
-                            <input
-                                type="checkbox"
-                                value="Lunch Entree"
-                                onChange={(event) => handleCheckboxChange(event, "dishType")}
-                            />
-                            Lunch Entree
-                        </label>
+                {/* Cook Time Filter */}
+                <FilterCategory
+                    category="cookTime"
+                    categoryLabel="Cook Time"
+                    icon="/images/filter_icons/cook_time.png"
+                    options={[
+                        "Under 30 minutes", "30-60 minutes", "1-2 hours", "2+ hours"
+                    ]}
+                    onCheckboxChange={handleCheckboxChange}
+                />
 
-                        <label>
-                            <input
-                                type="checkbox"
-                                value="Dinner Entree"
-                                onChange={(event) => handleCheckboxChange(event, "dishType")}
-                            />
-                            Dinner Entree
-                        </label>
+                {/* Servings Filter */}
+                <FilterCategory
+                    category="servings"
+                    categoryLabel="Servings"
+                    icon="/images/filter_icons/servings.png"
+                    options={[
+                        "1-2", "2-4", "4-6", "6+"
+                    ]}
+                    onCheckboxChange={handleCheckboxChange}
+                />
 
-                        <label>
-                            <input
-                                type="checkbox"
-                                value="Snack"
-                                onChange={(event) => handleCheckboxChange(event, "dishType")}
-                            />
-                            Snack
-                        </label>
+                {/* Allergies Filter */}
+                <FilterCategory
+                    category="allergies"
+                    categoryLabel="Allergies"
+                    icon="/images/filter_icons/allergies.png"
+                    options={[
+                        "Dairy", "Gluten", "Nuts", "Shellfish", "Soy", "Wheat"
+                    ]}
+                    onCheckboxChange={handleCheckboxChange}
+                />
 
-                        <label>
-                            <input
-                                type="checkbox"
-                                value="Side Dish"
-                                onChange={(event) => handleCheckboxChange(event, "dishType")}
-                            />
-                            Side Dish
-                        </label>
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                value="Party Snack"
-                                onChange={(event) => handleCheckboxChange(event, "dishType")}
-                            />
-                            Party Snack
-                        </label>
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                value="Dessert"
-                                onChange={(event) => handleCheckboxChange(event, "dishType")}
-                            />
-                            Dessert
-                        </label>
-
-                        <label>
-                            <input
-                                type="checkbox"
-                                value="Veggies"
-                                onChange={(event) => handleCheckboxChange(event, "dishType")}
-                            />
-                            Veggies
-                        </label>
-
-
-                        {/* Add more checkboxes here */}
-                    </div>
-                </div>
-
-                {/* Toggle Button */}
-
+                {/* Diet Types Filter */}
+                <FilterCategory
+                    category="dietType"
+                    categoryLabel="Diet Type"
+                    icon="/images/filter_icons/diet_type.png"
+                    options={[
+                        "Keto", "Paleo", "Vegan", "Vegetarian"
+                    ]}
+                    onCheckboxChange={handleCheckboxChange}
+                />
 
                 {/* Add more filter categories here */}
             </div>

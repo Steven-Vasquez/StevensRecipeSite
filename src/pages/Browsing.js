@@ -5,18 +5,26 @@ import "../stylesheets/SidePanel.css";
 import SidePanel from "../components/SidePanel";
 
 const Browsing = () => {
-  const [isSidePanelOpen, setIsSidePanelOpen] = useState(true);
+  const [activeFilters, setActiveFilters] = useState({
+    dishType: [],
+    cookTime: [],
+    servings: [],
+    allergies: [],
+    dietTypes: [],
+    nicheEquipment: []
+  });
 
-  const toggleSidePanel = () => {
-    setIsSidePanelOpen(!isSidePanelOpen);
+  const handleFilterChange = (filters) => {
+    setActiveFilters(filters);
+    console.log(activeFilters)
   };
 
   return (
     <div className="page-container">
       {/* Side Panel for Filters */}
-      <SidePanel onFilterChange={() => {}} />
+      <SidePanel onFilterChange={handleFilterChange} />
       {/* Toggle Button */}
-      
+
 
       {/* Main Content (Recipe List) */}
       <div className="main-content">
