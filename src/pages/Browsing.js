@@ -20,7 +20,7 @@ const Browsing = () => {
   };
 
   return (
-    <div className="page-container">
+    <div className="browsing-page-container">
       {/* Side Panel for Filters */}
       <SidePanel onFilterChange={handleFilterChange} />
       {/* Toggle Button */}

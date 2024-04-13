@@ -7,6 +7,7 @@ import Browsing from './pages/Browsing';
 import About from './pages/About';
 
 import Navbar from './components/Navbar';
+import RecipeOutline from './pages/RecipeOutline';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path="/" element={<Home/>} /> 
           <Route path="/about" element={<About/>} />
           <Route path="/browse" element={<Browsing/>} />
-
+          <Route path="/recipe-example" element={<RecipeOutline/>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     </Router>
