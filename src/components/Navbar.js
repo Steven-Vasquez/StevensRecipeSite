@@ -19,6 +19,7 @@ const Navbar = () => {
           <Link to="/" className="logo">
             <img src="/images/logo.png" alt="Logo" id="logo" />
           </Link>
+          Steven Cooks
         </li>
 
         <li className="navbar-item navbar-search">

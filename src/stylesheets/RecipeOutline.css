@@ -1,5 +1,4 @@
-.page-container {
-}
+.page-container {}
 
 .recipe-card-opening {
     /* background-color: #fefee3; */
@@ -11,7 +10,7 @@
         "recipe-info recipe-info";
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 3fr 1fr;
-    height: 75vh;    
+    height: 75vh;
     width: vw;
     margin: auto;
 }
@@ -40,7 +39,7 @@
 
 .recipe-name {
     font-family: 'Sriracha', cursive;
-        font-size: 72px;
+    font-size: 72px;
     margin-bottom: 10px;
     /* Add margin for spacing between name and credit */
 }
@@ -58,7 +57,7 @@
     grid-area: recipe-image;
     display: flex;
     justify-content: end;
-    
+
 }
 
 .recipe-image-container img {
@@ -66,12 +65,9 @@
     max-height: 100%;
     height: 75vh;
     margin-left: auto;
-    
-
 }
 
 .basic-info-container {
-    grid-area: recipe-info;
     height: 20vh;
     background-color: rgb(255, 248, 239);
 }
@@ -80,8 +76,43 @@
     border: 1px solid black;
 }
 
+.recipe-card-opening {
+    background-color: #FFE4C9;
+}
 
+.basic-info-container {
+    grid-area: recipe-info;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-.recipe-card-opening  {
-    background-color: #FFE4C9 ;
+.recipe-info {
+    text-align: center;
+}
+
+.recipe-info p {
+    font-weight: bold;
+    color: #333;
+}
+
+.recipe-info img {
+    width: 50px;
+    height: 50px;
+}
+
+.recipe-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recipe-info li {
+    margin-top: 5px;
+    color: #666;
+}
+
+.recipe-info li:first-child {
+    margin-top: 0;
 }
