@@ -6,8 +6,7 @@
 
     display: grid;
     grid-template-areas:
-        "recipe-name recipe-image"
-        "recipe-info recipe-info";
+        "recipe-name recipe-image";
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 3fr 1fr;
     height: 75vh;
@@ -67,11 +66,6 @@
     margin-left: auto;
 }
 
-.basic-info-container {
-    height: 20vh;
-    background-color: rgb(255, 248, 239);
-}
-
 .basic-info-container .recipe-name-container .recipe-image-container {
     border: 1px solid black;
 }
@@ -81,12 +75,12 @@
 }
 
 .basic-info-container {
-    grid-area: recipe-info;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 248, 239);
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .recipe-info {

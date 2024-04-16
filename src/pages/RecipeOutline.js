@@ -22,8 +22,10 @@ export function RecipeOutline() {
           <img src="/images/recipe_images/fried_rice/fried_rice.jpg" alt="Fried Rice" />
         </div>
 
-        {/* Recipe Information */}
-        <div className="basic-info-container">
+      </div>
+
+      {/* Recipe Information */}
+      <div className="basic-info-container">
           <div className="recipe-info">
             <img src="/images/filter_icons/dish_type.png" alt="Dish Type" className="filter-icon" />
             <p>Dish Type</p>
@@ -66,8 +68,6 @@ export function RecipeOutline() {
           </div>
 
         </div>
-
-      </div>
     </div>
   );
 }
