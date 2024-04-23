@@ -10,7 +10,7 @@ export function RecipeOutline() {
         <div className="opening-card-container">
 
           <div className="recipe-name-container">
-            <h2 className="recipe-name">Fried Rice</h2>
+            <p className="recipe-name">Fried Rice</p>
             <p className="recipe-credit">Recipe by: Me</p>
             <div className="tags-container">
               <span className="tag">Quick</span>
@@ -18,6 +18,7 @@ export function RecipeOutline() {
               <span className="tag">One pot</span>
               <span className="tag">Meal Prep</span>
             </div>
+            <p className="description-short">This is a simple fried rice recipe using easily-accessible supermarket ingredients</p>
           </div>
 
 

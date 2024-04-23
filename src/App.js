@@ -8,6 +8,7 @@ import About from './pages/About';
 
 import Navbar from './components/Navbar';
 import RecipeOutline from './pages/RecipeOutline';
+import RecipeOutline2 from './pages/RecipeOutline2';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<About/>} />
           <Route path="/browse" element={<Browsing/>} />
           <Route path="/recipe-example" element={<RecipeOutline/>} />
+          <Route path="/recipe-example2" element={<RecipeOutline2/>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     </Router>
