@@ -105,6 +105,28 @@ const SidePanel = ({ onFilterChange }) => {
                     onCheckboxChange={handleCheckboxChange}
                 />
 
+                {/* Special Equipment Filter */}
+                <FilterCategory
+                    category="specialEquipment"
+                    categoryLabel="Special Equipment"
+                    icon="/images/filter_icons/equipment_needed.png"
+                    options={[
+                        "Blender", "Food Processor", "Instant Pot", "Slow Cooker"
+                    ]}
+                    onCheckboxChange={handleCheckboxChange}
+                />
+
+                <FilterCategory
+                    category="proteinType"
+                    categoryLabel="Protein Type"
+                    icon="/images/filter_icons/meat.png"
+                    options={[
+                        "Beef", "Chicken", "Fish", "Pork", "Tofu", "Turkey"
+                    ]}
+                    onCheckboxChange={handleCheckboxChange}
+                />
+
+
                 {/* Add more filter categories here */}
             </div>
             <div className="toggle-container">

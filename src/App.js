@@ -13,6 +13,7 @@ import recipeRoutesConfig from './recipeRoutesConfig';
 
 import RecipeOutline from './pages/RecipeOutline';
 import RecipeOutline2 from './pages/RecipeOutline2';
+import RecipeOutline3 from './pages/RecipeOutline3';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/browse" element={<Browsing/>} />
           <Route path="/recipe-example" element={<RecipeOutline/>} />
           <Route path="/recipe-example2" element={<RecipeOutline2/>} />
+          <Route path="/recipe-example3" element={<RecipeOutline3/>} />
 
           {recipeRoutesConfig.map((route, index) => (
             <Route key={index} path={route.path} element={<route.component />} />

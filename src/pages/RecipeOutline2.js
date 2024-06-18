@@ -34,11 +34,13 @@ export function RecipeOutline({ recipeName, recipeCredit, recipeCreditLink, desc
 
 
                     {/* Recipe Nutrition Information */}
+                    {/*
                     <div className="outer-nutrition-info-container">
                         <div className="nutrition-info-container">
                             nutrition info
                         </div>
                     </div>
+                    */}
 
                     {/* Recipe Basic Info */}
                     <div className="outer-basic-info-container">
@@ -79,6 +81,22 @@ export function RecipeOutline({ recipeName, recipeCredit, recipeCreditLink, desc
                             <div className="recipe-info">
                                 <img src="/images/filter_icons/diet_type.png" alt="Diet Type" className="info-icon" />
                                 <p>Diet Type</p>
+                                <ul>
+                                    <li>None</li>
+                                </ul>
+                            </div>
+
+                            <div className="recipe-info">
+                                <img src="/images/filter_icons/equipment_needed.png" alt="Special Equipment" className="info-icon" />
+                                <p>Special Equipment</p>
+                                <ul>
+                                    <li>None</li>
+                                </ul>
+                            </div>
+
+                            <div className="recipe-info">
+                                <img src="/images/filter_icons/meat.png" alt="Protein Type" className="info-icon" />
+                                <p>Protein Type</p>
                                 <ul>
                                     <li>None</li>
                                 </ul>
