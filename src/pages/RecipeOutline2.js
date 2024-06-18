@@ -1,6 +1,7 @@
 import "../stylesheets/RecipeOutline2.css";
 
-export function RecipeOutline() {
+export function RecipeOutline({ recipeName, recipeCredit, recipeCreditLink, descriptionShort, tags, 
+    recipeImage, nutritionInfo, dishType, cookTime, servings, allergies, dietType }) {
 
     return (
         <div className="page-container">
