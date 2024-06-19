@@ -1,6 +1,7 @@
 .recipe-outline-container {
     display: flex;
     justify-content: center;
+    background-color: antiquewhite;
 }
 
 .opening-card-container {
@@ -12,14 +13,53 @@
     padding-bottom: 50px;
 }
 
+.recipe-name {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 1.875rem;
+    color: #e60000;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: center;
+}
+
+.tag {
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.recipe-attributes {
+    width: 360px;
+}
+
+.recipe-attributes ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+.rdpAttributes ul li.attribute {
+    border-left: 2px dotted #e60000;
+}
+
 .left {
     display: flex;
+    flex-direction: column;
     width: 25vw;
+    height: 100%;
+    background-color: aliceblue;
+    text-align: center; 
 }
 
 .right {
     display: flex;
-    width: 40vw;
+    width: 35vw;
 }
 
 .right img {
