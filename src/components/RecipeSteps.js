@@ -4,7 +4,7 @@ export function RecipeSteps({ title, steps }) {
             <h3>Steps for {title}</h3>
             <ol>
                 {steps.map((step, index) => (
-                    <li key={index}>{index}. {step}</li>
+                    <li key={index}> {step}</li>
                 ))}
             </ol>
         </div>
