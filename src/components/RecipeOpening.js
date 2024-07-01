@@ -1,29 +1,33 @@
-import "../stylesheets/RecipeOutline3.css";
+import StarRating from "./StarRating";
+import "../stylesheets/RecipeOpening.css";
 
-export function RecipeOutline() {
+export function RecipeOutline({
+    recipeName,        // The name of the recipe
+    starRating,        // The star rating of the recipe
+    recipeCredit,      // The credit for the recipe
+    descriptionShort,  // A short description of the recipe
+    tags = [],         // An array of tags related to the recipe, with a default empty array
+    recipeImage,       // The URL of the recipe image
+    prepTime,          // Preparation time for the recipe
+    totalTime,         // Total time for the recipe
+    servings           // Number of servings the recipe makes
+}) {
     return (
         <div className="recipe-outline-container">
             <div className="opening-card-container">
                 <div className="left">
                     <div className="recipe-name-container">
-                        <p className="recipe-name patua-font">Korean Fried Yellow Croaker</p>
+                        <p className="recipe-name patua-font">{recipeName}</p>
                         {/* Star Rating */}
-                        <div className="star-rating">
-                            <span className="star">&#9733;</span>
-                            <span className="star">&#9733;</span>
-                            <span className="star">&#9733;</span>
-                            <span className="star">&#9733;</span>
-                            <span className="star">&#9733;</span>
-                            <span className="lexend-font stevens-rating">(Steven's Rating) </span>
-                        </div>
+                        <StarRating rating={starRating} />
 
                         {/* Tags */}
                         <div className="tags-container">
-                            <span className="tag">Quick</span>
-                            <span className="tag">Easy</span>
-                            <span className="tag">One pan</span>
-                            <span className="tag">Korean</span>
+                            {tags.map((tag, index) => (
+                                <span key={index} className="tag">{tag}</span>
+                            ))}
                         </div>
+                        <span className="credit">Credit: {recipeCredit}</span>
                     </div>
 
 
@@ -58,7 +62,7 @@ export function RecipeOutline() {
                 </div>
 
                 <div className="right">
-                    <img src="/images/recipe_images/fried_rice/fried_rice.jpg" alt="Fried Rice" />
+                    <img src={recipeImage} alt={recipeName} />
                 </div>
             </div>
         </div>

@@ -1,0 +1,30 @@
+.star {
+    color: #e60000;
+    font-size: 1.2em;
+    position: relative;
+    display: inline-block;
+}
+
+.stevens-rating {
+    font-size: 12px;
+}
+
+.star.empty {
+    color: lightgray;
+    /* Color for empty stars */
+}
+
+.star.half {
+    color: lightgray;
+    /* Base color for half star */
+}
+
+.star.half::before {
+    content: '\2605';
+    /* Unicode for filled star */
+    color: #e60000;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+}
