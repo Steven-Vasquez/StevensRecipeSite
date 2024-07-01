@@ -14,11 +14,43 @@
 }
 
 .recipe-name {
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 1.875rem;
+    font-size: 2rem;
     color: #e60000;
     margin-top: 40px;
+    max-width: 375px;
+}
+
+.recipe-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.star {
+    color: #e60000;
+    font-size: 1.2em;
+}
+
+.stevens-rating {
+    font-size: 12px;
+}
+
+.big-number {
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+.small-label {
+    font-size: 11px;
+    text-transform: capitalize;
+}
+
+.red-info-title {
+    color: #e60000;
+    font-size: 15px;
+    font-family: "Patua One", serif;
 }
 
 .tags-container {
@@ -26,6 +58,7 @@
     flex-wrap: wrap;
     gap: 5px;
     justify-content: center;
+    margin-top: 25px;
 }
 
 .tag {
@@ -40,10 +73,11 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .recipe-attributes div.attribute {
-    width: 100px;
+    width: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +98,8 @@
     width: 30vw;
     height: 100%;
     background-color: white;
-    text-align: center; 
+    text-align: center;
+    justify-content: space-between;
 }
 
 .right {

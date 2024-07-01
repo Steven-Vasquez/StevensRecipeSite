@@ -5,49 +5,53 @@ export function RecipeOutline() {
         <div className="recipe-outline-container">
             <div className="opening-card-container">
                 <div className="left">
-                    <p className="recipe-name">Korean Fried Yellow Croaker</p>
-                    {/* Star Rating */}
-                    <div className="star-rating">
-                        <span>Steven's Rating: </span>
-                        <span className="star">&#9733;</span>
-                        <span className="star">&#9733;</span>
-                        <span className="star">&#9733;</span>
-                        <span className="star">&#9733;</span>
-                        <span className="star">&#9733;</span>
+                    <div className="recipe-name-container">
+                        <p className="recipe-name patua-font">Korean Fried Yellow Croaker</p>
+                        {/* Star Rating */}
+                        <div className="star-rating">
+                            <span className="star">&#9733;</span>
+                            <span className="star">&#9733;</span>
+                            <span className="star">&#9733;</span>
+                            <span className="star">&#9733;</span>
+                            <span className="star">&#9733;</span>
+                            <span className="lexend-font stevens-rating">(Steven's Rating) </span>
+                        </div>
 
+                        {/* Tags */}
+                        <div className="tags-container">
+                            <span className="tag">Quick</span>
+                            <span className="tag">Easy</span>
+                            <span className="tag">One pan</span>
+                            <span className="tag">Korean</span>
+                        </div>
                     </div>
 
 
-                    {/* Tags */}
-                    <div className="tags-container">
-                        <span className="tag">Quick</span>
-                        <span className="tag">Easy</span>
-                        <span className="tag">One pan</span>
-                        <span className="tag">Korean</span>
-                    </div>
+
+
 
                     {/* Recipe Attributes */}
                     <div className="recipe-attributes">
                         <div className="attribute">
-                            <span>Prep</span>
+                            <span className="red-info-title">Prep</span>
                             <span>
-                                <span>30</span>
-                                <span>Min</span>
+                                <span className="lexend-font big-number">30</span>
+                                <span className="lexend-font small-label"> Min</span>
                             </span>
                         </div>
                         <div className="attribute">
-                            <span>Total</span>
+                            <span className="red-info-title">Total</span>
                             <span>
-                                <span>6</span>
-                                <span>Hr</span>
-                                <span>10</span>
-                                <span>Min</span>
+                                <span className="lexend-font big-number">6</span>
+                                <span className="lexend-font small-label"> Hr </span>
+                                <span className="lexend-font big-number">10</span>
+                                <span className="lexend-font small-label"> Min</span>
                             </span>
                         </div>
                         <div className="attribute">
-                            <span>Servings</span>
+                            <span className="red-info-title">Servings</span>
                             <span>
-                                <span>30</span>
+                                <span className="lexend-font big-number">30</span>
                             </span>
                         </div>
                     </div>

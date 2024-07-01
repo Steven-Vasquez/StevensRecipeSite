@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* Use Lexend for informational bits (like links and measurements)*/
+.lexend-font {
+  font-family: 'Lexend', sans-serif;
+}
+
+.patua-font {
+  font-family: 'Patua One', serif;
+}

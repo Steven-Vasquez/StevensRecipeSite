@@ -125,6 +125,7 @@ const SidePanel = ({ onFilterChange }) => {
                     ]}
                     onCheckboxChange={handleCheckboxChange}
                 />
+                <div>notable chefs (TODO)</div>
 
 
                 {/* Add more filter categories here */}
