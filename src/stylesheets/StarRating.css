@@ -3,23 +3,33 @@
     font-size: 1.2em;
     position: relative;
     display: inline-block;
+    z-index: 2;
 }
+
+.star::before {
+    color: lightgray;
+    position: absolute;
+    top: 1px;
+    content: '★'; /* Unicode star character */
+    z-index: -1;
+}
+
 
 .stevens-rating {
     font-size: 12px;
 }
 
 .star.empty {
-    color: lightgray;
+    /*color: lightgray;*/
     /* Color for empty stars */
 }
 
 .star.half {
-    color: lightgray;
+    color: transparent;
     /* Base color for half star */
 }
 
-.star.half::before {
+.star.half::after {
     content: '\2605';
     /* Unicode for filled star */
     color: #e60000;
@@ -28,3 +38,5 @@
     width: 50%;
     overflow: hidden;
 }
+
+

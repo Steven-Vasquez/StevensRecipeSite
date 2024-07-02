@@ -2,10 +2,25 @@
 import React from 'react';
 import RecipeSteps from '../RecipeSteps';
 import RecipeIngredients from '../RecipeIngredients';
+import RecipeOpening from "../../components/RecipeOpening"
+
 
 export function ChickenTikka() {
     return (
         <div>
+            <RecipeOpening
+                recipeName={"Korean Fried Yellow Croaker"}
+                starRating={4.5}
+                recipeCredit={"Everything Alex Cooks"}
+                descriptionShort={"Korean Fried Yellow Croaker"}
+                tags={["Quick", "Easy", "One pan", "Korean"]}
+                recipeImage={"/images/recipe_images/fried_rice/fried_rice.jpg"}
+                prepTime={"30 min"}
+                totalTime={"6 hr 10 min"}
+                servings={30}
+            />
+
+
             {/* INGREDIENTS */}
             <RecipeIngredients
                 component_name={"Chicken"}

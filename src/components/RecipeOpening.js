@@ -13,21 +13,22 @@ export function RecipeOutline({
     servings           // Number of servings the recipe makes
 }) {
     return (
+        <div>
         <div className="recipe-outline-container">
             <div className="opening-card-container">
                 <div className="left">
                     <div className="recipe-name-container">
                         <p className="recipe-name patua-font">{recipeName}</p>
                         {/* Star Rating */}
-                        <StarRating rating={starRating} />
-
+                        
+                        <div className="star-container"><StarRating rating={starRating} /></div>
                         {/* Tags */}
                         <div className="tags-container">
                             {tags.map((tag, index) => (
                                 <span key={index} className="tag">{tag}</span>
                             ))}
                         </div>
-                        <span className="credit">Credit: {recipeCredit}</span>
+                        
                     </div>
 
 
@@ -65,6 +66,9 @@ export function RecipeOutline({
                     <img src={recipeImage} alt={recipeName} />
                 </div>
             </div>
+            
+        </div>
+        <span className="credit">Recipe by: {recipeCredit}</span>
         </div>
     );
 }
