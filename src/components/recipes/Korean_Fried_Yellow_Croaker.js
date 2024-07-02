@@ -21,27 +21,26 @@ export function KoreanFriedYellowCroaker() {
 
             <div>
                 <RecipeIngredients
-                    component_name={"Fish"}
+                    component_names={["Fish", "Sauce"]}
                     ingredients={[
-                        ["1.5 lbs Korean salted yellow croaker/corvina, defrosted (or fresh red snapper, branzino, any mild, flaky white fish)"],
-                        "2 tbsp potato starch or cornstarch",
-                        "2 tbsp flour",
-                        "2 tbsp neutral oil (grapeseed, avocado, canola etc.) "
-                    ]} />
-
-                <RecipeIngredients
-                    component_name={"Sauce"}
-                    ingredients={[
-                        "1/4 cup soy sauce",
-                        "1 tbsp rice wine vinegar",
-                        "2 tbsp honey",
-                        "2 tsp sesame oil",
-                        "2 tbsp gochugaru (Korean red pepper flakes)",
-                        "1 tbsp white sesame seeds",
-                        "4 scallions, chopped",
-                        "2 cloves garlic, finely diced",
-                        "1 jalapeno or Korean green pepper, diced",
-                        "1 tsp ginger"
+                        [
+                            ["1.5", "lbs Korean salted yellow croaker/corvina, defrosted (or fresh red snapper, branzino, any mild, flaky white fish)"],
+                            ["2", "tbsp potato starch or cornstarch"],
+                            ["2", "tbsp flour"],
+                            ["2", "tbsp neutral oil (grapeseed, avocado, canola etc.)"]
+                        ],
+                        [
+                            ["1/4", "cup soy sauce"],
+                            ["1", "tbsp rice wine vinegar"],
+                            ["2", "tbsp honey"],
+                            ["2", "tsp sesame oil"],
+                            ["2", "tbsp gochugaru (Korean red pepper flakes)"],
+                            ["1", "tbsp white sesame seeds"],
+                            ["4", "scallions, chopped"],
+                            ["2", "cloves garlic, finely diced"],
+                            ["1", "jalapeno or Korean green pepper, diced"],
+                            ["1", "tsp ginger"]
+                        ]
                     ]} />
 
                 <RecipeSteps
