@@ -1,71 +1,55 @@
 import React from 'react';
-import RecipeSteps from '../RecipeSteps';
+import RecipeTemplate from '../RecipeTemplate';
 import RecipeIngredients from '../RecipeIngredients';
 
 export function BuffaloBaconChickenMac() {
     return (
         <div>
-            {/* INGREDIENTS */}
-            <RecipeIngredients
-                component_name={"Slow Coooked Chicken"}
+
+            <RecipeTemplate
+                component_names={["Slow Cooked Chicken", "Blended Buffalo Cheese Sauce", "Everything else"]}
                 ingredients={[
-                    "2 lb chicken breast",
-                    "1/2 cup buffalo sauce",
-                    "~2 tbsp worscheshire sauce",
-                    "1 tbsp chicken bouillon",
-                    "salt/pepper/garlic to taste",
-                    "3 orange bell peppers",
-                    "2 onions",
+                    [
+                        ["2", "lb chicken breast"],
+                        ["1/2", "cup buffalo sauce"],
+                        ["~2", "tbsp worscheshire sauce"],
+                        ["1", "tbsp chicken bouillon"],
+                        ["", "salt/pepper/garlic to taste"],
+                        ["3", "orange bell peppers"],
+                        ["2", "onions"],
+                    ],
+                    [
+                        ["800", "g 2% cottage cheese"],
+                        ["50", "g 1/3 fat cream cheese"],
+                        ["100", "g extra sharp cheddar cheese"],
+                        ["60", "g parmigiano reggiano (or normal parmesan cheese)"],
+                        ["120", "g buffalo sauce"],
+                        ["300", "ml milk"],
+                        ["30", "g honey"],
+                        ["", "salt & pepper to taste"],
+                    ],
+                    [
+                        ["672", "pasta, cooked to 50%"],
+                        ["18", "slices center cut bacon"],
+                        ["chopped chives (optional)"],
+                    ]
                 ]}
-            />
-
-            <RecipeIngredients
-                component_name={"Blended Buffalo Cheese Sauce"}
-                ingredients={[
-                    "800 g 2% cottage cheese",
-                    "50g 1/3 fat cream cheese",
-                    "100 g extra sharp cheddar cheese",
-                    "60g parmigiano reggiano (or normal parmesan cheese)",
-                    "120 g buffalo sauce",
-                    "300 ml milk",
-                    "30g honey",
-                    "salt & pepper to taste",
-                ]}
-            />
-
-            <RecipeIngredients
-                component_name={"Everything else"}
-                ingredients={[
-                    "672 pasta, cooked to 50%",
-                    "18 slices center cut bacon",
-                    "chopped chives (optional)",
-                ]}
-            />
-
-            {/* STEPS */}
-            <RecipeSteps
-                title={"Slow Cooked Chicken"}
+                step_titles={["Slow Cooked Chicken", "Blended Buffalo Cheese Sauce", "Final Steps"]}
                 steps={[
-                    "1. Roast onions and bell peppers in oven at 400F for 20-25 minutes", 
-                    "2. Add all ingredients to slow cooker and cook on low for 3-4 hours or high for 2-3 hours",
-                    "3. Shred chicken with some tongs",
-                ]}
-            />
-
-            <RecipeSteps
-                title={"Blended Buffalo Cheese Sauce"}
-                steps={[
-                    "1. Blend all ingredients together until smooth",
-                ]}
-            />
-
-            <RecipeSteps
-                title={"Final Steps"}
-                steps={[
-                    "1. Cook bacon on foil-lined baking sheet in oven at 400F for 20-30 minutes",
-                    "2. Cook pasta to 50% and drain",
-                    "3. Mix chicken mix with noodles, then mix in cheese sauce and cover/cook for 20-30 mins",
-                    "4. Mix in/top with crumbled bacon and chopped chives",
+                    [
+                        "Roast onions and bell peppers in oven at 400F for 20-25 minutes",
+                        "Add all ingredients to slow cooker and cook on low for 3-4 hours or high for 2-3 hours",
+                        "Shred chicken with some tongs",
+                    ],
+                    [
+                        "Blend all ingredients together until smooth",
+                    ],
+                    [
+                        "Cook bacon on foil-lined baking sheet in oven at 400F for 20-30 minutes",
+                        "Cook pasta to 50% and drain",
+                        "Mix chicken mix with noodles, then mix in cheese sauce and cover/cook for 20-30 mins",
+                        "Mix in/top with crumbled bacon and chopped chives",
+                    ]
                 ]}
             />
         </div>

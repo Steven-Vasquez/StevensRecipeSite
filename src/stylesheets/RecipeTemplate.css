@@ -5,6 +5,13 @@
     background-color: rgb(246, 255, 207);
 }
 
+.recipe-ingredients-container {
+    border: rgb(255, 184, 90) solid 5px;  
+    border-radius: 50px; 
+    background-color: #ffedda;
+    padding: 50px;
+}
+
 .red-title, .recipe-component-name, .recipe-measurement {
     font-family: 'Patua One', serif;
     color: #e60000;
@@ -22,12 +29,13 @@
     letter-spacing: 1.5px;
 }
 
-.recipe-ingredients {
+.recipe-ingredients, .step-content {
     margin-left: 10px;
     width: 100%;
+    font-weight: 450;
 }
 
-.ingredient-container {
+.ingredient-container, .step-container {
     display: flex;
     margin-bottom: 10px;
 
@@ -45,7 +53,23 @@
     font-size: .9375rem;
 }
 
-.ingredient-list {
+.ingredient-list, .step-list {
     list-style: none;
     padding: 0;
+}
+
+.step-number {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #e60000;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e60000;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.step-container {
+    margin-bottom: 30px;
 }
