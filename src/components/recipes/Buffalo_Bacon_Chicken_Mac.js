@@ -1,6 +1,5 @@
 import React from 'react';
 import RecipeTemplate from '../RecipeTemplate';
-import RecipeIngredients from '../RecipeIngredients';
 
 export function BuffaloBaconChickenMac() {
     return (
@@ -38,7 +37,7 @@ export function BuffaloBaconChickenMac() {
                 steps={[
                     [
                         "Roast onions and bell peppers in oven at 400F for 20-25 minutes",
-                        "Add all ingredients to slow cooker and cook on low for 3-4 hours or high for 2-3 hours",
+                        "Add all ingredients to slow cooker and cook on low for 3-4 hours or high for 2-3 hours (May need to add chicken stock/broth to submerge chicken nearly fully)",
                         "Shred chicken with some tongs",
                     ],
                     [
