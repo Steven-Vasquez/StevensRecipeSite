@@ -1,5 +1,5 @@
 .outer-recipe-container {
-    width: 70vw;
+    width: 900px;
     display: flex;
     margin: auto;
     /*background-color: rgb(246, 255, 207);*/
@@ -37,12 +37,13 @@
     margin-left: 10px;
     width: 100%;
     font-weight: 450;
+    line-height: 1.3rem;
 }
 
 .ingredient-container,
 .step-container {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
 }
 
@@ -83,13 +84,12 @@
 }
 
 .step-container {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .red-line {
     border-bottom: 5px solid #e60000;
-    width: 150px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 20px;
 }
 
@@ -105,7 +105,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    width:min-content;
+    width: min-content;
 }
 
 .collapse-icon {

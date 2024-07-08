@@ -13,7 +13,7 @@ export function ChickenTikka() {
                 recipeCredit={"Shan Chicken Tikka Mix"}
                 descriptionShort={"A quick and easy chicken tikka recipe that is perfect for a weeknight dinner. The lentils and garbonzo beans add a nice touch of protein and fiber to the meal. Serve with a side of cole slaw for a refreshing crunch!"}
                 tags={["Quick", "Easy", "Nutritious"]}
-                recipeImage={"/images/recipe_images/no_image_available.jpg"}
+                recipeImage={"../../images/no_image_available.jpg"}
                 prepTime={"30 min"}
                 totalTime={"6 hr 10 min"}
                 servings={30}
