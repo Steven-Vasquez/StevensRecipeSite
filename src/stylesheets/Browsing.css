@@ -3,8 +3,13 @@
   display: flex;
 }
 
-
 .main-content {
   flex: 1;
   padding: 20px;
+}
+
+.search-results-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }

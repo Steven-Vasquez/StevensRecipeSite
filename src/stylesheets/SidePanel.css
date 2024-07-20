@@ -3,13 +3,22 @@
   padding-right: 5px;
   background-color: #f0f0f0;
   overflow-y: auto;
-  height:  calc(100vh - 70px);;
-  transition: width 0.3s ease; /* Add a smooth transition effect */
+  height: calc(100vh - 70px);
+  ;
+  transition: width 0.3s ease;
+  /* Add a smooth transition effect */
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .toggle-button {
-  top: 10px;
-  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #3498db;
   color: #fff;
   padding: 8px;
@@ -21,10 +30,17 @@
   height: 100px;
 }
 
-.toggle-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.collapse-icon2 {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+
+.collapsed-icon2 {
+  transform: rotate(90deg);
+  /* Rotate the icon 90 degrees */
 }
 
 /* Adjust when side panel is closed */
@@ -68,11 +84,13 @@
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid #333;
-  transition: transform 0.3s ease; /* Add a smooth transition effect */
+  transition: transform 0.3s ease;
+  /* Add a smooth transition effect */
 }
 
 .filter-header.collapsed::after {
-  transform: translateY(-50%) rotate(-90deg); /* Rotate the arrow when collapsed */
+  transform: translateY(-50%) rotate(-90deg);
+  /* Rotate the arrow when collapsed */
 }
 
 

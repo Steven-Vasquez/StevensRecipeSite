@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../stylesheets/SidePanel.css";
 
 import FilterCategory from "./FilterCategory";
+import CollapseIcon from "../images/collapse_icon.png";
 
 const SidePanel = ({ onFilterChange }) => {
     const [filters, setFilters] = useState({
@@ -125,15 +126,29 @@ const SidePanel = ({ onFilterChange }) => {
                     ]}
                     onCheckboxChange={handleCheckboxChange}
                 />
-                <div>notable chefs (TODO)</div>
+
+                <FilterCategory
+                    category= "notableChefs"
+                    categoryLabel="Notable Chefs"
+                    icon="/images/filter_icons/chef.png"
+                    options={[
+                        "Gordon Ramsay", "Joshua Weissman", "Steven"
+                    ]}
+                    onCheckboxChange={handleCheckboxChange}
+                />
 
 
                 {/* Add more filter categories here */}
             </div>
+
             <div className="toggle-container">
-                <button className={`toggle-button `} onClick={toggleSidePanel}>
-                    {isSidePanelOpen ? ">" : "<"}
-                </button>
+                <div className="toggle-button" onClick={toggleSidePanel}>
+                    <img
+                        className={`collapse-icon2 ${isSidePanelOpen ? 'collapsed-icon2' : 'not-collapsed-icon2'}`}
+                        src={CollapseIcon}
+                        alt="collapse icon"
+                    />
+                </div>
             </div>
         </div>
     );
