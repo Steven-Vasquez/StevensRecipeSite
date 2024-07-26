@@ -48,97 +48,99 @@ const SidePanel = ({ onFilterChange }) => {
     return (
         <div className="side-panel-container">
             <div className={`side-panel ${isSidePanelOpen ? "with-side-panel" : "without-side-panel"}`}>
-                <h2>Filters</h2>
+                <p className="filter-title">Filter By</p>
 
-                {/* Dish Type Filter */}
-                <FilterCategory
-                    category="dishType"
-                    categoryLabel="Dish Type"
-                    icon="/images/filter_icons/dish_type.png"
-                    options={[
-                        "Breakfast", "Lunch Entree", "Dinner Entree",
-                        "Snack", "Side Dish", "Party Snack", "Dessert", "Veggies"
-                    ]}
-                    onCheckboxChange={handleCheckboxChange}
-                />
+                <div className="filter-categories">
+                    {/* Dish Type Filter */}
+                    <FilterCategory
+                        category="dishType"
+                        categoryLabel="Dish Type"
+                        icon="/images/filter_icons/dish_type.png"
+                        options={[
+                            "Breakfast", "Lunch Entree", "Dinner Entree",
+                            "Snack", "Side Dish", "Party Snack", "Dessert", "Veggies"
+                        ]}
+                        onCheckboxChange={handleCheckboxChange}
+                    />
 
-                {/* Cook Time Filter */}
-                <FilterCategory
-                    category="cookTime"
-                    categoryLabel="Cook Time"
-                    icon="/images/filter_icons/cook_time.png"
-                    options={[
-                        "Under 30 minutes", "30-60 minutes", "1-2 hours", "2+ hours"
-                    ]}
-                    onCheckboxChange={handleCheckboxChange}
-                />
+                    {/* Cook Time Filter */}
+                    <FilterCategory
+                        category="cookTime"
+                        categoryLabel="Cook Time"
+                        icon="/images/filter_icons/cook_time.png"
+                        options={[
+                            "Under 30 minutes", "30-60 minutes", "1-2 hours", "2+ hours"
+                        ]}
+                        onCheckboxChange={handleCheckboxChange}
+                    />
 
-                {/* Servings Filter */}
-                <FilterCategory
-                    category="servings"
-                    categoryLabel="Servings"
-                    icon="/images/filter_icons/servings.png"
-                    options={[
-                        "1-2", "2-4", "4-6", "6+"
-                    ]}
-                    onCheckboxChange={handleCheckboxChange}
-                />
+                    {/* Servings Filter */}
+                    <FilterCategory
+                        category="servings"
+                        categoryLabel="Servings"
+                        icon="/images/filter_icons/servings.png"
+                        options={[
+                            "1-2", "2-4", "4-6", "6+"
+                        ]}
+                        onCheckboxChange={handleCheckboxChange}
+                    />
 
-                {/* Allergies Filter */}
-                <FilterCategory
-                    category="allergies"
-                    categoryLabel="Allergies"
-                    icon="/images/filter_icons/allergies.png"
-                    options={[
-                        "Dairy", "Gluten", "Nuts", "Shellfish", "Soy", "Wheat"
-                    ]}
-                    onCheckboxChange={handleCheckboxChange}
-                />
+                    {/* Allergies Filter */}
+                    <FilterCategory
+                        category="allergies"
+                        categoryLabel="Allergies"
+                        icon="/images/filter_icons/allergies.png"
+                        options={[
+                            "Dairy", "Gluten", "Nuts", "Shellfish", "Soy", "Wheat"
+                        ]}
+                        onCheckboxChange={handleCheckboxChange}
+                    />
 
-                {/* Diet Types Filter */}
-                <FilterCategory
-                    category="dietType"
-                    categoryLabel="Diet Type"
-                    icon="/images/filter_icons/diet_type.png"
-                    options={[
-                        "Keto", "Paleo", "Vegan", "Vegetarian"
-                    ]}
-                    onCheckboxChange={handleCheckboxChange}
-                />
+                    {/* Diet Types Filter */}
+                    <FilterCategory
+                        category="dietType"
+                        categoryLabel="Diet Type"
+                        icon="/images/filter_icons/diet_type.png"
+                        options={[
+                            "Keto", "Paleo", "Vegan", "Vegetarian", "Bulk", "Cut"
+                        ]}
+                        onCheckboxChange={handleCheckboxChange}
+                    />
 
-                {/* Special Equipment Filter */}
-                <FilterCategory
-                    category="specialEquipment"
-                    categoryLabel="Special Equipment"
-                    icon="/images/filter_icons/equipment_needed.png"
-                    options={[
-                        "Blender", "Food Processor", "Instant Pot", "Slow Cooker"
-                    ]}
-                    onCheckboxChange={handleCheckboxChange}
-                />
+                    {/* Special Equipment Filter */}
+                    <FilterCategory
+                        category="specialEquipment"
+                        categoryLabel="Equipment"
+                        icon="/images/filter_icons/equipment_needed.png"
+                        options={[
+                            "Blender", "Food Processor", "Instant Pot", "Slow Cooker"
+                        ]}
+                        onCheckboxChange={handleCheckboxChange}
+                    />
 
-                <FilterCategory
-                    category="proteinType"
-                    categoryLabel="Protein Type"
-                    icon="/images/filter_icons/meat.png"
-                    options={[
-                        "Beef", "Chicken", "Fish", "Pork", "Tofu", "Turkey"
-                    ]}
-                    onCheckboxChange={handleCheckboxChange}
-                />
+                    <FilterCategory
+                        category="proteinType"
+                        categoryLabel="Protein Type"
+                        icon="/images/filter_icons/meat.png"
+                        options={[
+                            "Beef", "Chicken", "Fish", "Pork", "Tofu", "Turkey"
+                        ]}
+                        onCheckboxChange={handleCheckboxChange}
+                    />
 
-                <FilterCategory
-                    category= "notableChefs"
-                    categoryLabel="Notable Chefs"
-                    icon="/images/filter_icons/chef.png"
-                    options={[
-                        "Gordon Ramsay", "Joshua Weissman", "Steven"
-                    ]}
-                    onCheckboxChange={handleCheckboxChange}
-                />
+                    <FilterCategory
+                        category="notableChefs"
+                        categoryLabel="Notable Chefs"
+                        icon="/images/filter_icons/chef.png"
+                        options={[
+                            "Gordon Ramsay", "Joshua Weissman", "Steven"
+                        ]}
+                        onCheckboxChange={handleCheckboxChange}
+                    />
 
 
-                {/* Add more filter categories here */}
+                    {/* Add more filter categories here */}
+                </div>
             </div>
 
             <div className="toggle-container">
