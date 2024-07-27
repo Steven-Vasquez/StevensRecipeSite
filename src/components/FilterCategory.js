@@ -1,4 +1,5 @@
 import React from "react";
+
 export function FilterCategory({ category, categoryLabel, icon, options, onCheckboxChange }) {
 
     function toggleFilterCategory(event) {

@@ -2,15 +2,15 @@
   padding: 15px;
   font-size: 20px;
   margin: 0;
-
+  background-color: #8A8D90;
+  color: white;
 }
 
 .side-panel {
   width: 300px;
-  background-color: #f0f0f0;
   overflow-y: auto;
   overflow: overlay;
-  height: calc(100vh - 70px);
+  height: calc(100vh-70px);
   transition: width 0.3s ease;
 
   /* Add a smooth transition effect */
@@ -42,11 +42,11 @@
   height: 20px;
   cursor: pointer;
   transition: transform 0.3s ease;
-  transform: rotate(-90deg);
+  transform: rotate(90deg);
 }
 
 .collapsed-icon2 {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
   /* Rotate the icon 90 degrees */
 }
 
@@ -59,41 +59,54 @@
 
 /* FILTER CATEGORY CODE */
 
-.filter-category {
-  border-left: #bb4d4d solid 2px;
+.filter-category.not-collapsed {
+  border-left: #FC6363 solid 4px;
+  margin-left: -4px;
 }
 
 .filter-categories {
   margin-left: 15px;
   margin-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.outer-filter-categories {
+  border-left: #D3CDCD solid 2px;
+  border-right: #D3CDCD solid 2px;
+  border-bottom: #D3CDCD solid 2px;
+  min-height: calc(100vh - 70px);
 }
 
 .filter-header {
   cursor: pointer;
-  background-color: #efe4e4;
   position: relative;
   display: flex;
   align-items: center;
   height: 50px;
   border-top: #D3CDCD solid 2px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: space-between;
+  transition: background-color 0.5s ease;
+}
+
+.filter-header:hover {
+  background-color: #F0F0F0;
 }
 
 .filter-header-text {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   white-space: nowrap;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 15px;
 }
 
 .filter-icon {
   width: 35px;
-  margin: 5px;
-  padding-right: 5px;
 }
-
+/*
 .filter-header::after {
   content: "";
   position: absolute;
@@ -107,17 +120,32 @@
   border-top: 7px solid #333;
   transition: transform 0.3s ease;
   margin-right: 5px;
-  /* Add a smooth transition effect */
 }
 
 .filter-header.collapsed::after {
   transform: translateY(-50%) rotate(-90deg);
-  /* Rotate the arrow when collapsed */
+}
+*/
+.collapse-icon {
+  margin-left: 5px;
+  margin-top: 5px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transform: rotate(-90deg);
+  transition: transform 0.3s ease;
 }
 
+.collapsed-icon {
+  transform: rotate(0deg);
+  /* Rotate the icon 90 degrees */
+}
+
+.collapse-icon-container {
+  padding-right: 10px;
+}
 
 .filter-content {
-  display: none;
   padding: 10px;
 }
 
@@ -133,4 +161,10 @@
 
 .filter-category:last-child {
   border-bottom: #D3CDCD solid 2px;
+}
+
+.filter-flex {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
 }
