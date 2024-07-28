@@ -48,7 +48,7 @@ const SidePanel = ({ onFilterChange }) => {
     return (
         <div className="side-panel-container">
             <div className={`side-panel ${isSidePanelOpen ? "with-side-panel" : "without-side-panel"}`}>
-                <p className="filter-title">Filter By</p>
+                <p className="filter-title">Filters</p>
 
                 <div className="outer-filter-categories">
                     <div className="reset-button-container">
