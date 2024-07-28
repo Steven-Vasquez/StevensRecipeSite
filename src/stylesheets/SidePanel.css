@@ -10,7 +10,6 @@
   width: 300px;
   overflow-y: auto;
   overflow: overlay;
-  height: calc(100vh-70px);
   transition: width 0.3s ease;
 
   /* Add a smooth transition effect */
@@ -26,7 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3498db;
+  background-color: #D3CDCD;
   color: #fff;
   padding: 8px;
   border: none;
@@ -35,6 +34,11 @@
   cursor: pointer;
   outline: none;
   height: 100px;
+  transition: .3s;
+}
+
+.toggle-button:hover {
+  background-color: #aeb2b5;
 }
 
 .collapse-icon2 {
@@ -47,18 +51,39 @@
 
 .collapsed-icon2 {
   transform: rotate(-90deg);
-  /* Rotate the icon 90 degrees */
 }
 
-/* Adjust when side panel is closed */
 .without-side-panel {
   width: 0;
   padding-left: 0;
   padding-right: 0;
 }
 
-/* FILTER CATEGORY CODE */
+.reset-button-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;  
+}
 
+.reset-button {
+  background-color: #ffffff;
+  color: #0F6FCF;
+  border: #0F6FCF solid 1.5px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 100;
+  border-radius: 5px;
+  width: 266px;
+  cursor: pointer; 
+  transition: .3s;
+}
+
+.reset-button:hover {
+  background-color: #0F6FCF;
+  color: #ffffff;
+}
+
+/* FILTER CATEGORY CODE */
 .filter-category.not-collapsed {
   border-left: #FC6363 solid 4px;
   margin-left: -4px;
@@ -106,26 +131,7 @@
 .filter-icon {
   width: 35px;
 }
-/*
-.filter-header::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 7px solid #333;
-  transition: transform 0.3s ease;
-  margin-right: 5px;
-}
 
-.filter-header.collapsed::after {
-  transform: translateY(-50%) rotate(-90deg);
-}
-*/
 .collapse-icon {
   margin-left: 5px;
   margin-top: 5px;

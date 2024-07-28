@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../stylesheets/SidePanel.css";
 
-import FilterCategory from "./FilterCategory2";
+import FilterCategory from "./FilterCategory";
 import CollapseIcon from "../images/collapse_icon.png";
 
 const SidePanel = ({ onFilterChange }) => {
@@ -51,15 +51,17 @@ const SidePanel = ({ onFilterChange }) => {
                 <p className="filter-title">Filter By</p>
 
                 <div className="outer-filter-categories">
+                    <div className="reset-button-container">
+                        <button className="reset-button">Clear all</button>
+                    </div>
                     <div className="filter-categories">
-                        {/* Dish Type Filter */}
+                        {/* Allergies Filter */}
                         <FilterCategory
-                            category="dishType"
-                            categoryLabel="Dish Type"
-                            icon="/images/filter_icons/dish_type.png"
+                            category="allergies"
+                            categoryLabel="Allergies"
+                            icon="/images/filter_icons/allergies.png"
                             options={[
-                                "Breakfast", "Lunch Entree", "Dinner Entree",
-                                "Snack", "Side Dish", "Party Snack", "Dessert", "Veggies"
+                                "Dairy", "Gluten", "Nuts", "Shellfish", "Soy", "Wheat"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -75,28 +77,6 @@ const SidePanel = ({ onFilterChange }) => {
                             onCheckboxChange={handleCheckboxChange}
                         />
 
-                        {/* Servings Filter */}
-                        <FilterCategory
-                            category="servings"
-                            categoryLabel="Servings"
-                            icon="/images/filter_icons/servings.png"
-                            options={[
-                                "1-2", "2-4", "4-6", "6+"
-                            ]}
-                            onCheckboxChange={handleCheckboxChange}
-                        />
-
-                        {/* Allergies Filter */}
-                        <FilterCategory
-                            category="allergies"
-                            categoryLabel="Allergies"
-                            icon="/images/filter_icons/allergies.png"
-                            options={[
-                                "Dairy", "Gluten", "Nuts", "Shellfish", "Soy", "Wheat"
-                            ]}
-                            onCheckboxChange={handleCheckboxChange}
-                        />
-
                         {/* Diet Types Filter */}
                         <FilterCategory
                             category="dietType"
@@ -104,6 +84,18 @@ const SidePanel = ({ onFilterChange }) => {
                             icon="/images/filter_icons/diet_type.png"
                             options={[
                                 "Keto", "Paleo", "Vegan", "Vegetarian", "Bulk", "Cut"
+                            ]}
+                            onCheckboxChange={handleCheckboxChange}
+                        />
+
+                        {/* Dish Type Filter */}
+                        <FilterCategory
+                            category="dishType"
+                            categoryLabel="Dish Type"
+                            icon="/images/filter_icons/dish_type.png"
+                            options={[
+                                "Breakfast", "Lunch Entree", "Dinner Entree",
+                                "Snack", "Side Dish", "Party Snack", "Dessert", "Veggies"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -119,16 +111,7 @@ const SidePanel = ({ onFilterChange }) => {
                             onCheckboxChange={handleCheckboxChange}
                         />
 
-                        <FilterCategory
-                            category="proteinType"
-                            categoryLabel="Protein Type"
-                            icon="/images/filter_icons/meat.png"
-                            options={[
-                                "Beef", "Chicken", "Fish", "Pork", "Tofu", "Turkey"
-                            ]}
-                            onCheckboxChange={handleCheckboxChange}
-                        />
-
+                        {/* Notable Chefs Filter */}
                         <FilterCategory
                             category="notableChefs"
                             categoryLabel="Notable Chefs"
@@ -139,6 +122,27 @@ const SidePanel = ({ onFilterChange }) => {
                             onCheckboxChange={handleCheckboxChange}
                         />
 
+                        {/* Protein Type Filter */}
+                        <FilterCategory
+                            category="proteinType"
+                            categoryLabel="Protein Type"
+                            icon="/images/filter_icons/meat.png"
+                            options={[
+                                "Beef", "Chicken", "Fish", "Pork", "Tofu", "Turkey"
+                            ]}
+                            onCheckboxChange={handleCheckboxChange}
+                        />
+
+                        {/* Servings Filter */}
+                        <FilterCategory
+                            category="servings"
+                            categoryLabel="Servings"
+                            icon="/images/filter_icons/servings.png"
+                            options={[
+                                "1-2", "2-4", "4-6", "6+"
+                            ]}
+                            onCheckboxChange={handleCheckboxChange}
+                        />
 
                         {/* Add more filter categories here */}
                     </div>

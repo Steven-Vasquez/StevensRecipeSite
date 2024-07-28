@@ -6,7 +6,6 @@ import { Suspense } from 'react';
 import Home from './pages/Home';
 import Browsing from './pages/Browsing';
 import About from './pages/About';
-import RecipeOutline from './pages/RecipeOutline2';
 
 import Navbar from './components/Navbar';
 
@@ -22,7 +21,6 @@ function App() {
           <Route path="/" element={<Home/>} /> 
           <Route path="/about" element={<About/>} />
           <Route path="/browse" element={<Browsing/>} />
-          <Route path="/recipe-example" element={<RecipeOutline/>} />
           {recipeRoutesConfig.map((route, index) => (
             <Route key={index} path={route.path} element={<route.component />} />
           ))}

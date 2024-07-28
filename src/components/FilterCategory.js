@@ -1,40 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
+import SmoothCollapse from "react-smooth-collapse";
+import CollapseIcon from "../images/collapse_icon.png";
+
+import "../stylesheets/SidePanel.css";
 
 export function FilterCategory({ category, categoryLabel, icon, options, onCheckboxChange }) {
+    const [isCollapsed, setIsCollapsed] = useState(false);
 
-    function toggleFilterCategory(event) {
-        var header = event.currentTarget;
-        var content = header.nextElementSibling;
-        if (content) {
-            if (content.style.display === "block") {
-                content.style.display = "none";
-                header.classList.add("collapsed"); // Add the collapsed class
-            } else {
-                content.style.display = "block";
-                header.classList.remove("collapsed"); // Remove the collapsed class
-            }
-        }
+    function toggleFilterCollapse() {
+        setIsCollapsed(!isCollapsed);
+        console.log("Filter collapsed: " + isCollapsed);
     }
 
     return (
-        <div className="filter-category">
-            <div className="filter-header" onClick={toggleFilterCategory}>
-                
-                <div className="filter-header-text">{categoryLabel}</div>
-                {icon && <img src={icon} alt={categoryLabel} className="filter-icon" />}
+        <div className={`filter-category ${isCollapsed ? "not-collapsed" : "collapsed"}`}>
+            <div className="filter-header" onClick={toggleFilterCollapse}>
+
+                <div className="filter-flex">
+                    <div className="filter-header-text">{categoryLabel}</div>
+                    {icon && <img src={icon} alt={categoryLabel} className="filter-icon" />}
+                </div>
+
+                <div className="collapse-icon-container">
+                    <img
+                        className={`collapse-icon ${isCollapsed ? 'collapsed-icon' : 'not-collapsed-icon'}`}
+                        src={CollapseIcon}
+                        alt="collapse icon"
+                    />
+                </div>
             </div>
-            <div className="filter-content">
-                {options.map((option, index) => (
-                    <label key={index}>
-                        <input
-                            type="checkbox"
-                            value={option}
-                            onChange={(event) => onCheckboxChange(event, category)}
-                        />
-                        {option}
-                    </label>
-                ))}
-            </div>
+            <SmoothCollapse expanded={isCollapsed}>
+                <div className="filter-content">
+                    {options.map((option, index) => (
+                        <label key={index}>
+                            <input
+                                type="checkbox"
+                                value={option}
+                                onChange={(event) => onCheckboxChange(event, category)}
+                            />
+                            {option}
+                        </label>
+                    ))}
+                </div>
+            </SmoothCollapse>
         </div>
     );
 };
