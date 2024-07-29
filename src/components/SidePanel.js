@@ -48,11 +48,14 @@ const SidePanel = ({ onFilterChange }) => {
     return (
         <div className="side-panel-container">
             <div className={`side-panel ${isSidePanelOpen ? "with-side-panel" : "without-side-panel"}`}>
-                <p className="filter-title">Filters</p>
+                <p className={`filter-title ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Filters</p>
 
-                <div className="outer-filter-categories">
-                    <div className="reset-button-container">
-                        <button className="reset-button">Clear all</button>
+                <div className={`outer-filter-categories ${isSidePanelOpen ? "with-border" : "no-border"}`}>
+                    <div className="outer-button-container">
+                        <div className="buttons-container">
+                            <button className={`reset-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Clear all</button>
+                            <button className={`apply-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Apply</button>
+                        </div>
                     </div>
                     <div className="filter-categories">
                         {/* Allergies Filter */}

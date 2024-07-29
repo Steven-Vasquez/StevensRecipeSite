@@ -5,6 +5,8 @@
   height: 50px;
   position: relative;
   background-color: #EDAA25;
+  position: sticky;
+  top: 0;
 }
 
 .navbar-container {

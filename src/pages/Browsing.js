@@ -39,6 +39,22 @@ const Browsing = () => {
           <BrowsingPreview />
           <BrowsingPreview />
           <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          <BrowsingPreview />
+          
 
         </div>
       </div>

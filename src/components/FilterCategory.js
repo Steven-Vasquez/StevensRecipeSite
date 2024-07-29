@@ -17,8 +17,9 @@ export function FilterCategory({ category, categoryLabel, icon, options, onCheck
             <div className="filter-header" onClick={toggleFilterCollapse}>
 
                 <div className="filter-flex">
+                {icon && <img src={icon} alt={categoryLabel} className="filter-icon" />}
                     <div className="filter-header-text">{categoryLabel}</div>
-                    {icon && <img src={icon} alt={categoryLabel} className="filter-icon" />}
+                    
                 </div>
 
                 <div className="collapse-icon-container">

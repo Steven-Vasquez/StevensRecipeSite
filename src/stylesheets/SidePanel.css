@@ -1,26 +1,26 @@
 .filter-title {
   padding: 15px;
   font-size: 20px;
+  font-weight: 500;
   margin: 0;
-  background-color: #e8e5e5;
-  color: black;
+  background-color: rgb(254, 254, 254);
+  color: rgb(61, 61, 61);
   text-align: center;
   border-right: #D3CDCD solid 2px;
 }
 
 .side-panel {
   width: 275px;
-  overflow-y: auto;
-  overflow: overlay;
+  
   transition: width 0.3s ease;
-
+  height: calc(100vh - 70px);
+  position: sticky;
   /* Add a smooth transition effect */
+  top: 70px;
 }
 
 .toggle-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
 }
 
 .toggle-button {
@@ -37,9 +37,10 @@
   outline: none;
   height: 100px;
   transition: .3s;
-  transform: translateX(-2px);
-  position: relative;
+  position: sticky;
   background-color: rgb(254, 254, 254);
+  top: calc((100vh - 70px)/2);
+  transform: translateX(-2px);
 }
 
 .toggle-button:hover {
@@ -64,10 +65,32 @@
   padding-right: 0;
 }
 
-.reset-button-container {
+.apply-button, .reset-button {
+  opacity: 1;
+  transition: opacity .01s ease-in-out;
+}
+.text-disappear {
+  pointer-events: none;
+  opacity: 0 !important;
+  border-right: #D3CDCD solid 2px;
+  transition: opacity .01s ease-in-out;
+}
+
+.no-border {
+  border-right: none !important;
+}
+
+.outer-button-container {
   display: flex;
   justify-content: center;
-  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 30px);
+  justify-content: space-between;
 }
 
 .reset-button {
@@ -78,13 +101,31 @@
   font-size: 18px;
   font-weight: 100;
   border-radius: 5px;
-  width: calc(100% - 30px);
+  width: calc(100% - 125px);
   cursor: pointer;
   transition: .3s;
 }
 
 .reset-button:hover {
   background-color: #0F6FCF;
+  color: #ffffff;
+}
+
+.apply-button {
+  background-color: #ffffff;
+  color: #0FCF6F;
+  border: #0FCF6F solid 1.5px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 100;
+  border-radius: 5px;
+  width: calc(100% - 125px);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.apply-button:hover {
+  background-color: #0FCF6F;
   color: #ffffff;
 }
 
@@ -96,16 +137,15 @@
 
 .filter-categories {
   margin-left: 15px;
-  padding-top: 10px;
   padding-bottom: 10px;
+  height: calc(100vh - 70px - 54px - 30px - 20px);
+  overflow: overlay;
+  position: sticky;
 }
 
 .outer-filter-categories {
-  border-left: #D3CDCD solid 2px;
   border-right: #D3CDCD solid 2px;
-  border-bottom: #D3CDCD solid 2px;
   background-color: rgb(254, 254, 254);
-  min-height: calc(100vh - 70px);
 }
 
 .filter-header {
@@ -144,7 +184,6 @@
   font-weight: 500;
   white-space: nowrap;
   padding-left: 10px;
-  padding-right: 15px;
   color: #6a6c6e;
 }
 
