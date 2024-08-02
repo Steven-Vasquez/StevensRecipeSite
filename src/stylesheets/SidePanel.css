@@ -132,11 +132,15 @@
 /* FILTER CATEGORY CODE */
 .filter-category.not-collapsed {
   border-left: #FC6363 solid 4px;
-  margin-left: -4px;
+  position: relative;
+}
+
+.filter-category.collapsed {
+  margin-left: 4px;
 }
 
 .filter-categories {
-  margin-left: 15px;
+  margin-left: 11px;
   padding-bottom: 10px;
   height: calc(100vh - 70px - 54px - 30px - 20px);
   overflow: overlay;
