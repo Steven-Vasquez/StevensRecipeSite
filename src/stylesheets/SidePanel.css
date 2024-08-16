@@ -20,7 +20,7 @@
 }
 
 .toggle-container {
-  
+  background-color: antiquewhite;
 }
 
 .toggle-button {
@@ -30,7 +30,7 @@
   border: #D3CDCD solid 2px;
   border-left: #D3CDCD dashed 2px;
   color: #fff;
-  padding: 8px;
+  padding: 5px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   cursor: pointer;
