@@ -21,6 +21,7 @@
 
 .toggle-container {
   background-color: antiquewhite;
+  width: 32px;
 }
 
 .toggle-button {
@@ -36,6 +37,7 @@
   cursor: pointer;
   outline: none;
   height: 100px;
+  width: 20px;
   transition: .3s;
   position: sticky;
   background-color: rgb(254, 254, 254);

@@ -6,7 +6,7 @@ import "../stylesheets/SidePanel.css";
 
 import SidePanel from "../components/SidePanel";
 import BrowsingPreview from "../components/BrowsingPreview";
-import SearchIcon from "../images/search_icon.png"
+import SearchIcon from "../images/search_icon_white.png"
 
 const Browsing = () => {
   const [activeFilters, setActiveFilters] = useState({
@@ -32,18 +32,14 @@ const Browsing = () => {
 
       {/* Main Content (Recipe List) */}
       <div className="main-content">
-        
+
         {/* Search Bar */}
-        <div className="filter-settings-container">
-          <div className="search-bar">
-            <input type="text" placeholder="Search..." className="search-input" />
-            <div className="search-icon-container">
-              <img
-                className="search-icon"
-                src={SearchIcon}
-                alt="search icon"
-              />
-            </div>
+        <div className="filter-settings">
+          <div class="search-container">
+            <input type="text" placeholder="Search Recipes" class="search-input" />
+            <button class="search-button-container">
+              <img src={SearchIcon} alt="Search" className="search-icon"/>
+            </button>
           </div>
         </div>
 
