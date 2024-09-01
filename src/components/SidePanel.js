@@ -86,7 +86,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Diet Type"
                             icon="/images/filter_icons/diet_type.png"
                             options={[
-                                "Keto", "Paleo", "Vegan", "Vegetarian", "Bulk", "Cut"
+                                "Vegan", "Vegetarian", "Pescatarian", "Bulk", "Cut"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -97,7 +97,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Dish Type"
                             icon="/images/filter_icons/dish_type.png"
                             options={[
-                                "Breakfast", "Lunch Entree", "Dinner Entree",
+                                "Breakfast", "Lunch", "Dinner",
                                 "Snack", "Side Dish", "Party Snack", "Dessert", "Veggies"
                             ]}
                             onCheckboxChange={handleCheckboxChange}

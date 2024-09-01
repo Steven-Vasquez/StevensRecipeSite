@@ -32,9 +32,9 @@ export function DadsMeatSauce() {
                             ["6-8", "cloves of garlic, minced"],
                             ["?", "tbps of italian seasoning"],
                             ["2-3", "bay leaves"],
-                            ["", "salt & pepper to taste"],
-                            ["", "olive oil"]
-                            ["", "red wine (optional)"]
+                            ["?", "salt & pepper to taste"],
+                            ["?", "olive oil"],
+                            ["?", "red wine (optional)"]
                         ],
                     ]}
                     step_titles={["Sauce"]}
@@ -43,8 +43,10 @@ export function DadsMeatSauce() {
                             "After seasoning the ribs with salt and pepper, sear both the ribs and italian sausages in olive oil. Remove and set aside.",
                             "In a large pot, saute the onions and garlic in olive oil until fragrant/slightly translucent.",
                             "OPTIONALLY, add red wine, and let it reduce.",
-                            "Add the canned tomatoes (not sauce/paste), 2 cans worth of water, and seasonings. Reduce heat to low and cover pot.",
-                            "Stir approximately every 30 minutes for 6-12 hours, allowing the meat to braise and the liqid to reduce."
+                            "Add the canned tomatoes (not sauce/paste), 2 cans worth of water, ribs/sausage, and seasonings. Reduce heat to low and cover pot.",
+                            "Stir approximately every 30 minutes for 6-12 hours, allowing the meat to braise and the liquid to reduce.",
+                            "About two hours before serving, add the tomato sauce and paste. Stir well and continue to reduce. Sauce should be thick and not watery.",
+                            "Remove bones and bay leaves before serving. Serve over pasta and (optional) garlic bread."
                         ]
                     ]}
                 />                
