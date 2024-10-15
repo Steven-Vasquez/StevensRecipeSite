@@ -1,0 +1,61 @@
+{
+    "id": 1,
+    "recipe_name": "(Recipe Name)",
+    "rating": 5,
+    "author_name": "(Original recipe author)",
+    "credit_link": "(Link to original recipe)",
+    "recipe_description": "(Description of the recipe)",
+    "recipe_image_url": "(URL to the main recipe image)",
+    "prep_time_mins": "",
+    "total_time_mins": "",
+    "servings": 0,
+    "notable_chef_id": 1,
+    "recipe_components": [
+        {
+            "component_name": "(Name of component to list ingredients for)",
+            "ingredients": [
+                {
+                    "quantity": 1,
+                    "name": "(measurement) (ingredient name)"
+                },
+                {
+                    "quantity": 1,
+                    "name": "(measurement) (ingredient name)"
+                }
+            ]
+        }
+    ],
+    "instructions": [
+        {
+            "step_title": "(step component title)",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "instruction": "(Step 1 instruction)",
+                    "step_images": [
+                        "(URL to step image)"
+                    ]
+                }
+            ]
+        }
+    ],
+
+    "tags": {
+        "diet_type": [
+            "vegetarian"
+        ],
+        "dish_type": [
+            "dinner"
+        ],
+        "allergies": [
+            "gluten"
+        ],
+        "equipment": [
+            "pan",
+            "pot"
+        ],
+        "protein_type": [
+            "pork"
+        ]
+    }
+}

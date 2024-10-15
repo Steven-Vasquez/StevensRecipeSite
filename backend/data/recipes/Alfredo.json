@@ -1,0 +1,85 @@
+{
+    "id": 1,
+    "name": "Alfredo Sauce",
+    "description": "A rich creamy pasta sauce made with butter and cheese.",
+    "author": "Joshua Weissman",
+    "rating": 5,
+    "prep_time": "",
+    "total_time": "",
+    "servings": 0,
+    "recipe_components": [
+        {
+            "component_name": "(",
+            "component": [
+                {
+                    "name": "Spaghetti",
+                    "quantity": "400g"
+                },
+                {
+                    "name": "Pancetta",
+                    "quantity": "150g"
+                },
+                {
+                    "name": "Eggs",
+                    "quantity": "4 large"
+                },
+                {
+                    "name": "Parmesan Cheese",
+                    "quantity": "100g"
+                },
+                {
+                    "name": "Black Pepper",
+                    "quantity": "To taste"
+                }
+            ]
+        }
+    ],
+    "instructions": [
+        {
+            "step_number": 1,
+            "instruction": "Cook the spaghetti in a large pot of salted boiling water until al dente."
+        },
+        {
+            "step_number": 2,
+            "instruction": "While the pasta cooks, fry the pancetta in a pan until crispy."
+        },
+        {
+            "step_number": 3,
+            "instruction": "Whisk the eggs and parmesan in a bowl. Season with pepper."
+        },
+        {
+            "step_number": 4,
+            "instruction": "Drain the pasta and mix immediately with pancetta. Turn off the heat."
+        },
+        {
+            "step_number": 5,
+            "instruction": "Add the egg mixture to the pasta and stir quickly until creamy."
+        }
+    ],
+    "images": {
+        "main_image": "spaghetti_carbonara.jpg",
+        "step_images": [
+            "step1.jpg",
+            "step2.jpg",
+            "step3.jpg"
+        ]
+    },
+    "tags": {
+        "diet_type": [
+            "vegetarian"
+        ],
+        "dish_type": [
+            "dinner"
+        ],
+        "allergies": [
+            "gluten"
+        ],
+        "equipment": [
+            "pan",
+            "pot"
+        ],
+        "protein_type": [
+            "pork"
+        ]
+    }
+}

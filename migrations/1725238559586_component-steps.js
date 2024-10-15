@@ -4,12 +4,12 @@
 exports.shorthands = undefined;
 
 exports.up = (pgm) => {
-  pgm.createTable('steps', {
+  pgm.createTable('component_steps', {
     step_id: 'id',
-    recipe_id: {
+    component_id: {
       type: 'integer',
       notNull: true,
-      references: '"recipes"',
+      references: '"recipe_components"',
       onDelete: 'CASCADE',
     },
     step_number: {
@@ -22,12 +22,12 @@ exports.up = (pgm) => {
     },
   });
 
-  // Ensure that each recipe has unique step numbers
-  pgm.addConstraint('steps', 'unique_recipe_step_number', {
-    unique: ['recipe_id', 'step_number'],
+  // Ensure unique step numbers within each component
+  pgm.addConstraint('component_steps', 'unique_component_step_number', {
+    unique: ['component_id', 'step_number'],
   });
 };
 
 exports.down = (pgm) => {
-  pgm.dropTable('steps');
+  pgm.dropTable('component_steps');
 };
