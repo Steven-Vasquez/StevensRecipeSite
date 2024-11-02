@@ -20,13 +20,8 @@ exports.up = (pgm) => {
       notNull: true,
     },
     quantity_numerator: {
-      type: 'integer',
+      type: 'varchar(50)',
       notNull: true,
-    },
-    quantity_denominator: {
-      type: 'integer',
-      notNull: true,
-      default: 1,
     },
   });
 

@@ -18,7 +18,8 @@ exports.up = (pgm) => {
         type: 'integer',
         references: 'notable_chefs',
         onDelete: 'SET NULL'
-      }
+      },
+      work_in_progress: { type: 'boolean', default: false },
     });
   };
   

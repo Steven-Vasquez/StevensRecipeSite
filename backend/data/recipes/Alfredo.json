@@ -1,85 +1,115 @@
 {
     "id": 1,
-    "name": "Alfredo Sauce",
-    "description": "A rich creamy pasta sauce made with butter and cheese.",
-    "author": "Joshua Weissman",
-    "rating": 5,
-    "prep_time": "",
-    "total_time": "",
+    "recipe_name": "Alfredo Sauce",
+    "rating": 4,
+    "author_name": "Joshua Weissman",
+    "credit_link": "https://www.joshuaweissman.com/post/perfect-fettuccine-alfredo",
+    "recipe_description": "A rich creamy pasta sauce made with butter and cheese.",
+    "recipe_image_url": "/images/salad.jpg",
+    "prep_time_mins": 10,
+    "total_time_mins": 0,
     "servings": 0,
+    "notable_chef_id": 3,
+    "work_in_progress": true,
     "recipe_components": [
         {
-            "component_name": "(",
-            "component": [
+            "component_name": "Sauce",
+            "ingredients": [
                 {
-                    "name": "Spaghetti",
-                    "quantity": "400g"
+                    "quantity": "14",
+                    "name": "oz (400g) Fettuccine (ingredient name)"
                 },
                 {
-                    "name": "Pancetta",
-                    "quantity": "150g"
+                    "quantity": "1/2",
+                    "name": "cup unsalted butter"
                 },
                 {
-                    "name": "Eggs",
-                    "quantity": "4 large"
+                    "quantity": "1/4",
+                    "name": "cup heavy whipping cream"
                 },
                 {
-                    "name": "Parmesan Cheese",
-                    "quantity": "100g"
+                    "quantity": "5",
+                    "name": "cloves garlic, finely minced"
                 },
                 {
-                    "name": "Black Pepper",
-                    "quantity": "To taste"
+                    "quantity": "2",
+                    "name": "tsp finely chopped thyme"
+                },
+                {
+                    "quantity": "",
+                    "name": "Salt and pepper to taste"
+                },
+                {
+                    "quantity": "2",
+                    "name": "cups parmigiano reggiano, finely grated"
                 }
             ]
         }
     ],
     "instructions": [
         {
-            "step_number": 1,
-            "instruction": "Cook the spaghetti in a large pot of salted boiling water until al dente."
-        },
-        {
-            "step_number": 2,
-            "instruction": "While the pasta cooks, fry the pancetta in a pan until crispy."
-        },
-        {
-            "step_number": 3,
-            "instruction": "Whisk the eggs and parmesan in a bowl. Season with pepper."
-        },
-        {
-            "step_number": 4,
-            "instruction": "Drain the pasta and mix immediately with pancetta. Turn off the heat."
-        },
-        {
-            "step_number": 5,
-            "instruction": "Add the egg mixture to the pasta and stir quickly until creamy."
+            "step_title": "Whole Recipe",
+            "steps": [
+                {
+                    "step_number": 1,
+                    "instruction": "Place fettuccine in a pot of boiling water that’s been seasoned generously with salt. Cook according to package instructions or until done.",
+                    "step_images": [
+                        ""
+                    ]
+                },
+                {
+                    "step_number": 2,
+                    "instruction": "In a large pan, add heavy whipping cream and unsalted butter set to medium heat. Constantly stir the pan until all the butter has melted.",
+                    "step_images": [
+                        ""
+                    ]
+                },
+                {
+                    "step_number": 3,
+                    "instruction": "Increase the heat slightly and bring to a gentle simmer. Simmer, stirring occasionally, for 3-4 minutes or until lightly thickened.",
+                    "step_images": [
+                        ""
+                    ]
+                },
+                {
+                    "step_number": 4,
+                    "instruction": "Cut off the heat and add in parmigiano reggiano, chopped thyme, and finely chopped garlic. Vigorously stir together until thoroughly combined. Season to taste with salt and pepper.",
+                    "step_images": [
+                        ""
+                    ]
+                },
+                {
+                    "step_number": 5,
+                    "instruction": "Reserve 3/4 cup of pasta water. Drain the pasta.",
+                    "step_images": [
+                        ""
+                    ]
+                },
+                {
+                    "step_number": 6,
+                    "instruction": "Add pasta to the alfredo sauce. Toss and using pasta water as needed to fully emulsify.",
+                    "step_images": [
+                        ""
+                    ]
+                } 
+            ]
         }
     ],
-    "images": {
-        "main_image": "spaghetti_carbonara.jpg",
-        "step_images": [
-            "step1.jpg",
-            "step2.jpg",
-            "step3.jpg"
-        ]
-    },
+
     "tags": {
         "diet_type": [
-            "vegetarian"
+            "bulk"
         ],
         "dish_type": [
-            "dinner"
+            "lunch", "dinner"
         ],
         "allergies": [
-            "gluten"
+            "dairy"
         ],
         "equipment": [
-            "pan",
-            "pot"
         ],
         "protein_type": [
-            "pork"
+            "chicken"
         ]
     }
 }

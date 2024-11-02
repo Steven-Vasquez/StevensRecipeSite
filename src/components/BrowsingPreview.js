@@ -1,12 +1,11 @@
 import "../stylesheets/BrowsingPreview.css";
-import FillerPhoto from "../images/salad.jpg";
 
 const BrowsingPreview = () => {
   return (
     <div className="preview-container">
         <div>
             <img
-                src={FillerPhoto}
+                src={"/images/salad.jpg"}
                 alt="recipe"
                 className="preview-image"
             /> 

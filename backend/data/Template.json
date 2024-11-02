@@ -6,20 +6,21 @@
     "credit_link": "(Link to original recipe)",
     "recipe_description": "(Description of the recipe)",
     "recipe_image_url": "(URL to the main recipe image)",
-    "prep_time_mins": "",
-    "total_time_mins": "",
+    "prep_time_mins": 0,
+    "total_time_mins": 0,
     "servings": 0,
     "notable_chef_id": 1,
+    "work_in_progress": true,
     "recipe_components": [
         {
             "component_name": "(Name of component to list ingredients for)",
             "ingredients": [
                 {
-                    "quantity": 1,
+                    "quantity": "1",
                     "name": "(measurement) (ingredient name)"
                 },
                 {
-                    "quantity": 1,
+                    "quantity": "1",
                     "name": "(measurement) (ingredient name)"
                 }
             ]
@@ -42,20 +43,20 @@
 
     "tags": {
         "diet_type": [
-            "vegetarian"
+            ""
         ],
         "dish_type": [
-            "dinner"
+            ""
         ],
         "allergies": [
-            "gluten"
+            ""
         ],
         "equipment": [
-            "pan",
-            "pot"
+            "",
+            ""
         ],
         "protein_type": [
-            "pork"
+            ""
         ]
     }
 }
