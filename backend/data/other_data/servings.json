@@ -1,0 +1,18 @@
+[
+    {
+        "serving_id": 1,
+        "servings": "1-2"
+    },
+    {
+        "serving_id": 2,
+        "servings": "3-4"
+    },
+    {
+        "serving_id": 3,
+        "servings": "5-6"
+    },
+    {
+        "serving_id": 4,
+        "servings": "6+"
+    }
+]

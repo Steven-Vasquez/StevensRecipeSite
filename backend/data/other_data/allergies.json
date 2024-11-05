@@ -1,0 +1,14 @@
+[
+    {
+        "allergy_id": 1,
+        "allergy_name": "Dairy"
+    },
+    {
+        "allergy_id": 8,
+        "allergy_name": "Nuts"
+    },
+    {
+        "allergy_id": 9,
+        "allergy_name": "Shellfish"
+    }
+]

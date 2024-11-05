@@ -1,0 +1,18 @@
+[
+    {
+        "diet_id": 1,
+        "diet_type": "Vegan"
+    },
+    {
+        "diet_id": 2,
+        "diet_type": "Vegetarian"
+    },
+    {
+        "diet_id": 3,
+        "diet_type": "Bulk"
+    },
+    {
+        "diet_id": 4,
+        "diet_type": "Cut"
+    }
+]

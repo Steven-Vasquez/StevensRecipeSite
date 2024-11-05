@@ -1,0 +1,18 @@
+[
+    {
+        "time_id": 1,
+        "cook_time": "<30 minutes"
+    },
+    {
+        "time_id": 2,
+        "cook_time": "30-60 minutes"
+    },
+    {
+        "time_id": 3,
+        "cook_time": "1-2 hours"
+    },
+    {
+        "time_id": 4,
+        "cook_time": "2+ hours"
+    }
+]

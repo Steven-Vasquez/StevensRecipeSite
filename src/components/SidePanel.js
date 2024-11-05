@@ -64,7 +64,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Allergies"
                             icon="/images/filter_icons/allergies.png"
                             options={[
-                                "Dairy", "Gluten", "Nuts", "Shellfish", "Soy", "Wheat"
+                                "Dairy", "Nuts", "Shellfish"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -86,7 +86,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Diet Type"
                             icon="/images/filter_icons/diet_type.png"
                             options={[
-                                "Vegan", "Vegetarian", "Pescatarian", "Bulk", "Cut"
+                                "Vegan", "Vegetarian", "Bulk", "Cut"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -97,8 +97,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Dish Type"
                             icon="/images/filter_icons/dish_type.png"
                             options={[
-                                "Breakfast", "Lunch", "Dinner",
-                                "Snack", "Side Dish", "Party Snack", "Dessert", "Veggies"
+                                "Breakfast", "Main Course", "Side Dish", "Dessert", "Snack", "Party Snack", "Veggies", "Soup & Stew", "Pasta", "Salad"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -109,7 +108,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Equipment"
                             icon="/images/filter_icons/equipment_needed.png"
                             options={[
-                                "Blender", "Food Processor", "Instant Pot", "Slow Cooker"
+                                "Blender", "Food Processor", "Instant Pot", "Air Fryer", "Slow Cooker"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -131,7 +130,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Protein Type"
                             icon="/images/filter_icons/meat.png"
                             options={[
-                                "Beef", "Chicken", "Fish", "Pork", "Tofu", "Turkey"
+                                "Chicken", "Beef", "Pork", "Fish", "Shellfish", "Turkey", "Tofu"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -142,7 +141,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Servings"
                             icon="/images/filter_icons/servings.png"
                             options={[
-                                "1-2", "2-4", "4-6", "6+"
+                                "1-2", "3-4", "4-6", "6+"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />

@@ -1,0 +1,30 @@
+[
+    {
+        "protein_id": 1,
+        "protein_type": "Chicken"
+    },
+    {
+        "protein_id": 2,
+        "protein_type": "Beef"
+    },
+    {
+        "protein_id": 3,
+        "protein_type": "Pork"
+    },
+    {
+        "protein_id": 4,
+        "protein_type": "Fish"
+    },
+    {
+        "protein_id": 5,
+        "protein_type": "Shellfish"
+    },
+    {
+        "protein_id": 6,
+        "protein_type": "Turkey"
+    },
+    {
+        "protein_id": 7,
+        "protein_type": "Tofu"
+    }
+]

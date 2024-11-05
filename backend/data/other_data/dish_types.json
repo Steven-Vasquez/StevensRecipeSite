@@ -1,0 +1,42 @@
+[
+    {
+        "dish_type_id": 1,
+        "dish_type": "Breakfast"
+    },
+    {
+        "dish_type_id": 2,
+        "dish_type": "Main Course"
+    },
+    {
+        "dish_type_id": 3,
+        "dish_type": "Side Dish"
+    },
+    {
+        "dish_type_id": 4,
+        "dish_type": "Dessert"
+    },
+    {
+        "dish_type_id": 5,
+        "dish_type": "Snack"
+    },
+    {
+        "dish_type_id": 6,
+        "dish_type": "Party Snack"
+    },
+    {
+        "dish_type_id": 7,
+        "dish_type": "Veggies"
+    },
+    {
+        "dish_type_id": 8,
+        "dish_type": "Soup & Stew"
+    },
+    {
+        "dish_type_id": 9,
+        "dish_type": "Pasta"
+    },
+    {
+        "dish_type_id": 10,
+        "dish_type": "Salad"
+    }
+]
