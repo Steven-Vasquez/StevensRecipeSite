@@ -42,7 +42,7 @@ export function HealthyProteinChili() {
                         ],
                         [
                             ["2","bell peppers, diced"],
-                            ["1","can garbonzo beans, drained and rinsed"],
+                            ["1"," 15.5 oz can garbonzo beans, drained and rinsed"],
                             ["1-2","tbsp worshestershire sauce"],
                             ["1-2","medium zuchinis, diced"],
                             ["1-2","tbsp coaco powder"],
@@ -58,10 +58,12 @@ export function HealthyProteinChili() {
                     step_titles={["Chili"]}
                     steps={[
                         [
+                            "Blend or finely chop the mushrooms",
                             "Brown the ground meat with olive oil, drain and set aside.",
                             "Use excess fat to saute onions and garlic until fragrant.",
-                            "Add all chili ingredients to slow cooker",
-                            "Cook on low for 5-6 hours or high for ?-? hours.",
+                            "Add all core chili ingredients to slow cooker",
+                            "Cook on low for 5-6 hours or high for 3-4 hours.",
+                            "In the last hour of cooking, add the zuccini and/or garbonzo beans if included.",
                         ]
                     ]}
                 />        

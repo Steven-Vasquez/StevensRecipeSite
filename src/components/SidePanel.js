@@ -75,10 +75,23 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Cook Time"
                             icon="/images/filter_icons/cook_time.png"
                             options={[
-                                "Under 30 minutes", "30-60 minutes", "1-2 hours", "2+ hours"
+                                "<1 hour", "2-3 hours", "4+ hours"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
+
+                        {/* Country of Origin Filter */}
+                        {/*https://www.freepik.com/icon/planet-earth_921490#fromView=search&page=1&position=0&uuid=fbfbedaf-a447-408d-a3df-d6f79f531bfa*/}
+                        <FilterCategory
+                            category="countryOfOrigin"
+                            categoryLabel="Country Origin"
+                            icon="/images/filter_icons/country_of_origin.png"
+                            options={[
+                                "America", "India", "Unknown"
+                            ]}
+                            onCheckboxChange={handleCheckboxChange}
+                        />
+
 
                         {/* Diet Types Filter */}
                         <FilterCategory
@@ -86,18 +99,19 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Diet Type"
                             icon="/images/filter_icons/diet_type.png"
                             options={[
-                                "Vegan", "Vegetarian", "Bulk", "Cut"
+                                "Bulk", "Cut", "Vegan", "Vegetarian"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
 
                         {/* Dish Type Filter */}
+                        {/*https://www.freepik.com/icon/portion_10008895#fromView=search&page=1&position=1&uuid=8529b7c9-409a-4d01-afa6-19afcedc57fb*/}
                         <FilterCategory
                             category="dishType"
                             categoryLabel="Dish Type"
                             icon="/images/filter_icons/dish_type.png"
                             options={[
-                                "Breakfast", "Main Course", "Side Dish", "Dessert", "Snack", "Party Snack", "Veggies", "Soup & Stew", "Pasta", "Salad"
+                                "Pasta", "Salad", "Soup/Stew", "Veggetable Dish"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -108,10 +122,22 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Equipment"
                             icon="/images/filter_icons/equipment_needed.png"
                             options={[
-                                "Blender", "Food Processor", "Instant Pot", "Air Fryer", "Slow Cooker"
+                                "Air Fryer", "Blender", "Food Processor", "Instant Pot", "Slow Cooker"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
+                        
+                        {/* Meal Type Filter */}
+                        <FilterCategory
+                            category="mealType"
+                            categoryLabel="Meal Type"
+                            icon="/images/filter_icons/meal_type.png"
+                            options={[
+                                "Breakfast", "Lunch", "Dinner/Main Course", "Dessert", "Side Dish",  "Snack" 
+                            ]}
+                            onCheckboxChange={handleCheckboxChange}
+                        />
+
 
                         {/* Notable Chefs Filter */}
                         <FilterCategory
@@ -130,7 +156,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Protein Type"
                             icon="/images/filter_icons/meat.png"
                             options={[
-                                "Chicken", "Beef", "Pork", "Fish", "Shellfish", "Turkey", "Tofu"
+                                "Beef", "Chicken", "Fish", "Pork", "Shrimp", "Tofu", "Turkey"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -141,7 +167,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Servings"
                             icon="/images/filter_icons/servings.png"
                             options={[
-                                "1-2", "3-4", "4-6", "6+"
+                                "1-2", "3-4", "5+"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
