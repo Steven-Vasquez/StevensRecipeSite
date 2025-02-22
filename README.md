@@ -72,3 +72,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### To create the database tables, run `npm run db:migrate`.
 ### To delete all database tables, run `npm run drop_tables`.
+
+### To populate the database using the RecipeData.json file, run `npm run populate_db`.

@@ -3,22 +3,22 @@
  * @returns {Promise<void> | void}
  */
 exports.up = (pgm) => {
-    pgm.createTable('recipe_equipment', {
+    pgm.createTable('recipe_allergy_types', {
       recipe_id: {
         type: 'integer',
         references: 'recipes',
         onDelete: 'CASCADE',
         notNull: true
       },
-      equipment_id: {
+      allergy_type_id: {
         type: 'integer',
-        references: 'equipment',
+        references: 'allergy_types',
         onDelete: 'CASCADE',
         notNull: true
       }
     });
-    pgm.addConstraint('recipe_equipment', 'unique_recipe_equipment', {
-      unique: ['recipe_id', 'equipment_id']
+    pgm.addConstraint('recipe_allergy_types', 'unique_recipe_allergy_type', {
+      unique: ['recipe_id', 'allergy_type_id']
     });
   };
   
@@ -27,6 +27,6 @@ exports.up = (pgm) => {
    * @returns {Promise<void> | void}
    */
   exports.down = (pgm) => {
-    pgm.dropTable('recipe_equipment');
+    pgm.dropTable('recipe_allergies_types');
   };
   

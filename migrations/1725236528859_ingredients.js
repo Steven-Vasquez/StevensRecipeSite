@@ -15,11 +15,7 @@ exports.up = (pgm) => {
       type: 'varchar(255)',
       notNull: true,
     },
-    measurement: {
-      type: 'varchar(50)',
-      notNull: true,
-    },
-    quantity_numerator: {
+    quantity: {
       type: 'varchar(50)',
       notNull: true,
     },

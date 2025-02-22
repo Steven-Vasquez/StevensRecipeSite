@@ -9,7 +9,8 @@
     "prep_time_mins": 0,
     "total_time_mins": 0,
     "servings": 0,
-    "notable_chef_id": 1,
+    "notable_chef": "(Notable chef's name)",
+    "country_of_origin": "(Country of origin)",
     "work_in_progress": true,
     "recipe_components": [
         {
@@ -42,17 +43,22 @@
     ],
 
     "tags": {
+        "allergies": [
+            ""
+        ],
+        "cook_time": [
+            ""
+        ],
         "diet_type": [
             ""
         ],
         "dish_type": [
             ""
         ],
-        "allergies": [
+        "equipment": [
             ""
         ],
-        "equipment": [
-            "",
+        "meal_type": [
             ""
         ],
         "protein_type": [

@@ -5,7 +5,10 @@ exports.shorthands = undefined;
 
 exports.up = (pgm) => {
   pgm.createTable('recipe_components', {
-    component_id: 'id',
+    component_id: {
+      type: 'SERIAL',
+      primaryKey: true,
+    },
     recipe_id: {
       type: 'integer',
       notNull: true,

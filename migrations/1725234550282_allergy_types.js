@@ -3,8 +3,8 @@
  * @returns {Promise<void> | void}
  */
 exports.up = (pgm) => {
-  pgm.createTable('allergies', {
-    allergy_id: 'id',
+  pgm.createTable('allergy_types', {
+    allergy_type_id: 'id',
     allergy_name: { type: 'varchar(50)', notNull: true, unique: true }
   });
 };
@@ -14,5 +14,5 @@ exports.up = (pgm) => {
  * @returns {Promise<void> | void}
  */
 exports.down = (pgm) => {
-  pgm.dropTable('allergies');
+  pgm.dropTable('allergy_types');
 };

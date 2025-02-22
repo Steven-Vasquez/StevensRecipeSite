@@ -19,6 +19,11 @@ exports.up = (pgm) => {
         references: 'notable_chefs',
         onDelete: 'SET NULL'
       },
+      country_of_origin_id: {
+        type: 'integer',
+        references: 'country_of_origin',
+        onDelete: 'SET NULL'
+      },
       work_in_progress: { type: 'boolean', default: false },
     });
   };
