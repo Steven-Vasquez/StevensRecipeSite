@@ -6,12 +6,16 @@ import CollapseIcon from "../images/collapse_icon.png";
 
 const SidePanel = ({ onFilterChange }) => {
     const [filters, setFilters] = useState({
-        dishType: [],
-        cookTime: [],
-        servings: [],
         allergies: [],
+        cookTime: [],
+        countryOfOrigin: [],
         dietType: [],
-        nicheEquipment: []
+        dishType: [],
+        equipment: [],
+        mealType: [],
+        notableChefs: [],
+        proteinType: [],
+        servings: [],
     });
 
     const [isSidePanelOpen, setIsSidePanelOpen] = useState(true);
@@ -118,7 +122,7 @@ const SidePanel = ({ onFilterChange }) => {
 
                         {/* Special Equipment Filter */}
                         <FilterCategory
-                            category="specialEquipment"
+                            category="equipment"
                             categoryLabel="Equipment"
                             icon="/images/filter_icons/equipment_needed.png"
                             options={[
@@ -126,14 +130,14 @@ const SidePanel = ({ onFilterChange }) => {
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
-                        
+
                         {/* Meal Type Filter */}
                         <FilterCategory
                             category="mealType"
                             categoryLabel="Meal Type"
                             icon="/images/filter_icons/meal_type.png"
                             options={[
-                                "Breakfast", "Lunch", "Dinner/Main Course", "Dessert", "Side Dish",  "Snack" 
+                                "Breakfast", "Lunch", "Dinner/Main Course", "Dessert", "Side Dish", "Snack"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -156,7 +160,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Protein Type"
                             icon="/images/filter_icons/meat.png"
                             options={[
-                                "Beef", "Chicken", "Fish", "Pork", "Shrimp", "Tofu", "Turkey"
+                                "Beef", "Chicken", "Cottage Cheese", "Fish", "Pork", "Shrimp", "Tofu", "Turkey"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />

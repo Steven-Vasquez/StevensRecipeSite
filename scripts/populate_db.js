@@ -10,7 +10,7 @@ const client = new Client({
 });
 
 // Load JSON data
-const recipeData = JSON.parse(fs.readFileSync('./backend/data/RecipeData.json', 'utf8'));
+const recipeData = JSON.parse(fs.readFileSync('./backend/database/data/RecipeData.json', 'utf8'));
 
 // Helper function to insert data into a table
 async function insertData(tableName, data) {

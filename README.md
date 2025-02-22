@@ -74,3 +74,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### To delete all database tables, run `npm run drop_tables`.
 
 ### To populate the database using the RecipeData.json file, run `npm run populate_db`.
+
+## To start both frontend and backend serversm run `npm run dev`.

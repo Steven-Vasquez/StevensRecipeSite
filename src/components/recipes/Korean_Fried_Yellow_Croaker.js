@@ -8,7 +8,7 @@ export function KoreanFriedYellowCroaker() {
         <div>
             <RecipeOpening
                 recipeName={"Korean Fried Yellow Croaker"}
-                starRating={4.5}
+                starRating={3.5}
                 recipeCredit={"Everything Alex Cooks"}
                 descriptionShort={"Korean Fried Yellow Croaker"}
                 tags={["Quick", "Easy", "One pan", "Korean"]}

@@ -27,7 +27,9 @@
     "db:rollback": "node-pg-migrate down",
     "postinstall": "npm run db:migrate",
     "drop_tables": "node scripts/drop_all_tables.js",
-    "populate_db": "node scripts/populate_db.js"
+    "populate_db": "node scripts/populate_db.js",
+    "start-backend": "cd backend && npm run dev",
+    "dev": "concurrently \"npm start\" \"npm run start-backend\"" 
   },
   "eslintConfig": {
     "extends": [
@@ -46,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }
