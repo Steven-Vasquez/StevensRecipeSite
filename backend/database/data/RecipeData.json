@@ -3,6 +3,7 @@
         {
             "id": 1,
             "recipe_name": "Alfredo Sauce",
+            "recipe_slug": "alfredo-sauce",
             "rating": 4,
             "author_name": "Joshua Weissman",
             "credit_link": "https://www.joshuaweissman.com/post/perfect-fettuccine-alfredo",
@@ -20,31 +21,38 @@
                     "ingredients": [
                         {
                             "quantity": "14",
-                            "name": "oz (400g) Fettuccine (ingredient name)"
+                            "name": "oz (400g) Fettuccine (ingredient name)",
+                            "ingredient_notes": ""
                         },
                         {
                             "quantity": "1/2",
-                            "name": "cup unsalted butter"
+                            "name": "cup unsalted butter",
+                            "ingredient_notes": ""
                         },
                         {
                             "quantity": "1 1/4",
-                            "name": "cup heavy whipping cream"
+                            "name": "cup heavy whipping cream",
+                            "ingredient_notes": ""
                         },
                         {
                             "quantity": "5",
-                            "name": "cloves garlic, finely minced"
+                            "name": "cloves garlic, finely minced",
+                            "ingredient_notes": ""
                         },
                         {
                             "quantity": "2",
-                            "name": "tsp finely chopped thyme"
+                            "name": "tsp finely chopped thyme",
+                            "ingredient_notes": ""
                         },
                         {
                             "quantity": "",
-                            "name": "Salt and pepper to taste"
+                            "name": "Salt and pepper to taste",
+                            "ingredient_notes": ""
                         },
                         {
                             "quantity": "2",
-                            "name": "cups parmigiano reggiano, finely grated"
+                            "name": "cups parmigiano reggiano, finely grated",
+                            "ingredient_notes": ""
                         }
                     ]
                 }
@@ -56,6 +64,7 @@
                         {
                             "step_number": 1,
                             "instruction": "Place fettuccine in a pot of boiling water that’s been seasoned generously with salt. Cook according to package instructions or until done.",
+                            "step_notes": "test",
                             "step_images": [
                                 "/images/salad.jpg"
                             ]
@@ -63,6 +72,7 @@
                         {
                             "step_number": 2,
                             "instruction": "In a large pan, add heavy whipping cream and unsalted butter set to medium heat. Constantly stir the pan until all the butter has melted.",
+                            "step_notes": "",
                             "step_images": [
                                 ""
                             ]
@@ -70,6 +80,7 @@
                         {
                             "step_number": 3,
                             "instruction": "Increase the heat slightly and bring to a gentle simmer. Simmer, stirring occasionally, for 3-4 minutes or until lightly thickened.",
+                            "step_notes": "",
                             "step_images": [
                                 ""
                             ]
@@ -77,6 +88,7 @@
                         {
                             "step_number": 4,
                             "instruction": "Cut off the heat and add in parmigiano reggiano, chopped thyme, and finely chopped garlic. Vigorously stir together until thoroughly combined. Season to taste with salt and pepper.",
+                            "step_notes": "",
                             "step_images": [
                                 ""
                             ]
@@ -84,6 +96,7 @@
                         {
                             "step_number": 5,
                             "instruction": "Reserve 3/4 cup of pasta water. Drain the pasta.",
+                            "step_notes": "",
                             "step_images": [
                                 ""
                             ]
@@ -91,6 +104,7 @@
                         {
                             "step_number": 6,
                             "instruction": "Add pasta to the alfredo sauce. Toss and using pasta water as needed to fully emulsify.",
+                            "step_notes": "",
                             "step_images": [
                                 ""
                             ]
@@ -98,6 +112,11 @@
                     ]
                 }
             ],
+
+            "recipe_notes": [
+                "test note"
+            ],
+
             "tags": {
                 "allergies_type": [
                     "dairy"

@@ -23,6 +23,9 @@ exports.up = (pgm) => {
             type: 'text',
             notNull: true,
         },
+        step_notes: {
+            type: 'text',
+        },
     });
 
     // Ensure unique step numbers within each component

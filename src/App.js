@@ -6,6 +6,7 @@ import { Suspense } from 'react';
 import Home from './pages/Home';
 import Browsing from './pages/Browsing';
 import About from './pages/About';
+import RecipePage from './pages/RecipePage';
 
 import Navbar from './components/Navbar';
 
@@ -21,6 +22,8 @@ function App() {
           <Route path="/" element={<Home/>} /> 
           <Route path="/about" element={<About/>} />
           <Route path="/browse" element={<Browsing/>} />
+          <Route path="/recipes/:slug" element={<RecipePage />} />
+          
           {recipeRoutesConfig.map((route, index) => (
             <Route key={index} path={route.path} element={<route.component />} />
           ))}

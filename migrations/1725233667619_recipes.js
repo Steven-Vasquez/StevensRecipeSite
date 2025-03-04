@@ -6,6 +6,7 @@ exports.up = (pgm) => {
     pgm.createTable('recipes', {
       recipe_id: 'id',
       recipe_name: { type: 'varchar(255)', notNull: true },
+      recipe_slug: { type: 'varchar(255)', notNull: true, unique: true },
       star_rating: { type: 'decimal(2, 1)' },
       author_name: { type: 'varchar(255)' },
       credit_link: { type: 'varchar(255)' },

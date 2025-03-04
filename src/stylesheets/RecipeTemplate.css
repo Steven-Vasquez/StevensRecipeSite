@@ -12,24 +12,26 @@
     padding: 50px;
 }
 
+.recipe-ingredients {
+    flex: 1;
+}
+
  .recipe-component-name {
     font-family: 'Patua One', serif;
 
 }
 
-.recipe-measurement {
-    font-family: 'Patua One', serif;
-    color: #e60000;
-}
-
 
 
 .recipe-measurement {
-    width: 55px;
+    width: 35px;
     text-align: right;
     font-weight: 500;
     white-space: nowrap;
     letter-spacing: 1.5px;
+    font-family: 'Patua One', serif;
+    color: #e60000;
+    margin-top: 1px;
 }
 
 .recipe-ingredients,
@@ -37,14 +39,33 @@
     margin-left: 10px;
     width: 100%;
     font-weight: 450;
-    line-height: 1.3rem;
+    line-height: 1.4;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    opacity: 0.7; /* Optional: Reduce opacity to make it look faded */
 }
 
 .ingredient-container,
 .step-container {
     display: flex;
+    align-items: flex-start;  /* Align items to the top */
     margin-bottom: 5px;
+}
 
+/* Style the checkbox input */
+.ingredient-container input[type="checkbox"] {
+    margin: 3px 10px 0 5px;  /* Top, Right, Bottom, Left */
+    cursor: pointer;
+    min-width: 16px;
+    height: 16px;
+}
+
+.recipe-ingredients-notes,
+.recipe-step-notes {
+    opacity: 0.5;
+    font-style: italic;
 }
 
 .red-title {
@@ -108,7 +129,7 @@
     width: min-content;
 }
 
-.collapse-icon {
+.collapse-icon-recipe {
     margin-left: 5px;
     margin-top: 5px;
     width: 20px;
@@ -117,11 +138,15 @@
     transition: transform 0.3s ease;
 }
 
-.collapsed-icon {
-    transform: rotate(90deg);
+.collapsed-icon-recipe {
+    transform: rotate(-90deg);
     /* Rotate the icon 90 degrees */
 }
 
 .steps-container {
     margin-left: 25px;
 }
+
+
+
+

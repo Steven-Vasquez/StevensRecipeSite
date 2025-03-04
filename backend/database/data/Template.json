@@ -3,6 +3,7 @@
     "recipe_name": "(Recipe Name)",
     "rating": 5,
     "author_name": "(Original recipe author)",
+    "recipe_slug": "(recipe-slug)",
     "credit_link": "(Link to original recipe)",
     "recipe_description": "(Description of the recipe)",
     "recipe_image_url": "(URL to the main recipe image)",
@@ -18,11 +19,13 @@
             "ingredients": [
                 {
                     "quantity": "1",
-                    "name": "(measurement) (ingredient name)"
+                    "name": "(measurement) (ingredient name)",
+                    "ingredient_notes": ""
                 },
                 {
                     "quantity": "1",
-                    "name": "(measurement) (ingredient name)"
+                    "name": "(measurement) (ingredient name)",
+                    "ingredient_notes": ""
                 }
             ]
         }
@@ -34,12 +37,18 @@
                 {
                     "step_number": 1,
                     "instruction": "(Step 1 instruction)",
+                    "step_notes": "",
                     "step_images": [
                         "(URL to step image)"
                     ]
                 }
             ]
         }
+    ],
+    
+    "recipe_notes":
+    [
+        ""
     ],
 
     "tags": {

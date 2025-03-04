@@ -131,6 +131,7 @@ const SidePanel = ({ onFilterChange }) => {
                             onCheckboxChange={handleCheckboxChange}
                         />
 
+
                         {/* Meal Type Filter */}
                         <FilterCategory
                             category="mealType"
@@ -142,7 +143,7 @@ const SidePanel = ({ onFilterChange }) => {
                             onCheckboxChange={handleCheckboxChange}
                         />
 
-
+                        
                         {/* Notable Chefs Filter */}
                         <FilterCategory
                             category="notableChefs"
@@ -172,6 +173,17 @@ const SidePanel = ({ onFilterChange }) => {
                             icon="/images/filter_icons/servings.png"
                             options={[
                                 "1-2", "3-4", "5+"
+                            ]}
+                            onCheckboxChange={handleCheckboxChange}
+                        />
+
+                        {/* Etc Properteis Filter */}
+                        <FilterCategory
+                            category="etcProperties"
+                            categoryLabel="COMING SOON"
+                            icon="/images/filter_icons/etc_properties.png"
+                            options={[
+                                "Meal prep", "Freezable", "Cost Effective", "Sauces"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />

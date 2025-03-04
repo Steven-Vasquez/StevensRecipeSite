@@ -11,13 +11,16 @@ exports.up = (pgm) => {
       references: '"ingredient_components"',
       onDelete: 'CASCADE',
     },
-    ingredient_text: {
-      type: 'varchar(255)',
-      notNull: true,
-    },
     quantity: {
       type: 'varchar(50)',
       notNull: true,
+    },
+    ingredient_text: {
+      type: 'text',
+      notNull: true,
+    },
+    ingredient_notes: {
+      type: 'text',
     },
   });
 

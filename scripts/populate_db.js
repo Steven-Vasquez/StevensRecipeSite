@@ -63,6 +63,7 @@ async function insertRecipe(recipe) {
         // Insert the recipe
         const recipeRow = await insertData('recipes', {
             recipe_name: recipe.recipe_name,
+            recipe_slug: recipe.recipe_slug,
             star_rating: recipe.rating,
             author_name: recipe.author_name,
             credit_link: recipe.credit_link,
@@ -86,8 +87,9 @@ async function insertRecipe(recipe) {
             for (const ingredient of component.ingredients) {
                 await insertData('ingredients', {
                     component_id: componentRow.component_id,
-                    ingredient_text: ingredient.name,
                     quantity: ingredient.quantity,
+                    ingredient_text: ingredient.name,
+                    ingredient_notes: ingredient.ingredient_notes,
                 });
             }
         }
@@ -104,6 +106,7 @@ async function insertRecipe(recipe) {
                     component_id: instructionRow.component_id,
                     step_number: step.step_number,
                     step_description: step.instruction,
+                    step_notes: step.step_notes
                 });
 
                 for (const imageUrl of step.step_images) {
@@ -115,6 +118,14 @@ async function insertRecipe(recipe) {
                     }
                 }
             }
+        }
+
+        // Insert recipe_notes
+        for (const note of recipe.recipe_notes) {
+            await insertData('recipe_notes', {
+                recipe_id: recipeRow.recipe_id,
+                note_text: note,
+            });
         }
 
         // Insert tags (allergy_type, cook_time_type, diet_type, dish_type, equipment_type, meal_type, protein_type)
