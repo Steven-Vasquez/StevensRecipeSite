@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Home/>} /> 
           <Route path="/about" element={<About/>} />
           <Route path="/browse" element={<Browsing/>} />
-          <Route path="/recipes/:slug" element={<RecipePage />} />
+          <Route path="/recipes/:recipe_slug" element={<RecipePage />} />
           
           {recipeRoutesConfig.map((route, index) => (
             <Route key={index} path={route.path} element={<route.component />} />

@@ -13,8 +13,8 @@ export function KoreanFriedYellowCroaker() {
                 descriptionShort={"Korean Fried Yellow Croaker"}
                 tags={["Quick", "Easy", "One pan", "Korean"]}
                 recipeImage={"/images/recipe_images/Korean_Fried_Yellow_Croaker/Korean Fried Yellow Croaker.jpeg"}
-                prepTime={"30 min"}
-                totalTime={"6 hr 10 min"}
+                prepTime={300}
+                totalTime={90}
                 servings={30}
             />
 

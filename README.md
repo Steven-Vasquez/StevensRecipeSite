@@ -70,6 +70,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
+
+
+
+
 ### To create the database tables, run `npm run db:migrate`.
 ### To delete all database tables, run `npm run drop_tables`.
 

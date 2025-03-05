@@ -118,7 +118,7 @@
             ],
 
             "tags": {
-                "allergies_type": [
+                "allergy_type": [
                     "dairy"
                 ],
                 "cook_time_type": [
