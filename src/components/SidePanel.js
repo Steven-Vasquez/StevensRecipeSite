@@ -138,7 +138,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Meal Type"
                             icon="/images/filter_icons/meal_type.png"
                             options={[
-                                "Breakfast", "Lunch", "Dinner/Main Course", "Dessert", "Side Dish", "Snack"
+                                "Breakfast", "Lunch", "Dinner", "Dessert", "Side Dish", "Snack"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -161,7 +161,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Protein Type"
                             icon="/images/filter_icons/meat.png"
                             options={[
-                                "Beef", "Chicken", "Cottage Cheese", "Fish", "Pork", "Shrimp", "Tofu", "Turkey"
+                                "Beef", "Chicken", "Cottage Cheese", "Fish", "Lentils", "Pork", "Shrimp", "Tofu", "Turkey"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />

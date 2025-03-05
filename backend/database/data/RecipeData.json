@@ -64,7 +64,7 @@
                         {
                             "step_number": 1,
                             "instruction": "Place fettuccine in a pot of boiling water that’s been seasoned generously with salt. Cook according to package instructions or until done.",
-                            "step_notes": "test",
+                            "step_notes": "",
                             "step_images": [
                                 "/images/salad.jpg"
                             ]
@@ -112,11 +112,9 @@
                     ]
                 }
             ],
-
             "recipe_notes": [
-                "test note"
+                "Add chicken and sliced mushrooms :)"
             ],
-
             "tags": {
                 "allergy_type": [
                     "dairy"
@@ -134,10 +132,486 @@
                     ""
                 ],
                 "meal_type": [
-                    "dinner/main course"
+                    "dinner"
                 ],
                 "protein_type": [
+                    "chicken"
+                ]
+            }
+        },
+        {
+            "id": 2,
+            "recipe_name": "Tandoori Chicken",
+            "rating": 4,
+            "author_name": "Swasthi Shreekanth",
+            "recipe_slug": "tandoori-chicken",
+            "credit_link": "https://www.indianhealthyrecipes.com/tandoori-chicken-recipe",
+            "recipe_description": "A popular Indian dish made with marinated chicken traditionally cooked in a tandoor.",
+            "recipe_image_url": "/images/salad.jpg",
+            "prep_time_mins": 15,
+            "total_time_mins": 420,
+            "servings": 4,
+            "notable_chef": "Swasthi Shreekanth",
+            "country_of_origin": "India",
+            "work_in_progress": false,
+            "recipe_components": [
+                {
+                    "component_name": "Chicken + Marinade",
+                    "ingredients": [
+                        {
+                            "quantity": "1.5",
+                            "name": "kg skinless bone-in chicken thighs",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1/2",
+                            "name": "cup Greek yogurt",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "tbsp ginger garlic paste",
+                            "ingredient_notes": "or 3/4 tbsp each, grated"
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "tsp garam masala",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1-2",
+                            "name": "tsp Kashmiri red chili powder",
+                            "ingredient_notes": "for a smoky flavor, susbtitute half of the Kashmiri chili powder with smoked paprika"
+                        },
+                        {
+                            "quantity": "1/4",
+                            "name": "tsp crushed black pepper",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1 1/2",
+                            "name": "tsp coriander powder",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1/2",
+                            "name": "tsp cumin powder",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1/2",
+                            "name": "tsp salt",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1/4",
+                            "name": "tsp tumeric",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "teaspoon kasuri methi",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "tbsp lemon juice",
+                            "ingredient_notes": "(half of a medium-small lemon)"
+                        },
+                        {
+                            "quantity": "1 1/2",
+                            "name": "tbsp neutral oil",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "tbsp chopped coriander leaves to garnish",
+                            "ingredient_notes": "(OPTIONAL)"
+                        }
+                    ]
+                },
+                {
+                    "component_name": "Red Chili Oil (OPTIONAL)",
+                    "ingredients": [
+                        {
+                            "quantity": "1",
+                            "name": "tsp Kashmiri red chili powder",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1-2",
+                            "name": "tbsp neutral oil",
+                            "ingredient_notes": "(use for basting/topping)"
+                        }
+                    ]
+                }
+            ],
+            "instructions": [
+                {
+                    "step_title": "Preparing Tandoori Marinade",
+                    "steps": [
+                        {
+                            "step_number": 1,
+                            "instruction": "Add all marinade ingredients to a large mixing bowl or freezer bag. Mix well.",
+                            "step_notes": "Taste test, adjust salt and spiciness as needed.",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 2,
+                            "instruction": "Make deep slits (3-4 on larger thighs or 2-3 on smaller). Add chicken to the marinade and coat well",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 3,
+                            "instruction": "Cover and refrigerate for at least 6 hours or overnight.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "step_title": "Cook in oven (Option 1)",
+                    "steps": [
+                        {
+                            "step_number": 1,
+                            "instruction": "Preheat the oven to 475 F for at least 15 minutes. Place a wire rack over a baking tray lined with foil for easy cleanup. Spray oil over the wire rack.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 2,
+                            "instruction": "Place the marinated chicken on the wire rack and bake for 12-15 minutes, then baste with leftover marinate or chili oil.",
+                            "step_notes": "(baking for a total of 25 minutes)",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 3,
+                            "instruction": "Turn the chicken to the other side after basting and roast for another 12-15 mins. Move tray to top rack and broil for 2-3 mins to get some charred spots.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 4,
+                            "instruction": "Brush the drippings all over the chicken and garnish with chopped coriander leaves.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "step_title": "Cook on stovetop (Option 2)",
+                    "steps": [
+                        {
+                            "step_number": 1,
+                            "instruction": "Spread 1-2 tbsp neutral oil to a pan on medium heat.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 2,
+                            "instruction": "Place chicken on pan and cook for 3-4 minutes. Apply the marinade and turn over. Cook for another 3-4 minutes.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 3,
+                            "instruction": "Smear the chili oil over chicken and continue cooking until done. Instant-read thermometer should read 165 F.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "step_title": "Cook in air fryer (Option 3)",
+                    "steps": [
+                        {
+                            "step_number": 1,
+                            "instruction": "Preheat the air fryer to 390 F. Place chicken on the basket and air fry for 10 mins each side or until cooked through and internal temperature reaches 165 F.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 2,
+                            "instruction": "Once done, brush chicken with leftover marinade or chili oil. Air fry for another 2 mins.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        }
+                    ]
+                }
+
+            ],
+            
+            "recipe_notes":
+            [
+                "Serve with tumeric rice"
+            ],
+        
+            "tags": {
+                "allergies": [
+                    "Dairy"
+                ],
+                "cook_time": [
+                    "4+ hours"
+                ],
+                "diet_type": [
+                    "bulk", "cut"
+                ],
+                "dish_type": [
                     ""
+                ],
+                "equipment": [
+                    "air fryer"
+                ],
+                "meal_type": [
+                    "lunch", "dinner"
+                ],
+                "protein_type": [
+                    "chicken"
+                ]
+            }
+        },
+        {
+            "id": 1,
+            "recipe_name": "Red Lentil Sweet Potato Curry",
+            "rating": 4,
+            "author_name": "Allie Peterson",
+            "recipe_slug": "red-lentil-sweet-potato-curry",
+            "credit_link": "https://naturallieplantbased.com/vegan-red-lentil-sweet-potato-curry/#recipe",
+            "recipe_description": "A cozy vegan curry made with red lentils and sweet potatoes made in one pot.",
+            "recipe_image_url": "/images/salad.jpg",
+            "prep_time_mins": 10,
+            "total_time_mins": 40,
+            "servings": 6,
+            "notable_chef": "",
+            "country_of_origin": "India",
+            "work_in_progress": false,
+            "recipe_components": [
+                {
+                    "component_name": "Spices",
+                    "ingredients": [
+                        {
+                            "quantity": "2",
+                            "name": "tsp curry powder",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "2",
+                            "name": "tsp garam masala",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "tsp tumeric",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "tsp cumin",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "tsp chili powder",
+                            "ingredient_notes": "(from chilis, not bean chili seasoning mix)"
+                        },
+                        {
+                            "quantity": "1/2",
+                            "name": "tsp coriander powder",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1/2",
+                            "name": "tsp salt",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1/4",
+                            "name": "tsp black pepper",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "",
+                            "name": "Cilantro for topping",
+                            "ingredient_notes": "(OPTIONAL)"
+                        }
+                    ]
+                },
+                {
+                    "component_name": "Other ingredients",
+                    "ingredients": [
+                        {
+                            "quantity": "1",
+                            "name": "tbsp coconut oil",
+                            "ingredient_notes": "(or neutral oil)"
+                        },
+                        {
+                            "quantity": "4",
+                            "name": "cloves garlic, minced",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "tbsp fresh ginger, minced",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "3",
+                            "name": "cups diced sweet potato",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1 1/2",
+                            "name": "cups red lentils",
+                            "ingredient_notes": "(or green lentils)"
+                        },
+                        {
+                            "quantity": "3",
+                            "name": "cups vegetable broth",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "can crushed tomatoes (15 oz)",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "tbsp maple syrup",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "tbsp peanut butter",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "2",
+                            "name": "tbsp fresh lime juice",
+                            "ingredient_notes": "(1 full lime)"
+                        },
+                        {
+                            "quantity": "1",
+                            "name": "15 oz can coconut milk (full-fat)",
+                            "ingredient_notes": ""
+                        }
+                    ]
+                }
+            ],
+            "instructions": [
+                {
+                    "step_title": "Main Steps",
+                    "steps": [
+                        {
+                            "step_number": 1,
+                            "instruction": "In a large pot or dutch oven, begin by heating your oil over medium heat.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 2,
+                            "instruction": "Add in garlic and ginger and sauté for 3 minutes.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 3,
+                            "instruction": "Add in your diced sweet potato and all the spices and stir well. Cook for 5 minutes until spices become aromatic and sweet potatoes are beginning to brown.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 4,
+                            "instruction": "Next add in your lentils, veggie broth, lime, maple syrup, peanut butter, and crushed tomatoes. Bring to a boil and then simmer for ~20-25 minutes, covered. Taste test your sweet potatoes and lentils to ensure doneness.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 5,
+                            "instruction": "Pour in coconut milk (3/4 of can) and reserve the rest for topping if desired.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 6,
+                            "instruction": "Sprinkle with fresh cilantro.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        },
+                        {
+                            "step_number": 7,
+                            "instruction": "Serve with basmati rice or garlic naan.",
+                            "step_notes": "",
+                            "step_images": [
+                                ""
+                            ]
+                        }
+                    ]
+                }
+            ],
+            
+            "recipe_notes":
+            [
+                "Let the curry cool to room temperature before storing. Transfer it to an airtight container and place it in the refrigerator. The curry will keep for up to 5 days in the refrigerator."
+            ],
+        
+            "tags": {
+                "allergies": [
+                    ""
+                ],
+                "cook_time": [
+                    "<1 hour"
+                ],
+                "diet_type": [
+                    "vegan", "vegetarian"
+                ],
+                "dish_type": [
+                    "vegetable dish"
+                ],
+                "equipment": [
+                    ""
+                ],
+                "meal_type": [
+                    "dinner", "lunch", "side dish"
+                ],
+                "protein_type": [
+                    "lentils"
                 ]
             }
         }
