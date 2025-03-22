@@ -126,7 +126,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Equipment"
                             icon="/images/filter_icons/equipment_needed.png"
                             options={[
-                                "Air Fryer", "Blender", "Food Processor", "Instant Pot", "Slow Cooker"
+                                "Air Fryer", "Blender", "Food Processor", "Instant Pot", "Large Pot", "Slow Cooker"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />

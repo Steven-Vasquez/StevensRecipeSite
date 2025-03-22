@@ -363,14 +363,10 @@
                         }
                     ]
                 }
-
             ],
-            
-            "recipe_notes":
-            [
+            "recipe_notes": [
                 "Serve with tumeric rice"
             ],
-        
             "tags": {
                 "allergies": [
                     "Dairy"
@@ -379,7 +375,8 @@
                     "4+ hours"
                 ],
                 "diet_type": [
-                    "bulk", "cut"
+                    "bulk",
+                    "cut"
                 ],
                 "dish_type": [
                     ""
@@ -388,7 +385,8 @@
                     "air fryer"
                 ],
                 "meal_type": [
-                    "lunch", "dinner"
+                    "lunch",
+                    "dinner"
                 ],
                 "protein_type": [
                     "chicken"
@@ -396,7 +394,7 @@
             }
         },
         {
-            "id": 1,
+            "id": 3,
             "recipe_name": "Red Lentil Sweet Potato Curry",
             "rating": 4,
             "author_name": "Allie Peterson",
@@ -585,12 +583,9 @@
                     ]
                 }
             ],
-            
-            "recipe_notes":
-            [
+            "recipe_notes": [
                 "Let the curry cool to room temperature before storing. Transfer it to an airtight container and place it in the refrigerator. The curry will keep for up to 5 days in the refrigerator."
             ],
-        
             "tags": {
                 "allergies": [
                     ""
@@ -599,7 +594,8 @@
                     "<1 hour"
                 ],
                 "diet_type": [
-                    "vegan", "vegetarian"
+                    "vegan",
+                    "vegetarian"
                 ],
                 "dish_type": [
                     "vegetable dish"
@@ -608,10 +604,145 @@
                     ""
                 ],
                 "meal_type": [
-                    "dinner", "lunch", "side dish"
+                    "dinner",
+                    "lunch",
+                    "side dish"
                 ],
                 "protein_type": [
                     "lentils"
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "recipe_name": "Easy Corned Beef and Cabbage",
+            "rating": 4.5,
+            "author_name": "Rachel Farnsworth",
+            "recipe_slug": "corned-beef-and-cabbage",
+            "credit_link": "https://www.thestayathomechef.com",
+            "recipe_description": "Make juicy corned beef and cabbage on the stovetop or in the slow cooker! Braise your brisket in Guinness or broth for a flavorful Irish meal.",
+            "recipe_image_url": "",
+            "prep_time_mins": 15,
+            "total_time_mins": 195,
+            "servings": 8,
+            "notable_chef": "",
+            "country_of_origin": "America",
+            "work_in_progress": true,
+            "recipe_components": [
+                {
+                    "component_name": "Main Dish",
+                    "ingredients": [
+                        {
+                            "quantity": "2 to 3 pounds",
+                            "name": "corned beef brisket",
+                            "ingredient_notes": "with spice packet"
+                        },
+                        {
+                            "quantity": "4 cups",
+                            "name": "Guinness beer or beef broth",
+                            "ingredient_notes": "or water (if you absolutely must)"
+                        },
+                        {
+                            "quantity": "1/4 cup",
+                            "name": "Worcestershire sauce",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "2 pounds",
+                            "name": "red baby potatoes",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "2 pounds",
+                            "name": "carrots, chopped",
+                            "ingredient_notes": "or baby carrots"
+                        },
+                        {
+                            "quantity": "1 head",
+                            "name": "green cabbage",
+                            "ingredient_notes": "cut into wedges of desired size"
+                        },
+                        {
+                            "quantity": "1/2 teaspoon",
+                            "name": "salt",
+                            "ingredient_notes": ""
+                        },
+                        {
+                            "quantity": "1/2 teaspoon",
+                            "name": "black pepper",
+                            "ingredient_notes": ""
+                        }
+                    ]
+                }
+            ],
+            "instructions": [
+                {
+                    "step_title": "Stovetop Method",
+                    "steps": [
+                        {
+                            "step_number": 1,
+                            "instruction": "Remove the corned beef brisket from the packaging, reserving the spice packet, and place it into a large 4 to 8-quart pot with a lid. Pour 4 cups Guinness beer (or beef broth) over the brisket until covered. Add Worcestershire sauce and sprinkle the spice packet over the meat.",
+                            "step_notes": "",
+                            "step_images": []
+                        },
+                        {
+                            "step_number": 2,
+                            "instruction": "Bring to a boil over high heat. Cover with the lid, reduce the heat to low, and simmer for 50 minutes per pound until it reaches an internal temperature of 195–205°F, or until a fork slides in easily.",
+                            "step_notes": "Monitor liquid levels and add more if needed.",
+                            "step_images": []
+                        },
+                        {
+                            "step_number": 3,
+                            "instruction": "Add the potatoes, cover, and cook for 15 minutes until they begin to soften.",
+                            "step_notes": "",
+                            "step_images": []
+                        },
+                        {
+                            "step_number": 4,
+                            "instruction": "Add the carrots and cabbage. Season with salt and pepper. Cover and continue cooking for another 15 minutes, or until all the vegetables are tender.",
+                            "step_notes": "Cooking time may vary depending on the size of the potatoes and carrots.",
+                            "step_images": []
+                        },
+                        {
+                            "step_number": 5,
+                            "instruction": "Remove the meat from the pot and let it rest for 15 minutes before slicing against the grain or shredding. Serve with vegetables and cooking liquid as desired.",
+                            "step_notes": "",
+                            "step_images": []
+                        }
+                    ]
+                },
+                {
+                    "step_title": "Slow Cooker Method",
+                    "steps": [
+                        {"step_number": 1, "instruction": "Place the corned beef brisket into the bottom of a 6-quart slow cooker. Pour the beer (or beef broth) over the brisket to cover. Add Worcestershire sauce and sprinkle the spice packet over the meat.", "step_notes": "", "step_images": []},
+                        {"step_number": 2, "instruction": "Cover and cook on low for 4 to 5 hours.", "step_notes": "", "step_images": []},
+                        {"step_number": 3, "instruction": "Add the potatoes, carrots, and cabbage. Season with salt and pepper. Cover and continue cooking on low for another 4 to 5 hours, or until the vegetables are tender and the meat shreds easily with a fork.", "step_notes": "", "step_images": []},
+                        {"step_number": 4, "instruction": "Remove the meat from the slow cooker and let it rest for 15 minutes before slicing against the grain or shredding.", "step_notes": "", "step_images": []}
+                    ]
+                }
+            ],
+            "recipe_notes": [
+                "When cutting the meat, cut against the grain.",
+                "For the brisket, flat cuts are ideal for slicing for serving and use in sandwiches. Point cuts are best for shredding."
+            ],
+            "tags": {
+                "allergies": [],
+                "cook_time": [
+                    "2-3 hours"
+                ],
+                "diet_type": [],
+                "dish_type": [
+                    ""
+                ],
+                "equipment": [
+                    "Large Pot",
+                    "Slow Cooker"
+                ],
+                "meal_type": [
+                    "Dinner"
+                ],
+                "protein_type": [
+                    "Beef"
                 ]
             }
         }
