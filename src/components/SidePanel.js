@@ -91,7 +91,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Country Origin"
                             icon="/images/filter_icons/country_of_origin.png"
                             options={[
-                                "America", "India", "Unknown"
+                                "India", "United States", "Unknown"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />

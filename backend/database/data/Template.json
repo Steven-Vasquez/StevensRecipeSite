@@ -17,16 +17,8 @@
         {
             "component_name": "(Name of component to list ingredients for)",
             "ingredients": [
-                {
-                    "quantity": "1",
-                    "name": "(measurement) (ingredient name)",
-                    "ingredient_notes": ""
-                },
-                {
-                    "quantity": "1",
-                    "name": "(measurement) (ingredient name)",
-                    "ingredient_notes": ""
-                }
+                { "quantity": "1", "name": "(measurement) (ingredient name)", "ingredient_notes": "" },
+                { "quantity": "1", "name": "(measurement) (ingredient name)", "ingredient_notes": "" }
             ]
         }
     ],
@@ -34,14 +26,7 @@
         {
             "step_title": "(step component title)",
             "steps": [
-                {
-                    "step_number": 1,
-                    "instruction": "(Step 1 instruction)",
-                    "step_notes": "",
-                    "step_images": [
-                        "(URL to step image)"
-                    ]
-                }
+                { "step_number": 1, "instruction": "(Step 1 instruction)", "step_notes": "", "step_images": ["(URL to step image)"] }
             ]
         }
     ],
@@ -52,26 +37,12 @@
     ],
 
     "tags": {
-        "allergies": [
-            ""
-        ],
-        "cook_time": [
-            ""
-        ],
-        "diet_type": [
-            ""
-        ],
-        "dish_type": [
-            ""
-        ],
-        "equipment": [
-            ""
-        ],
-        "meal_type": [
-            ""
-        ],
-        "protein_type": [
-            ""
-        ]
+        "allergies": [""],
+        "cook_time": [""],
+        "diet_type": [""],
+        "dish_type": [""],
+        "equipment": [""],
+        "meal_type": [""],
+        "protein_type": [""]
     }
 }
