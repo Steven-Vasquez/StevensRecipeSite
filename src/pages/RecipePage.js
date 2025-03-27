@@ -17,7 +17,7 @@ const RecipePage = () => {
         const fetchRecipeData = async () => {
             try {
                 const response = await fetch(`http://localhost:3001/api/recipes/${recipe_slug}`);
-        
+                //console.log(response);
                 // Handle 404 errors separately
                 if (response.status === 404) {
                     throw new Error('Recipe not found');
@@ -37,6 +37,8 @@ const RecipePage = () => {
         
                 // Parse and process successful response
                 const data = await response.json();
+                console.log("THE RECIPE DATA IS...");
+                console.log(data);
         
                 // Transform data for RecipeOpening and RecipeTemplate
                 const mainInfo = {
@@ -45,28 +47,48 @@ const RecipePage = () => {
                     recipeCredit: data.author_name,
                     descriptionShort: data.recipe_description,
                     tags: [
-                        ...(data.allergies || []).map(a => a.allergy_name),
-                        ...(data.diets || []).map(d => d.diet_type_name),
-                        ...(data.dish_types || []).map(dt => dt.dish_type_name)
+                        ...(Array.isArray(data.allergies) ? data.allergies.map(a => a.allergy_name) : []),
+                        ...(Array.isArray(data.diets) ? data.diets.map(d => d.diet_type_name) : []),
+                        ...(Array.isArray(data.dish_types) ? data.dish_types.map(dt => dt.dish_type_name) : [])
                     ],
                     recipeImage: data.recipe_image_url,
                     prepTime: data.prep_time_mins,
                     totalTime: data.total_time_mins,
                     servings: data.servings
                 };
-        
-                const templateData = {
-                    component_names: data.components.map(c => c.component_title),
-                    ingredients: data.components.map(c => 
-                        c.ingredients.map(i => [i.quantity, i.ingredient_text, i.ingredient_notes])
-                    ),
-                    step_titles: data.components.map(c => c.component_title),
-                    steps: data.components.map(c => 
-                        c.steps.map(s => [s.step_description, s.step_notes])
-                    ),
-                    recipe_notes: data.notes.map(n => n.note_text)
+                
+                // Transform data for RecipeTemplate
+                const templateData = { 
+                    component_names: Array.isArray(data.recipe_components) 
+                        ? data.recipe_components.map(c => c.component_name) 
+                        : [],
+                
+                    ingredients: Array.isArray(data.recipe_components)
+                        ? data.recipe_components.map(c =>
+                            Array.isArray(c.ingredients)
+                                ? c.ingredients.map(i => [i.quantity, i.name, i.ingredient_notes])
+                                : []
+                        )
+                        : [],
+                
+                    step_titles: Array.isArray(data.instructions) 
+                        ? data.instructions.map(c => c.step_title) 
+                        : [],
+                
+                    steps: Array.isArray(data.instructions)
+                        ? data.instructions.map(c =>
+                            Array.isArray(c.steps)
+                                ? c.steps.map(s => [s.instruction, s.step_notes])
+                                : []
+                        )
+                        : [],
+                
+                    recipe_notes: Array.isArray(data.recipe_notes) ? data.recipe_notes : []
                 };
-        
+                
+                //console.log ("THE TEMPLATE DATA IS...");
+                //console.log(templateData);
+
                 setRecipeData({ mainInfo, templateData });
                 setError(null);
             } catch (err) {

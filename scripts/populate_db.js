@@ -95,7 +95,7 @@ async function insertRecipe(recipe) {
         }
 
         // Insert instructions and step_images
-        for (const instruction of recipe.instructions) {
+        for (const instruction of recipe.recipe_instructions) {
             const instructionRow = await insertData('recipe_components', {
                 recipe_id: recipeRow.recipe_id,
                 component_title: instruction.step_title,

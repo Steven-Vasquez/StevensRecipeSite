@@ -29,7 +29,7 @@
                     ]
                 }
             ],
-            "instructions": [
+            "recipe_instructions": [
                 {
                     "step_title": "Whole Recipe",
                     "steps": [
@@ -98,7 +98,7 @@
                     ]
                 }
             ],
-            "instructions": [
+            "recipe_instructions": [
                 {
                     "step_title": "Preparing Tandoori Marinade",
                     "steps": [
@@ -177,7 +177,7 @@
                     ]
                 }
             ],
-            "instructions": [
+            "recipe_instructions": [
                 {
                     "step_title": "Main Steps",
                     "steps": [
@@ -218,7 +218,7 @@
             "servings": 8,
             "notable_chef": "",
             "country_of_origin": "United States",
-            "work_in_progress": true,
+            "work_in_progress": false,
             "recipe_components": [
                 {
                     "component_name": "Main Dish",
@@ -234,11 +234,11 @@
                     ]
                 }
             ],
-            "instructions": [
+            "recipe_instructions": [
                 {
                     "step_title": "Stovetop Method",
                     "steps": [
-                        { "step_number": 1, "instruction": "Remove the corned beef brisket from the packaging, reserving the spice packet, and place it into a large 4 to 8-quart pot with a lid. Pour 4 cups Guinness beer (or beef broth) over the brisket until covered. Add Worcestershire sauce and sprinkle the spice packet over the meat.", "step_notes": "", "step_images": [] },
+                        { "step_number": 1, "instruction": "Remove the corned beef brisket from the packaging, reserving the spice packet, and place it into a large 4 to 8-quart pot with a lid. Pour 4 cups Guinness beer (or beef broth) over the brisket to cover. Add Worcestershire sauce and sprinkle the spice packet over the meat.", "step_notes": "", "step_images": [] },
                         { "step_number": 2, "instruction": "Bring to a boil over high heat. Cover with the lid, reduce the heat to low, and simmer for 50 minutes per pound until it reaches an internal temperature of 195–205°F, or until a fork slides in easily.", "step_notes": "Monitor liquid levels and add more if needed.", "step_images": [] },
                         { "step_number": 3, "instruction": "Add the potatoes, cover, and cook for 15 minutes until they begin to soften.", "step_notes": "", "step_images": [] },
                         { "step_number": 4, "instruction": "Add the carrots and cabbage. Season with salt and pepper. Cover and continue cooking for another 15 minutes, or until all the vegetables are tender.", "step_notes": "Cooking time may vary depending on the size of the potatoes and carrots.", "step_images": [] },
@@ -322,12 +322,11 @@
                     ]
                 }
             ],
-            "instructions": [
+            "recipe_instructions": [
                 {
                     "step_title": "Prep Work",
                     "steps": [
-                        { "step_number": 1, "instruction": "Cook the bacon in a 4.5-quart soup pot slowly over low heat. Set aside on a paper towel-lined plate. Reserve 2 tbsp of bacon drippings.", "step_notes": "", "step_images": [] },
-                        { "step_number": 2, "instruction": "Wipe any dark spots from the pot but leave as much bacon remnants as possible for added flavor.", "step_notes": "", "step_images": [] }
+                        { "step_number": 1, "instruction": "Cook the bacon in a 4.5-quart soup pot slowly over low heat. Set aside on a paper towel-lined plate. Reserve 2 tbsp of bacon drippings.", "step_notes": "", "step_images": [] }
                     ]
                 },
                 {
@@ -335,7 +334,7 @@
                     "steps": [
                         { "step_number": 3, "instruction": "Add reserved bacon drippings and butter to the pot over medium heat. Add onions and celery, cook for 5-6 minutes. Add garlic, hot sauce, Worcestershire sauce, and seasonings. Cook for 1 minute.", "step_notes": "", "step_images": [] },
                         { "step_number": 4, "instruction": "Add flour and cook for 2 minutes, stirring continuously.", "step_notes": "", "step_images": [] },
-                        { "step_number": 5, "instruction": "Gradually add chicken broth and Half and Half, stirring continuously.", "step_notes": "", "step_images": [] },
+                        { "step_number": 5, "instruction": "Gradually add chicken broth and milk, stirring continuously.", "step_notes": "", "step_images": [] },
                         { "step_number": 6, "instruction": "Stir in chicken bouillon, bay leaf, and clam juice. Simmer for 20 minutes, partially covered, stirring occasionally.", "step_notes": "", "step_images": [] },
                         { "step_number": 7, "instruction": "Add diced potatoes and cook until fork-tender, about 20-25 minutes.", "step_notes": "", "step_images": [] },
                         { "step_number": 8, "instruction": "Stir in chopped clams and let them heat through, about 5 minutes. Remove bay leaf.", "step_notes": "", "step_images": [] },
@@ -344,21 +343,19 @@
                 }
             ],
             "recipe_notes": [
-                "Clams: Bar Harbor Chopped Clams and Clam Juice recommended.",
-                "Use fresh clams if preferred, cleaned and steamed beforehand.",
                 "Yukon Gold potatoes recommended for creamy consistency.",
                 "The longer the soup simmers, the thicker it gets.",
                 "Hot sauce enhances flavor but does not add spiciness.",
                 "Worcestershire sauce adds umami; soy sauce can be substituted.",
-                "Pair with crusty no-knead bread for dipping.",
-                "Inspired by https://thecozycook.com/clam-chowder-recipe/"
+                "Garnish with oyster crackers.",
+                "Inspired by https://thecozycook.com/clam-chowder-recipe/ and https://damndelicious.net/2015/04/25/easy-clam-chowder/"
             ],
             "tags": {
                 "allergies": ["dairy", "shellfish"],
                 "cook_time": ["1-2 hours"],
                 "diet_type": [""],
                 "dish_type": ["soup"],
-                "equipment": ["soup pot"],
+                "equipment": ["large pot"],
                 "meal_type": ["dinner"],
                 "protein_type": ["clams"]
             }

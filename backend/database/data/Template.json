@@ -22,7 +22,7 @@
             ]
         }
     ],
-    "instructions": [
+    "recipe_instructions": [
         {
             "step_title": "(step component title)",
             "steps": [
