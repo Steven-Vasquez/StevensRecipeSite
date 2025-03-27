@@ -43,11 +43,11 @@ const SidePanel = ({ onFilterChange }) => {
         }
     };
 
-
-    useEffect(() => {
-        // Pass the filters data to the parent component after state update
+    const handleApplyFilters = () => {
         onFilterChange(filters);
-    }, [filters, onFilterChange]);
+        console.log("Filters applied");
+    };
+
 
     return (
         <div className="side-panel-container">
@@ -57,8 +57,9 @@ const SidePanel = ({ onFilterChange }) => {
                 <div className={`outer-filter-categories ${isSidePanelOpen ? "with-border" : "no-border"}`}>
                     <div className="outer-button-container">
                         <div className="buttons-container">
-                            <button className={`reset-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Clear all</button>
-                            <button className={`apply-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Apply</button>
+                            <button className={`reset-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Clear all (TODO)</button>
+                            <button className={`reset-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Select all (TODO)</button>
+                            <button className={`apply-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`} onClick={handleApplyFilters}>Apply</button>
                         </div>
                     </div>
                     <div className="filter-categories">
@@ -91,7 +92,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Country Origin"
                             icon="/images/filter_icons/country_of_origin.png"
                             options={[
-                                "India", "United States", "Unknown"
+                                "India", "Italy", "United States", "Unknown"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -115,7 +116,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Dish Type"
                             icon="/images/filter_icons/dish_type.png"
                             options={[
-                                "Pasta", "Salad", "Soup/Stew", "Veggetable Dish"
+                                "Pasta", "Salad", "Soup/Stew", "Vegetable Dish"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -150,7 +151,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Notable Chefs"
                             icon="/images/filter_icons/chef.png"
                             options={[
-                                "Gordon Ramsay", "Joshua Weissman", "Steven"
+                                "Gordon Ramsay", "Joshua Weissman", "Steven", "Swasthi Shreekanth"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -169,7 +170,7 @@ const SidePanel = ({ onFilterChange }) => {
                         {/* Servings Filter */}
                         <FilterCategory
                             category="servings"
-                            categoryLabel="Servings"
+                            categoryLabel="Servings (TODO)"
                             icon="/images/filter_icons/servings.png"
                             options={[
                                 "1-2", "3-4", "5+"

@@ -5,7 +5,7 @@
 exports.up = (pgm) => {
   pgm.createTable('allergy_types', {
     allergy_type_id: 'id',
-    allergy_name: { type: 'varchar(50)', notNull: true, unique: true }
+    allergy_type_name: { type: 'varchar(50)', notNull: true, unique: true }
   });
 };
 

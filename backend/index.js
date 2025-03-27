@@ -21,15 +21,196 @@ app.use(cors());
 
 // API to fetch basic recipe information for Browsing Preview 
 app.get('/api/recipes/basic-info', async (req, res) => {
+    // Parse filters from the URL, e.g., allergies, cookTime, etc. and place results in comma-separated arrays
+    const filters = Object.fromEntries(
+        Object.entries(req.query).map(([key, value]) => {
+            let processedValue = Array.isArray(value)
+                ? value.map(v => v.toLowerCase()) // If already an array
+                : typeof value === 'string'
+                    ? value.toLowerCase().split(',').map(v => v.trim()) // Split CSV into an array
+                    : value; // Leave other types as they are
+
+            // Filter out empty values (e.g., '')
+            return [key, processedValue.filter(v => v !== '')];
+        })
+    );
+    console.log('Filters:', filters);
+
+    // If no filters provided, run a simple query
+    if (Object.keys(filters).length === 0) {
+        try {
+            const result = await client.query(`
+        SELECT recipe_id, recipe_name, recipe_slug, star_rating, recipe_image_url, work_in_progress
+        FROM recipes
+      `);
+            return res.json(result.rows);
+        } catch (err) {
+            console.error('Error fetching recipes:', err);
+            return res.status(500).json({ error: 'Internal server error' });
+        }
+    }
+
+    let conditions = [];
+    let values = [];
+    let paramIndex = 1;
+
+    // Allergy filter: recipe_allergies -> allergies
+    if (filters.allergies && filters.allergies.length > 0) {
+        console.log("Allergies filter applied!");
+        const allergyArr = Array.isArray(filters.allergies)
+            ? filters.allergies
+            : [filters.allergies];
+
+        conditions.push(`r.recipe_id IN (
+            SELECT rat.recipe_id 
+            FROM recipe_allergy_types rat
+            JOIN allergy_types at ON rat.allergy_type_id = at.allergy_type_id
+            WHERE at.allergy_type_name = ANY($${paramIndex}::text[])
+        )`);
+        values.push(allergyArr);
+        paramIndex++;
+    }
+
+    // Cook Time filter: assuming it’s in a range (e.g., "under 30 mins", "30-60 mins", etc.)
+    if (filters.cookTime && filters.cookTime.length > 0) {
+        console.log("CookTime filter applied!");
+        const cookTimeArr = Array.isArray(filters.cookTime)
+            ? filters.cookTime
+            : [filters.cookTime];
+
+        // Example logic: Assuming cook time is stored in `recipe_cook_times`
+        conditions.push(`r.recipe_id IN (
+            SELECT rctt.recipe_id
+            FROM recipe_cook_time_types rctt
+            JOIN cook_time_types ctt ON rctt.cook_time_type_id = ctt.cook_time_type_id
+            WHERE ctt.cook_time_type_name = ANY($${paramIndex}::text[])
+        )`);
+        values.push(cookTimeArr);
+        paramIndex++;
+    }
+
+    // Country of Origin filter
+    if (filters.countryOfOrigin && filters.countryOfOrigin.length > 0) {
+        console.log("CountryOfOrigin filter applied!");
+        const countryOfOriginArr = Array.isArray(filters.countryOfOrigin)
+            ? filters.countryOfOrigin
+            : [filters.countryOfOrigin];
+
+        conditions.push(`
+      r.recipe_id IN (
+        SELECT r.recipe_id
+        FROM recipes r
+        JOIN country_of_origin co ON r.country_of_origin_id = co.country_id
+        WHERE co.country_name = ANY($${paramIndex}::text[])
+      )
+    `);
+        values.push(countryOfOriginArr);
+        paramIndex++;
+    }
+
+    // Diet Type filter: recipe_diet_types -> diet_types
+    if (filters.dietType && filters.dietType.length > 0) {
+        console.log("DietType filter applied!");
+        const dietTypeArr = Array.isArray(filters.dietType)
+            ? filters.dietType
+            : [filters.dietType];
+
+        conditions.push(`r.recipe_id IN (
+            SELECT rd.recipe_id
+            FROM recipe_diet_types rd
+            JOIN diet_types dt ON rd.diet_type_id = dt.diet_type_id
+            WHERE dt.diet_type_name = ANY($${paramIndex}::text[])
+        )`);
+        values.push(dietTypeArr);
+        paramIndex++;
+    }
+
+    // Dish Type filter: recipe_dish_types -> dish_types
+    if (filters.dishType && filters.dishType.length > 0) {
+        console.log("DishType filter applied!");
+        const dishTypeArr = Array.isArray(filters.dishType)
+            ? filters.dishType
+            : [filters.dishType];
+
+        conditions.push(`r.recipe_id IN (
+            SELECT rd.recipe_id
+            FROM recipe_dish_types rd
+            JOIN dish_types dt ON rd.dish_type_id = dt.dish_type_id
+            WHERE dt.dish_type_name = ANY($${paramIndex}::text[])
+        )`);
+        values.push(dishTypeArr);
+        paramIndex++;
+    }
+
+    // Equipment filter: recipe_equipment_types -> equipment_types
+    if (filters.equipment && filters.equipment.length > 0) {
+        console.log("Equipment filter applied!");
+        const equipmentArr = Array.isArray(filters.equipment)
+            ? filters.equipment
+            : [filters.equipment];
+
+        conditions.push(`r.recipe_id IN (
+            SELECT ret.recipe_id
+            FROM recipe_equipment_types ret
+            JOIN equipment_types et ON ret.equipment_type_id = et.equipment_type_id
+            WHERE et.equipment_type_name = ANY($${paramIndex}::text[])
+        )`);
+        values.push(equipmentArr);
+        paramIndex++;
+    }
+
+    // Notable Chef filter
+    if (filters.notableChefs && filters.notableChefs.length > 0) {
+        console.log("NotableChefs filter applied!");
+        const notableChefsArr = Array.isArray(filters.notableChefs)
+            ? filters.notableChefs
+            : [filters.notableChefs];
+
+        conditions.push(`r.recipe_id IN (
+            SELECT r.recipe_id
+            FROM recipes r
+            JOIN notable_chefs nc ON r.notable_chef_id = nc.chef_id
+            WHERE nc.chef_name = ANY($${paramIndex}::text[])
+        )`);
+        values.push(notableChefsArr);
+        paramIndex++;
+    }
+
+    // Protein Type filter: recipe_protein_types -> protein_types
+    if (filters.proteinType && filters.proteinType.length > 0) {
+        console.log("ProteinType filter applied!");
+        const proteinTypeArr = Array.isArray(filters.proteinType)
+            ? filters.proteinType
+            : [filters.proteinType];
+
+        conditions.push(`r.recipe_id IN (
+            SELECT rpt.recipe_id 
+            FROM recipe_protein_types rpt 
+            JOIN protein_types pt ON rpt.protein_type_id = pt.protein_type_id 
+            WHERE pt.protein_type_name = ANY($${paramIndex}::text[])
+        )`);
+        values.push(proteinTypeArr);
+        paramIndex++;
+    }
+
+    // Servings filter TODO
+
+    // Build the final query. If no conditions, it will return all recipes.
+    const query = `
+    SELECT DISTINCT r.recipe_id, r.recipe_name, r.recipe_slug, r.star_rating, r.recipe_image_url, r.work_in_progress
+    FROM recipes r
+    ${conditions.length ? 'WHERE ' + conditions.join(' AND ') : ''}
+  `;
+
+    console.log('Generated Query:', query); // Debug output for generated query
+    console.log('With Values:', values);      // Debug output for parameter values
+
     try {
-        const result = await client.query(`
-            SELECT recipe_id, recipe_name, recipe_slug, star_rating, recipe_image_url, work_in_progress
-            FROM recipes
-        `);
-        res.json(result.rows);
+        const result = await client.query(query, values);
+        return res.json(result.rows);
     } catch (err) {
         console.error('Error fetching recipes:', err);
-        res.status(500).json({ error: 'Internal server error' });
+        return res.status(500).json({ error: 'Internal server error' });
     }
 });
 
@@ -91,7 +272,7 @@ app.get('/api/recipes/:slug', async (req, res) => {
             WHERE r.recipe_slug = $1
             GROUP BY r.recipe_id, nc.chef_name, co.country_name;
         `, [slug]);
-        
+
         const recipeIngredients = await client.query(`
             SELECT 
                 json_agg(
@@ -152,7 +333,7 @@ app.get('/api/recipes/:slug', async (req, res) => {
                     WHERE rat.recipe_id = r.recipe_id
                 ),
                 'cook_time', (
-                    SELECT COALESCE(json_agg(ctt.cook_time_name), '[]')
+                    SELECT COALESCE(json_agg(ctt.cook_time_type_name), '[]')
                     FROM recipe_cook_time_types rct
                     JOIN cook_time_types ctt ON rct.cook_time_type_id = ctt.cook_time_type_id
                     WHERE rct.recipe_id = r.recipe_id

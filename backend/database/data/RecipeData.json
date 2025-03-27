@@ -12,8 +12,8 @@
             "prep_time_mins": 5,
             "total_time_mins": 20,
             "servings": 4,
-            "notable_chef": "Joshua Weissman",
-            "country_of_origin": "Italy",
+            "notable_chef": "joshua weissman",
+            "country_of_origin": "italy",
             "work_in_progress": false,
             "recipe_components": [
                 {
@@ -67,8 +67,8 @@
             "prep_time_mins": 15,
             "total_time_mins": 420,
             "servings": 4,
-            "notable_chef": "Swasthi Shreekanth",
-            "country_of_origin": "India",
+            "notable_chef": "swasthi shreekanth",
+            "country_of_origin": "india",
             "work_in_progress": false,
             "recipe_components": [
                 {
@@ -121,11 +121,11 @@
                 "Serve with turmeric rice"
             ],
             "tags": {
-                "allergies": ["dairy"],
-                "cook_time": ["4+ hours"],
+                "allergy_type": ["dairy"],
+                "cook_time_type": ["4+ hours"],
                 "diet_type": ["bulk", "cut"],
                 "dish_type": [""],
-                "equipment": ["air fryer"],
+                "equipment_type": ["air fryer"],
                 "meal_type": ["lunch", "dinner"],
                 "protein_type": ["chicken"]
             }
@@ -143,7 +143,7 @@
             "total_time_mins": 40,
             "servings": 6,
             "notable_chef": "",
-            "country_of_origin": "India",
+            "country_of_origin": "india",
             "work_in_progress": false,
             "recipe_components": [
                 {
@@ -195,11 +195,11 @@
                 "Let the curry cool to room temperature before storing. Transfer it to an airtight container and place it in the refrigerator. The curry will keep for up to 5 days in the refrigerator."
             ],
             "tags": {
-                "allergies": [""],
-                "cook_time": ["<1 hour"],
+                "allergy_type": [""],
+                "cook_time_type": ["<1 hour"],
                 "diet_type": ["vegan", "vegetarian"],
                 "dish_type": ["vegetable dish"],
-                "equipment": [""],
+                "equipment_type": [""],
                 "meal_type": ["dinner", "lunch", "side dish"],
                 "protein_type": ["lentils"]
             }
@@ -217,7 +217,7 @@
             "total_time_mins": 195,
             "servings": 8,
             "notable_chef": "",
-            "country_of_origin": "United States",
+            "country_of_origin": "united states",
             "work_in_progress": false,
             "recipe_components": [
                 {
@@ -260,11 +260,11 @@
                 "For the brisket, flat cuts are ideal for slicing for serving and use in sandwiches. Point cuts are best for shredding."
             ],
             "tags": {
-                "allergies": [],
-                "cook_time": ["2-3 hours"],
+                "allergy_type": [],
+                "cook_time_type": ["2-3 hours"],
                 "diet_type": [],
                 "dish_type": [""],
-                "equipment": ["large pot", "slow cooker"],
+                "equipment_type": ["large pot", "slow cooker"],
                 "meal_type": ["dinner"],
                 "protein_type": ["beef"]
             }
@@ -282,7 +282,7 @@
             "total_time_mins": 75,
             "servings": 9,
             "notable_chef": "",
-            "country_of_origin": "United States",
+            "country_of_origin": "united states",
             "work_in_progress": true,
             "recipe_components": [
                 {
@@ -351,11 +351,11 @@
                 "Inspired by https://thecozycook.com/clam-chowder-recipe/ and https://damndelicious.net/2015/04/25/easy-clam-chowder/"
             ],
             "tags": {
-                "allergies": ["dairy", "shellfish"],
-                "cook_time": ["1-2 hours"],
+                "allergy_type": ["dairy", "shellfish"],
+                "cook_time_type": ["<1 hour"],
                 "diet_type": [""],
                 "dish_type": ["soup"],
-                "equipment": ["large pot"],
+                "equipment_type": ["large pot"],
                 "meal_type": ["dinner"],
                 "protein_type": ["clams"]
             }

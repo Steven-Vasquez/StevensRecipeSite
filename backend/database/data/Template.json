@@ -2,7 +2,7 @@
     "id": 1,
     "recipe_name": "(Recipe Name)",
     "rating": 5,
-    "author_name": "(Original recipe author)",
+    "author_name": "(Original recipe author, lowercase)",
     "recipe_slug": "(recipe-slug)",
     "credit_link": "(Link to original recipe)",
     "recipe_description": "(Description of the recipe)",
@@ -11,7 +11,7 @@
     "total_time_mins": 0,
     "servings": 0,
     "notable_chef": "(Notable chef's name)",
-    "country_of_origin": "(Country of origin)",
+    "country_of_origin": "(Country of origin lowercase)",
     "work_in_progress": true,
     "recipe_components": [
         {
@@ -37,11 +37,11 @@
     ],
 
     "tags": {
-        "allergies": [""],
-        "cook_time": [""],
+        "allergy_type": [""],
+        "cook_time_type": [""],
         "diet_type": [""],
         "dish_type": [""],
-        "equipment": [""],
+        "equipment_type": [""],
         "meal_type": [""],
         "protein_type": [""]
     }

@@ -31,7 +31,17 @@ const Browsing = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/recipes/basic-info");
+        // Check if all filters are empty
+        const areFiltersEmpty = Object.values(activeFilters).every(
+          (filter) => filter.length === 0
+        );
+
+        // Build the URL
+        const url = areFiltersEmpty
+          ? "http://localhost:3001/api/recipes/basic-info" // Fetch all recipes
+          : `http://localhost:3001/api/recipes/basic-info?${new URLSearchParams(activeFilters).toString()}`;
+
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error("Failed to fetch recipes");
         }
@@ -45,7 +55,7 @@ const Browsing = () => {
     };
 
     fetchRecipes();
-  }, []);
+  }, [activeFilters]);
 
   if (isLoading) {
     return <div className="loading">Loading...</div>;

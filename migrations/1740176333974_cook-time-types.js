@@ -8,7 +8,7 @@ exports.up = (pgm) => {
             type: 'SERIAL',
             primaryKey: true,
         },
-        cook_time_name: {
+        cook_time_type_name: {
             type: 'VARCHAR(50)',
             notNull: true,
             unique: true,

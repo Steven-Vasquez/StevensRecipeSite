@@ -47,7 +47,7 @@ const RecipePage = () => {
                     recipeCredit: data.author_name,
                     descriptionShort: data.recipe_description,
                     tags: [
-                        ...(Array.isArray(data.allergies) ? data.allergies.map(a => a.allergy_name) : []),
+                        ...(Array.isArray(data.allergies) ? data.allergies.map(a => a.allergy_type_name) : []),
                         ...(Array.isArray(data.diets) ? data.diets.map(d => d.diet_type_name) : []),
                         ...(Array.isArray(data.dish_types) ? data.dish_types.map(dt => dt.dish_type_name) : [])
                     ],

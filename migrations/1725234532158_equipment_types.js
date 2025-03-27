@@ -5,7 +5,7 @@
 exports.up = (pgm) => {
     pgm.createTable('equipment_types', {
       equipment_type_id: 'id',
-      equipment_name: { type: 'varchar(50)', notNull: true, unique: true }
+      equipment_type_name: { type: 'varchar(50)', notNull: true, unique: true }
     });
   };
   
