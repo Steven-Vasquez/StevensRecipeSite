@@ -23,7 +23,7 @@ app.use(cors());
 app.get('/api/recipes/basic-info', async (req, res) => {
     try {
         const result = await client.query(`
-            SELECT recipe_id, recipe_name, star_rating, recipe_image_url, work_in_progress
+            SELECT recipe_id, recipe_name, recipe_slug, star_rating, recipe_image_url, work_in_progress
             FROM recipes
         `);
         res.json(result.rows);

@@ -82,6 +82,7 @@ const Browsing = () => {
             <BrowsingPreview
               key={recipe.recipe_id}
               recipeName={recipe.recipe_name}
+              recipeSlug={recipe.recipe_slug}
               rating={recipe.star_rating}
               imageUrl={recipe.recipe_image_url}
               isWorkInProgress={recipe.work_in_progress}
