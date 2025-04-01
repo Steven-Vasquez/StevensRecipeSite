@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../stylesheets/SidePanel.css";
 
 import FilterCategory from "./FilterCategory";
+import FilterCategoryRange from "./FilterCategoryRange";
 import CollapseIcon from "../images/collapse_icon.png";
 
 const SidePanel = ({ onFilterChange }) => {
@@ -62,7 +63,18 @@ const SidePanel = ({ onFilterChange }) => {
                             <button className={`apply-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`} onClick={handleApplyFilters}>Apply</button>
                         </div>
                     </div>
+                    
                     <div className="filter-categories">
+                        <FilterCategoryRange
+                            category="cookTime"
+                            categoryLabel="Cook Time"
+                            icon="/images/filter_icons/cook_time.png"
+                            options={[
+                                "<1 hour", "2-3 hours", "4+ hours"
+                            ]}
+                            onCheckboxChange={handleCheckboxChange}
+                        />
+                        
                         {/* Allergies Filter */}
                         <FilterCategory
                             category="allergies"

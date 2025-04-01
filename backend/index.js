@@ -327,7 +327,7 @@ app.get('/api/recipes/:slug', async (req, res) => {
         const recipeTags = await client.query(`
             SELECT json_build_object(
                 'allergies', (
-                    SELECT COALESCE(json_agg(at.allergy_name), '[]') 
+                    SELECT COALESCE(json_agg(at.allergy_type_name), '[]') 
                     FROM recipe_allergy_types rat
                     JOIN allergy_types at ON rat.allergy_type_id = at.allergy_type_id
                     WHERE rat.recipe_id = r.recipe_id
@@ -351,7 +351,7 @@ app.get('/api/recipes/:slug', async (req, res) => {
                     WHERE rdt.recipe_id = r.recipe_id
                 ),
                 'equipment', (
-                    SELECT COALESCE(json_agg(et.equipment_name), '[]') 
+                    SELECT COALESCE(json_agg(et.equipment_type_name), '[]') 
                     FROM recipe_equipment_types ret
                     JOIN equipment_types et ON ret.equipment_type_id = et.equipment_type_id
                     WHERE ret.recipe_id = r.recipe_id

@@ -217,7 +217,12 @@
   padding: 10px;
   background: white;
 }
-
+.slider-content {
+  padding-bottom: 30px;
+  padding-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 .filter-content label {
   display: block;
   margin-bottom: 5px;

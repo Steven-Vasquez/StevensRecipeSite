@@ -302,7 +302,7 @@
                         { "quantity": "1 tbsp", "name": "butter", "ingredient_notes": "" },
                         { "quantity": "1/3 cup", "name": "flour", "ingredient_notes": "" },
                         { "quantity": "1 cup", "name": "vegetable or chicken broth", "ingredient_notes": "" },
-                        { "quantity": "1 1/2 cup milk", "name": "milk", "ingredient_notes": "" },
+                        { "quantity": "1 1/2 cup", "name": "whole milk", "ingredient_notes": "" },
                         { "quantity": "3", "name": "6.5 oz cans chopped clams with clam juice", "ingredient_notes": "" }
                     ]
                 },
