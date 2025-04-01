@@ -8,7 +8,8 @@ import CollapseIcon from "../images/collapse_icon.png";
 const SidePanel = ({ onFilterChange }) => {
     const [filters, setFilters] = useState({
         allergies: [],
-        cookTime: [],
+        cookTimeMin: 0,
+        cookTimeMax: 4,
         countryOfOrigin: [],
         dietType: [],
         dishType: [],
@@ -44,6 +45,15 @@ const SidePanel = ({ onFilterChange }) => {
         }
     };
 
+    // Update the cookTime filter when the slider is changed
+    const handleSliderChange = (newRange) => {
+        setFilters(prevFilters => ({
+            ...prevFilters,
+            cookTimeMin: newRange[0],
+            cookTimeMax: newRange[1],
+        }));
+    };
+
     const handleApplyFilters = () => {
         onFilterChange(filters);
         console.log("Filters applied");
@@ -69,10 +79,8 @@ const SidePanel = ({ onFilterChange }) => {
                             category="cookTime"
                             categoryLabel="Cook Time"
                             icon="/images/filter_icons/cook_time.png"
-                            options={[
-                                "<1 hour", "2-3 hours", "4+ hours"
-                            ]}
-                            onCheckboxChange={handleCheckboxChange}
+
+                            onSliderChange={handleSliderChange}
                         />
                         
                         {/* Allergies Filter */}
@@ -87,6 +95,7 @@ const SidePanel = ({ onFilterChange }) => {
                         />
 
                         {/* Cook Time Filter */}
+                        {/*
                         <FilterCategory
                             category="cookTime"
                             categoryLabel="Cook Time"
@@ -96,6 +105,7 @@ const SidePanel = ({ onFilterChange }) => {
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
+                        */}
 
                         {/* Country of Origin Filter */}
                         {/*https://www.freepik.com/icon/planet-earth_921490#fromView=search&page=1&position=0&uuid=fbfbedaf-a447-408d-a3df-d6f79f531bfa*/}

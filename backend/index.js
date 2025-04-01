@@ -29,7 +29,7 @@ app.get('/api/recipes/basic-info', async (req, res) => {
                 : typeof value === 'string'
                     ? value.toLowerCase().split(',').map(v => v.trim()) // Split CSV into an array
                     : value; // Leave other types as they are
-
+            
             // Filter out empty values (e.g., '')
             return [key, processedValue.filter(v => v !== '')];
         })
@@ -71,22 +71,53 @@ app.get('/api/recipes/basic-info', async (req, res) => {
         paramIndex++;
     }
 
-    // Cook Time filter: assuming it’s in a range (e.g., "under 30 mins", "30-60 mins", etc.)
-    if (filters.cookTime && filters.cookTime.length > 0) {
+    // Cook Time filter: Min and Max (e.g., cookTimeMin and cookTimeMax)
+    if (filters.cookTimeMin !== undefined || filters.cookTimeMax !== undefined) {
         console.log("CookTime filter applied!");
-        const cookTimeArr = Array.isArray(filters.cookTime)
-            ? filters.cookTime
-            : [filters.cookTime];
+        
+        // Ensure that cookTimeMin and cookTimeMax are numbers, otherwise, set them to null
+        let cookTimeMin = filters.cookTimeMin ? parseInt(filters.cookTimeMin, 10) : null;
+        let cookTimeMax = filters.cookTimeMax ? parseInt(filters.cookTimeMax, 10) : null;
+        const cookTimeDict = {
+            0: 0,
+            1: 30,
+            2: 60,
+            3: 120,
+            4: 9999
+        };
+        if (cookTimeMax == 0) {
+            cookTimeMax = 0;
+        }
+        else {
+            cookTimeMax = cookTimeDict[cookTimeMax];
+        }
 
-        // Example logic: Assuming cook time is stored in `recipe_cook_times`
-        conditions.push(`r.recipe_id IN (
-            SELECT rctt.recipe_id
-            FROM recipe_cook_time_types rctt
-            JOIN cook_time_types ctt ON rctt.cook_time_type_id = ctt.cook_time_type_id
-            WHERE ctt.cook_time_type_name = ANY($${paramIndex}::text[])
-        )`);
-        values.push(cookTimeArr);
-        paramIndex++;
+        if (cookTimeMin == 4) { 
+            cookTimeMin = 240;
+        }
+        else {
+            cookTimeMin = cookTimeDict[cookTimeMin];
+        }
+
+
+        // If both are set, use the BETWEEN clause in SQL
+        if (cookTimeMin !== null && cookTimeMax !== null) {
+            conditions.push(`r.total_time_mins BETWEEN $${paramIndex} AND $${paramIndex + 1}`);
+            values.push(cookTimeMin, cookTimeMax);
+            paramIndex += 2;
+        }
+        // If only cookTimeMin is set, fetch recipes with total_time_mins greater than or equal to cookTimeMin
+        else if (cookTimeMin !== null) {
+            conditions.push(`r.total_time_mins >= $${paramIndex}`);
+            values.push(cookTimeMin);
+            paramIndex++;
+        }
+        // If only cookTimeMax is set, fetch recipes with total_time_mins less than or equal to cookTimeMax
+        else if (cookTimeMax !== null) {
+            conditions.push(`r.total_time_mins <= $${paramIndex}`);
+            values.push(cookTimeMax);
+            paramIndex++;
+        }
     }
 
     // Country of Origin filter

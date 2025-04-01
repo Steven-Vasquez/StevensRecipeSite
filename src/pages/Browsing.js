@@ -11,7 +11,8 @@ import SearchIcon from "../images/search_icon_white.png"
 const Browsing = () => {
   const [activeFilters, setActiveFilters] = useState({
     allergies: [],
-    cookTime: [],
+    cookTimeMin: 0,
+    cookTimeMax: 4,
     countryOfOrigin: [],
     dietType: [],
     dishType: [],
@@ -32,15 +33,31 @@ const Browsing = () => {
     const fetchRecipes = async () => {
       try {
         // Check if all filters are empty
-        const areFiltersEmpty = Object.values(activeFilters).every(
-          (filter) => filter.length === 0
-        );
+        const areFiltersEmpty = Object.entries(activeFilters).every(([key, filter]) => {
+          if (Array.isArray(filter)) {
+            // For array filters, check if the length is zero
+            return filter.length === 0;
+          } else if (typeof filter === 'number') {
+            // For numeric filters like cookTime, check if their values are the default (0 for min, 4 for max)
+            if (key === "cookTimeMin") {
+              return filter === 0;
+            } else if (key === "cookTimeMax") {
+              return filter === 4;
+            }
+            // For other numeric filters, just check if the value is zero or any other default
+            return filter === 0;
+          }
+          // For other cases (like strings or objects), treat empty values as falsy
+          return !filter;
+        });
+
 
         // Build the URL
         const url = areFiltersEmpty
           ? "http://localhost:3001/api/recipes/basic-info" // Fetch all recipes
           : `http://localhost:3001/api/recipes/basic-info?${new URLSearchParams(activeFilters).toString()}`;
 
+        console.log("Fetching recipes from URL:", url);
         const response = await fetch(url);
         if (!response.ok) {
           throw new Error("Failed to fetch recipes");

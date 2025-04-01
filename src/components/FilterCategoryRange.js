@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "rc-slider";
 import 'rc-slider/assets/index.css';
 import SmoothCollapse from "react-smooth-collapse";
@@ -6,7 +6,7 @@ import CollapseIcon from "../images/collapse_icon.png";
 
 import "../stylesheets/SidePanel.css";
 
-export function FilterCategoryRange({ category, categoryLabel, icon, options, onCheckboxChange }) {
+export function FilterCategoryRange({ category, categoryLabel, icon, options, onSliderChange }) {
     const [isCollapsed, setIsCollapsed] = useState(false);
 
     function toggleFilterCollapse() {
@@ -18,9 +18,12 @@ export function FilterCategoryRange({ category, categoryLabel, icon, options, on
 
     const handleSliderChange = (newRange) => {
         setRange(newRange);
-        //TODO IMPLEMENT
-        //onChange(newRange); // Send updated values to parent component
+        console.log("Value of range: " + newRange);
     };
+
+    useEffect(() => {
+        onSliderChange(range); // Send updated values to parent component when range is updated
+    }, [range]); // Runs after range is updated
 
     return (
         <div className={`filter-category ${isCollapsed ? "not-collapsed" : "collapsed"}`}>
