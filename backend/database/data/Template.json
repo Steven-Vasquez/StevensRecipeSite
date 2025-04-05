@@ -38,7 +38,6 @@
 
     "tags": {
         "allergy_type": [""],
-        "cook_time_type": [""],
         "diet_type": [""],
         "dish_type": [""],
         "equipment_type": [""],

@@ -128,10 +128,9 @@ async function insertRecipe(recipe) {
             });
         }
 
-        // Insert tags (allergy_type, cook_time_type, diet_type, dish_type, equipment_type, meal_type, protein_type)
+        // Insert tags (allergy_type, diet_type, dish_type, equipment_type, meal_type, protein_type)
         const tagCategories = [
             { table: 'allergy_types', column: 'allergy_type_name', values: recipe.tags.allergy_type },
-            { table: 'cook_time_types', column: 'cook_time_type_name', values: recipe.tags.cook_time_type },
             { table: 'diet_types', column: 'diet_type_name', values: recipe.tags.diet_type },
             { table: 'dish_types', column: 'dish_type_name', values: recipe.tags.dish_type },
             { table: 'equipment_types', column: 'equipment_type_name', values: recipe.tags.equipment_type },

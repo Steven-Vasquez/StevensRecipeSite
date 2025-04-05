@@ -47,7 +47,6 @@
             ],
             "tags": {
                 "allergy_type": ["dairy"],
-                "cook_time_type": ["<1 hour"],
                 "diet_type": ["bulk"],
                 "dish_type": ["pasta"],
                 "equipment_type": [""],
@@ -122,7 +121,6 @@
             ],
             "tags": {
                 "allergy_type": ["dairy"],
-                "cook_time_type": ["4+ hours"],
                 "diet_type": ["bulk", "cut"],
                 "dish_type": [""],
                 "equipment_type": ["air fryer"],
@@ -196,7 +194,6 @@
             ],
             "tags": {
                 "allergy_type": [""],
-                "cook_time_type": ["<1 hour"],
                 "diet_type": ["vegan", "vegetarian"],
                 "dish_type": ["vegetable dish"],
                 "equipment_type": [""],
@@ -261,7 +258,6 @@
             ],
             "tags": {
                 "allergy_type": [],
-                "cook_time_type": ["2-3 hours"],
                 "diet_type": [],
                 "dish_type": [""],
                 "equipment_type": ["large pot", "slow cooker"],
@@ -352,7 +348,6 @@
             ],
             "tags": {
                 "allergy_type": ["dairy", "shellfish"],
-                "cook_time_type": ["<1 hour"],
                 "diet_type": [""],
                 "dish_type": ["soup"],
                 "equipment_type": ["large pot"],

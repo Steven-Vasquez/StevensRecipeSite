@@ -85,8 +85,10 @@ const SidePanel = ({ onFilterChange }) => {
                 <div className={`outer-filter-categories ${isSidePanelOpen ? "with-border" : "no-border"}`}>
                     <div className="outer-button-container">
                         <div className="buttons-container">
-                            <button className={`reset-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Clear all (TODO)</button>
+                            <button className={`reset-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Reset (TODO)</button>
                             <button className={`reset-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Select all (TODO)</button>
+                            <button className={`reset-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Expand all (TODO)</button>
+                            <button className={`reset-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`}>Collapse all (TODO)</button>
                             <button className={`apply-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`} onClick={handleApplyFilters}>Apply</button>
                         </div>
                     </div>
