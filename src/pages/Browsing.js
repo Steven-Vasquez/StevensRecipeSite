@@ -20,7 +20,8 @@ const Browsing = () => {
     mealType: [],
     notableChefs: [],
     proteinType: [],
-    servings: [],
+    servingsMin: 0,
+    servingsMax: 4,
   });
 
   // Stores: recipe_id, recipe_name, star_rating, recipe_image_url, work_in_progress
@@ -35,13 +36,13 @@ const Browsing = () => {
         // Check if all filters are empty
         const areFiltersEmpty = Object.entries(activeFilters).every(([key, filter]) => {
           if (Array.isArray(filter)) {
-            // For array filters, check if the length is zero
+            // For checkbox filters, check if the length is zero
             return filter.length === 0;
           } else if (typeof filter === 'number') {
             // For numeric filters like cookTime, check if their values are the default (0 for min, 4 for max)
-            if (key === "cookTimeMin") {
+            if (key === "cookTimeMin" || key === "servingsMin") {
               return filter === 0;
-            } else if (key === "cookTimeMax") {
+            } else if (key === "cookTimeMax" || key === "servingsMax") {
               return filter === 4;
             }
             // For other numeric filters, just check if the value is zero or any other default
@@ -80,7 +81,7 @@ const Browsing = () => {
 
   const handleFilterChange = (filters) => {
     setActiveFilters(filters);
-    console.log(activeFilters)
+    //console.log(activeFilters)
   };
 
   return (

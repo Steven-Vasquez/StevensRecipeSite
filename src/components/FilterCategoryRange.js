@@ -6,7 +6,16 @@ import CollapseIcon from "../images/collapse_icon.png";
 
 import "../stylesheets/SidePanel.css";
 
-export function FilterCategoryRange({ category, categoryLabel, icon, options, onSliderChange }) {
+export function FilterCategoryRange({ 
+    category, // Category of the filter (e.g., cookTime, servings)
+    categoryLabel, // Label/name to display on website
+    icon, // Icon for the filter category
+    onSliderChange, // Function to send updated values to parent component
+    min, // Min slider value
+    max, // Max slider value
+    marks // { 0: '0', 1: '1', 2: '2', 3: '3', 4: '4' }
+
+ }) {
     const [isCollapsed, setIsCollapsed] = useState(false);
 
     function toggleFilterCollapse() {
@@ -14,7 +23,7 @@ export function FilterCategoryRange({ category, categoryLabel, icon, options, on
         console.log("Filter collapsed: " + isCollapsed);
     }
 
-    const [range, setRange] = useState([0, 4]); // Default range (0 to 4 hours)
+    const [range, setRange] = useState([min, max]); // Default range (0 to 4 hours)
 
     const handleSliderChange = (newRange) => {
         setRange(newRange);
@@ -22,7 +31,7 @@ export function FilterCategoryRange({ category, categoryLabel, icon, options, on
     };
 
     useEffect(() => {
-        onSliderChange(range); // Send updated values to parent component when range is updated
+        onSliderChange(category, range); // Send updated values to parent component when range is updated
     }, [range]); // Runs after range is updated
 
     return (
@@ -47,17 +56,11 @@ export function FilterCategoryRange({ category, categoryLabel, icon, options, on
                 <div className="filter-content slider-content">
                     <Slider
                         range
-                        min={0}
-                        max={4}
-                        defaultValue={[0,4]}
+                        min={min}
+                        max={max}
+                        defaultValue={[min,max]}
                         step={1}
-                        marks={{
-                            0: '<30',
-                            1: '1 hr',
-                            2: '2 hrs',
-                            3: '3 hrs',
-                            4: '4+',
-                        }}
+                        marks={marks}
                         value={range}
                         onChange={handleSliderChange}
                     />

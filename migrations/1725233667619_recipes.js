@@ -14,7 +14,7 @@ exports.up = (pgm) => {
       recipe_image_url: { type: 'varchar(255)' },
       prep_time_mins: { type: 'integer' },
       total_time_mins: { type: 'integer' },
-      servings: { type: 'varchar(10)' },
+      servings: { type: 'integer' },
       notable_chef_id: {
         type: 'integer',
         references: 'notable_chefs',

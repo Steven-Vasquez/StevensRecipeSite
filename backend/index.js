@@ -85,12 +85,9 @@ app.get('/api/recipes/basic-info', async (req, res) => {
             3: 120,
             4: 9999
         };
-        if (cookTimeMax == 0) {
-            cookTimeMax = 0;
-        }
-        else {
-            cookTimeMax = cookTimeDict[cookTimeMax];
-        }
+
+        // Convert the cook time values to minutes
+        cookTimeMax = cookTimeDict[cookTimeMax];
 
         if (cookTimeMin == 4) { 
             cookTimeMin = 240;
@@ -105,18 +102,6 @@ app.get('/api/recipes/basic-info', async (req, res) => {
             conditions.push(`r.total_time_mins BETWEEN $${paramIndex} AND $${paramIndex + 1}`);
             values.push(cookTimeMin, cookTimeMax);
             paramIndex += 2;
-        }
-        // If only cookTimeMin is set, fetch recipes with total_time_mins greater than or equal to cookTimeMin
-        else if (cookTimeMin !== null) {
-            conditions.push(`r.total_time_mins >= $${paramIndex}`);
-            values.push(cookTimeMin);
-            paramIndex++;
-        }
-        // If only cookTimeMax is set, fetch recipes with total_time_mins less than or equal to cookTimeMax
-        else if (cookTimeMax !== null) {
-            conditions.push(`r.total_time_mins <= $${paramIndex}`);
-            values.push(cookTimeMax);
-            paramIndex++;
         }
     }
 
@@ -224,7 +209,39 @@ app.get('/api/recipes/basic-info', async (req, res) => {
         paramIndex++;
     }
 
-    // Servings filter TODO
+    // Servings filter: Min and Max (e.g., servingsMin and servingsMax)
+    if (filters.servingsMin !== undefined || filters.servingsMax !== undefined) {
+        console.log("Servings filter applied!");
+
+        // Ensure that servingsMin and servingsMax are numbers, otherwise, set them to null
+        let servingsMin = filters.servingsMin ? parseInt(filters.servingsMin, 10) : null;
+        let servingsMax = filters.servingsMax ? parseInt(filters.servingsMax, 10) : null;
+        const servingsDict = {
+            0: 1,
+            1: 2,
+            2: 3,
+            3: 4,
+            4: 9999
+        };
+
+        // Convert the servings values to actual numbers
+        servingsMax = servingsDict[servingsMax];
+
+        if (servingsMin == 4) { // If a person selects only 5+ servings, set the min to 5
+            servingsMin = 5;
+        }
+        else {
+            servingsMin = servingsDict[servingsMin];
+        }
+
+        // If both are set, use the BETWEEN clause in SQL
+        if (servingsMin !== null && servingsMax !== null) {
+            conditions.push(`r.servings BETWEEN $${paramIndex} AND $${paramIndex + 1}`);
+            values.push(servingsMin, servingsMax);
+            paramIndex += 2;
+        }
+    }
+
 
     // Build the final query. If no conditions, it will return all recipes.
     const query = `

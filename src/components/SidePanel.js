@@ -17,7 +17,8 @@ const SidePanel = ({ onFilterChange }) => {
         mealType: [],
         notableChefs: [],
         proteinType: [],
-        servings: [],
+        servingsMin: 0,
+        servingsMax: 4,
     });
 
     const [isSidePanelOpen, setIsSidePanelOpen] = useState(true);
@@ -26,6 +27,10 @@ const SidePanel = ({ onFilterChange }) => {
         setIsSidePanelOpen(!isSidePanelOpen);
     };
 
+    useEffect(() => {
+        // print the filters state whenever it changes
+        console.log("Filters state updated:", filters);
+    }, [filters]);
 
     const handleCheckboxChange = (event, category) => {
         console.log("Filter being changed:" + category + " " + event.target.value)
@@ -46,12 +51,24 @@ const SidePanel = ({ onFilterChange }) => {
     };
 
     // Update the cookTime filter when the slider is changed
-    const handleSliderChange = (newRange) => {
-        setFilters(prevFilters => ({
-            ...prevFilters,
-            cookTimeMin: newRange[0],
-            cookTimeMax: newRange[1],
-        }));
+    const handleSliderChange = (category, newRange) => {
+        setFilters(prevFilters => {
+            console.log("Slider changed for category: " + category + " with new range: " + newRange);
+            if (category === "cookTime") {
+                return {
+                    ...prevFilters,
+                    cookTimeMin: newRange[0],
+                    cookTimeMax: newRange[1],
+                };
+            } else if (category === "servings") {
+                return {
+                    ...prevFilters,
+                    servingsMin: newRange[0],
+                    servingsMax: newRange[1],
+                };
+            }
+            return prevFilters; // Return unchanged filters if category doesn't match
+        });
     };
 
     const handleApplyFilters = () => {
@@ -73,16 +90,10 @@ const SidePanel = ({ onFilterChange }) => {
                             <button className={`apply-button ${isSidePanelOpen ? "text-appear" : "text-disappear"}`} onClick={handleApplyFilters}>Apply</button>
                         </div>
                     </div>
-                    
-                    <div className="filter-categories">
-                        <FilterCategoryRange
-                            category="cookTime"
-                            categoryLabel="Cook Time"
-                            icon="/images/filter_icons/cook_time.png"
 
-                            onSliderChange={handleSliderChange}
-                        />
-                        
+
+
+                    <div className="filter-categories">
                         {/* Allergies Filter */}
                         <FilterCategory
                             category="allergies"
@@ -95,17 +106,23 @@ const SidePanel = ({ onFilterChange }) => {
                         />
 
                         {/* Cook Time Filter */}
-                        {/*
-                        <FilterCategory
+                        <FilterCategoryRange
                             category="cookTime"
                             categoryLabel="Cook Time"
                             icon="/images/filter_icons/cook_time.png"
-                            options={[
-                                "<1 hour", "2-3 hours", "4+ hours"
-                            ]}
-                            onCheckboxChange={handleCheckboxChange}
+                            min={0}
+                            max={4}
+                            defaultValue={[0, 4]}
+                            step={1}
+                            marks={{
+                                0: '<30',
+                                1: '1 hr',
+                                2: '2 hrs',
+                                3: '3 hrs',
+                                4: '4+',
+                            }}
+                            onSliderChange={handleSliderChange}
                         />
-                        */}
 
                         {/* Country of Origin Filter */}
                         {/*https://www.freepik.com/icon/planet-earth_921490#fromView=search&page=1&position=0&uuid=fbfbedaf-a447-408d-a3df-d6f79f531bfa*/}
@@ -166,7 +183,7 @@ const SidePanel = ({ onFilterChange }) => {
                             onCheckboxChange={handleCheckboxChange}
                         />
 
-                        
+
                         {/* Notable Chefs Filter */}
                         <FilterCategory
                             category="notableChefs"
@@ -190,14 +207,22 @@ const SidePanel = ({ onFilterChange }) => {
                         />
 
                         {/* Servings Filter */}
-                        <FilterCategory
+                        <FilterCategoryRange
                             category="servings"
-                            categoryLabel="Servings (TODO)"
+                            categoryLabel="Servings"
                             icon="/images/filter_icons/servings.png"
-                            options={[
-                                "1-2", "3-4", "5+"
-                            ]}
-                            onCheckboxChange={handleCheckboxChange}
+                            min={0}
+                            max={4}
+                            defaultValue={[0, 4]}
+                            step={1}
+                            marks={{
+                                0: '1',
+                                1: '2',
+                                2: '3',
+                                3: '4',
+                                4: '5+',
+                            }}
+                            onSliderChange={handleSliderChange}
                         />
 
                         {/* Etc Properteis Filter */}
