@@ -372,6 +372,16 @@ app.get('/api/recipes/:slug', async (req, res) => {
             WHERE rc.recipe_id = (SELECT recipe_id FROM recipes WHERE recipe_slug = $1);
             `, [slug]);
 
+
+        /* TODO ADD THIS TOO!!!
+        
+                'cook_time', (
+                    SELECT COALESCE(json_agg(ctt.cook_time_type_name), '[]')
+                    FROM recipe_cook_time_types rct
+                    JOIN cook_time_types ctt ON rct.cook_time_type_id = ctt.cook_time_type_id
+                    WHERE rct.recipe_id = r.recipe_id
+                ),
+                */
         const recipeTags = await client.query(`
             SELECT json_build_object(
                 'allergies', (
@@ -380,12 +390,7 @@ app.get('/api/recipes/:slug', async (req, res) => {
                     JOIN allergy_types at ON rat.allergy_type_id = at.allergy_type_id
                     WHERE rat.recipe_id = r.recipe_id
                 ),
-                'cook_time', (
-                    SELECT COALESCE(json_agg(ctt.cook_time_type_name), '[]')
-                    FROM recipe_cook_time_types rct
-                    JOIN cook_time_types ctt ON rct.cook_time_type_id = ctt.cook_time_type_id
-                    WHERE rct.recipe_id = r.recipe_id
-                ),
+                
                 'diet_type', (
                     SELECT COALESCE(json_agg(dt.diet_type_name), '[]') 
                     FROM recipe_diet_types rdt

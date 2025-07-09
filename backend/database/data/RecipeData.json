@@ -73,7 +73,7 @@
                 {
                     "component_name": "Chicken + Marinade",
                     "ingredients": [
-                        { "quantity": "1.5", "name": "kg skinless bone-in chicken thighs", "ingredient_notes": "" },
+                        { "quantity": "1.5", "name": "lb skinless bone-in chicken thighs", "ingredient_notes": "" },
                         { "quantity": "1/2", "name": "cup Greek yogurt", "ingredient_notes": "" },
                         { "quantity": "1", "name": "tbsp ginger garlic paste", "ingredient_notes": "or 3/4 tbsp each, grated" },
                         { "quantity": "1", "name": "tsp garam masala", "ingredient_notes": "" },
@@ -207,7 +207,7 @@
             "rating": 4.5,
             "author_name": "Rachel Farnsworth",
             "recipe_slug": "corned-beef-and-cabbage",
-            "credit_link": "https://www.thestayathomechef.com",
+            "credit_link": "https://thestayathomechef.com/corned-beef-and-cabbage/",
             "recipe_description": "Make juicy corned beef and cabbage on the stovetop or in the slow cooker! Braise your brisket in Guinness or broth for a flavorful Irish meal.",
             "recipe_image_url": "",
             "prep_time_mins": 15,
@@ -354,7 +354,303 @@
                 "meal_type": ["dinner"],
                 "protein_type": ["clams"]
             }
+        },
+        {
+            "id": 6,
+            "recipe_name": "Lemon Yogurt Herb Sauce",
+            "rating": 4,
+            "author_name": "Alex Rios",
+            "recipe_slug": "lemon-yogurt-herb-sauce",
+            "credit_link": "https://www.instagram.com/reel/DGRJfiKvNLR/?igsh=MzRlODBiNWFlZA==",
+            "recipe_description": "A versatile yogurt sauce",
+            "recipe_image_url": "",
+            "prep_time_mins": 5,
+            "total_time_mins": 5,
+            "servings": 8,
+            "notable_chef": "Alex Rios",
+            "country_of_origin": "",
+            "work_in_progress": false,
+            "recipe_components": [
+                {
+                    "component_name": "The Sauce",
+                    "ingredients": [
+                        { "quantity": "1/2", "name": "cup mayonnaise", "ingredient_notes": "" },
+                        { "quantity": "1/2", "name": "cup plain greek yogurt", "ingredient_notes": "" },
+                        { "quantity": "1", "name": "lemon, juiced", "ingredient_notes": "" },
+                        { "quantity": "1", "name": "tbsp white vinegar", "ingredient_notes": "" },
+                        { "quantity": "1", "name": "tbsp sugar", "ingredient_notes": "" },
+                        { "quantity": "1", "name": "tbsp fresgg parsley, minced", "ingredient_notes": "" },
+                        { "quantity": "", "name": "salt and pepper to taste", "ingredient_notes": "" }
+                    ]
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "step_title": "Make the sauce!",
+                    "steps": [
+                        { "step_number": 1, "instruction": "Combine all ingredients, mix, and enjoy!", "step_notes": "", "step_images": [] }
+                    ]
+                }
+            ],
+            "recipe_notes": [ "" ],   
+            "tags": {
+                "allergy_type": ["dairy"],
+                "diet_type": [""],
+                "dish_type": ["vegetarian"],
+                "equipment_type": [""],
+                "meal_type": [""],
+                "protein_type": [""]
+            }
+        },
+        {
+            "id": 7,
+            "recipe_name": "High Protein Buffalo Chicken & Bacon Mac n' Cheese",
+            "rating": 5,
+            "author_name": "Stealth Health Life",
+            "recipe_slug": "high-protein-buffalo-bacon-mac",
+            "credit_link": "https://www.youtube.com/watch?v=eO0tlkNxISs",
+            "recipe_description": "Delicious and extremely high mac n' cheese recipe.",
+            "recipe_image_url": "",
+            "prep_time_mins": 15,
+            "total_time_mins": 240,
+            "servings": 10,
+            "notable_chef": "",
+            "country_of_origin": "",
+            "work_in_progress": false,
+            "recipe_components": [
+                {
+                    "component_name": "(Name of component to list ingredients for)",
+                    "ingredients": [
+                        { "quantity": "1", "name": "(measurement) (ingredient name)", "ingredient_notes": "" },
+                        { "quantity": "1", "name": "(measurement) (ingredient name)", "ingredient_notes": "" }
+                    ]
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "step_title": "(step component title)",
+                    "steps": [
+                        { "step_number": 1, "instruction": "(Step 1 instruction)", "step_notes": "", "step_images": ["(URL to step image)"] }
+                    ]
+                }
+            ],
+            "recipe_notes":
+            [
+                ""
+            ],
+            "tags": {
+                "allergy_type": [""],
+                "diet_type": [""],
+                "dish_type": [""],
+                "equipment_type": [""],
+                "meal_type": [""],
+                "protein_type": [""]
+            }
+        },
+        {
+            "id": 8,
+            "recipe_name": "Chicken Chili Relleno Casserole",
+            "rating": 4.5,
+            "author_name": "Mom",
+            "recipe_slug": "chicken-chilli-relleno-casserole",
+            "credit_link": "",
+            "recipe_description": "A bold and comforting casserole inspired by classic chile rellenos, featuring layers of roasted poblano peppers, tender chicken, creamy egg batter, and a vibrant homemade sauce.",
+            "recipe_image_url": "",
+            "prep_time_mins": 40,
+            "total_time_mins": 85,
+            "servings": 10,
+            "notable_chef": "",
+            "country_of_origin": "mexico",
+            "work_in_progress": false,
+            "recipe_components": [
+                {
+                "component_name": "Main Casserole",
+                "ingredients": [
+                    { "quantity": "8", "name": "chili poblanos", "ingredient_notes": "roasted and peeled" },
+                    { "quantity": "1.5 pounds", "name": "chicken", "ingredient_notes": "cooked and shredded" },
+                    { "quantity": "2", "name": "Hatch chili", "ingredient_notes": "roasted and chopped" },
+                    { "quantity": "2", "name": "garlic cloves", "ingredient_notes": "minced" },
+                    { "quantity": "1/2", "name": "onion", "ingredient_notes": "chopped" },
+                    { "quantity": "6", "name": "eggs", "ingredient_notes": "separated (whites and yolks)" },
+                    { "quantity": "1 tsp", "name": "salt", "ingredient_notes": "" },
+                    { "quantity": "1", "name": "serrano chili", "ingredient_notes": "chopped" },
+                    { "quantity": "1", "name": "chile verde", "ingredient_notes": "Kinder pack" },
+                    { "quantity": "1", "name": "Roma tomato", "ingredient_notes": "chopped" },
+                    { "quantity": "1 tsp", "name": "baking powder", "ingredient_notes": "" },
+                    { "quantity": "1/2 tsp", "name": "pepper", "ingredient_notes": "" },
+                    { "quantity": "1/3 cup", "name": "flour", "ingredient_notes": "" },
+                    { "quantity": "1/4 cup", "name": "heavy cream", "ingredient_notes": "" },
+                    { "quantity": "to taste", "name": "cheese", "ingredient_notes": "for layering" }
+                ]
+                },
+                {
+                "component_name": "Sauce",
+                "ingredients": [
+                    { "quantity": "5", "name": "Roma tomatoes", "ingredient_notes": "" },
+                    { "quantity": "5", "name": "chili puya", "ingredient_notes": "" },
+                    { "quantity": "2", "name": "chili morita", "ingredient_notes": "" },
+                    { "quantity": "1", "name": "garlic clove", "ingredient_notes": "" },
+                    { "quantity": "1/2 tsp", "name": "oregano", "ingredient_notes": "" },
+                    { "quantity": "1", "name": "piece of onion", "ingredient_notes": "" },
+                    { "quantity": "1/4 tsp", "name": "cumin", "ingredient_notes": "" },
+                    { "quantity": "to taste", "name": "salt", "ingredient_notes": "" },
+                    { "quantity": "to blend", "name": "water", "ingredient_notes": "add a little more to pan after blending" }
+                ]
+                }
+            ],
+            "recipe_instructions": [
+                {
+                "step_title": "Prepare Filling",
+                "steps": [
+                    {
+                    "step_number": 1,
+                    "instruction": "Roast and peel chili poblanos. Set aside.",
+                    "step_notes": "",
+                    "step_images": []
+                    },
+                    {
+                    "step_number": 2,
+                    "instruction": "In a pan, cook onion, chili, serrano, and garlic in oil for 3 minutes.",
+                    "step_notes": "",
+                    "step_images": []
+                    },
+                    {
+                    "step_number": 3,
+                    "instruction": "Add chicken and chile verde; cook for 5 minutes.",
+                    "step_notes": "",
+                    "step_images": []
+                    },
+                    {
+                    "step_number": 4,
+                    "instruction": "Add Hatch chile, pepper, and Roma tomato. Cook for 10 minutes.",
+                    "step_notes": "",
+                    "step_images": []
+                    }
+                ]
+                },
+                {
+                "step_title": "Prepare Egg Batter",
+                "steps": [
+                    {
+                    "step_number": 5,
+                    "instruction": "In a bowl, beat 6 egg whites until stiff, then gently fold in yolks.",
+                    "step_notes": "",
+                    "step_images": []
+                    },
+                    {
+                    "step_number": 6,
+                    "instruction": "Add salt, baking powder, pepper, flour, and heavy cream. Mix on low.",
+                    "step_notes": "",
+                    "step_images": []
+                    }
+                ]
+                },
+                {
+                "step_title": "Assemble Casserole",
+                "steps": [
+                    {
+                    "step_number": 7,
+                    "instruction": "Grease a 13x9 inch baking dish. Layer sauce, poblano chilies, cheese, and chicken.",
+                    "step_notes": "",
+                    "step_images": []
+                    },
+                    {
+                    "step_number": 8,
+                    "instruction": "Sprinkle chopped Hatch chile on top.",
+                    "step_notes": "",
+                    "step_images": []
+                    }
+                ]
+                },
+                {
+                "step_title": "Make the Sauce",
+                "steps": [
+                    {
+                    "step_number": 9,
+                    "instruction": "Boil Roma tomatoes, chili puya, and morita chiles. Blend with garlic, oregano, onion, cumin, salt, and water.",
+                    "step_notes": "",
+                    "step_images": []
+                    },
+                    {
+                    "step_number": 10,
+                    "instruction": "Put oil in a pan, pour in sauce, add a little water, and simmer for 1 minute.",
+                    "step_notes": "",
+                    "step_images": []
+                    }
+                ]
+                }
+            ],
+            "recipe_notes": [
+                "Roasting the poblanos ahead of time gives the dish a more authentic flavor.",
+                "For a spicier version, increase the amount of serrano or morita chiles.",
+                "You can substitute cheese with a blend of Oaxaca and Monterey Jack for a creamy melt."
+            ],
+            "tags": {
+                "allergy_type": ["dairy"],
+                "diet_type": ["bulk"],
+                "dish_type": [""],
+                "equipment_type": [""],
+                "meal_type": ["dinner"],
+                "protein_type": ["chicken"]
+            }
+        },
+        {
+            "id": 9,
+            "recipe_name": "Marry Me Orzo",
+            "rating": 4.5,
+            "author_name": "",
+            "recipe_slug": "marry-me-orzo",
+            "credit_link": "https://www.instagram.com/reel/C5cNay_JqXr/?igsh=MzRlODBiNWFlZA==",
+            "recipe_description": "Delicious healthy take on marry me chicken cooked with orzo pasta and coconut milk instead of heavy cream",
+            "recipe_image_url": "",
+            "prep_time_mins": 15,
+            "total_time_mins": 40,
+            "servings": 3,
+            "notable_chef": "",
+            "country_of_origin": "united states",
+            "work_in_progress": false,
+            "recipe_components": [
+                {
+                    "component_name": "All Ingredients",
+                    "ingredients": [
+                        { "quantity": "2", "name": "large chicken breasts, cubed", "ingredient_notes": "" },
+                        { "quantity": "2", "name": "tbsp olive oil", "ingredient_notes": "" },
+                        { "quantity": "4", "name": "garlic cloves minced", "ingredient_notes": "" },
+                        { "quantity": "1/3", "name": "cup sundried tomatoes in oil, drained", "ingredient_notes": " and chopped" },
+                        { "quantity": "1", "name": "cup orzo", "ingredient_notes": "" },
+                        { "quantity": "2 1/2", "name": "cups chicken broth", "ingredient_notes": " (or water)" },
+                        { "quantity": "3/4", "name": "cup full fat coconut milk", "ingredient_notes": " or heavy cream" },
+                        { "quantity": "2", "name": "large handfuls of spinach", "ingredient_notes": "" },
+                        { "quantity": "3/4", "name": "cup parmesan cheese, grated", "ingredient_notes": "" },
+                        { "quantity": "2", "name": "tsp Italian seasoning", "ingredient_notes": "" },
+                        { "quantity": "1", "name": "paprika", "ingredient_notes": "" },
+                        { "quantity": "", "name": "salt and pepper to taste", "ingredient_notes": "" }
+                    ]
+                }
+            ],
+            "recipe_instructions": [
+                {
+                    "step_title": "Main Steps",
+                    "steps": [
+                        { "step_number": 1, "instruction": "Heat a tall pan with oil and add the chicken.", "step_notes": "", "step_images": ["(URL to step image)"] },
+                        { "step_number": 2, "instruction": "Cook for 2-3 mins on each side on high heat. Then, add the sundried tomatoes, Italian seasoning, garlic, paprika, salt, and pepper. Cook for 3 mins more.", "step_notes": "", "step_images": [""] },
+                        { "step_number": 3, "instruction": "Add your orzo and chicken broth. Mix and turn the heat to medium. Cover and cook for about 12 minutes (removing the cover and stirring every now and then).", "step_notes": "", "step_images": [""] },
+                        { "step_number": 4, "instruction": "Once the orzo is cooked through, add the coconut milk, spinach, and parmesan cheese and mix. Serve and enjoy!", "step_notes": "", "step_images": [""] }
+                    ]
+                }
+            ],
+            "recipe_notes":
+            [
+                ""
+            ],
+            "tags": {
+                "allergy_type": [""],
+                "diet_type": ["cut"],
+                "dish_type": ["pasta"],
+                "equipment_type": [""],
+                "meal_type": ["dinner"],
+                "protein_type": ["chicken"]
+            }
         }
-        
     ]
 }

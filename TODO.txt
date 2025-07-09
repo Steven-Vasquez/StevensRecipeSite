@@ -1,0 +1,4 @@
+1. Add "untested" as a filter to cooking website so I can just start adding recipes that I
+have saved and want to try, i have so many. Do this after finalizing image size design.
+
+2. Add cook time types to database.

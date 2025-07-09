@@ -133,7 +133,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Country Origin"
                             icon="/images/filter_icons/country_of_origin.png"
                             options={[
-                                "India", "Italy", "United States", "Unknown"
+                                "India", "Italy", "Mexico", "United States", "Unknown"
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />
@@ -157,7 +157,7 @@ const SidePanel = ({ onFilterChange }) => {
                             categoryLabel="Dish Type"
                             icon="/images/filter_icons/dish_type.png"
                             options={[
-                                "Pasta", "Salad", "Soup/Stew", "Vegetable Dish"
+                                "Pasta", "Salad", "Soup/Stew", "Vegetable Dish",
                             ]}
                             onCheckboxChange={handleCheckboxChange}
                         />

@@ -41,7 +41,7 @@ export function BuffaloBaconChickenMac() {
                         "Shred chicken with some tongs",
                     ],
                     [
-                        "Blend all ingredients together until smooth",
+                        "Blend all cheese sauce ingredients together until smooth",
                     ],
                     [
                         "Cook bacon on foil-lined baking sheet in oven at 400F for 20-30 minutes",
